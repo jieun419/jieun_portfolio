@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
       line-height: 1.5;
       font-weight: 400;
+      letter-spacing: -1px;
 
       font-synthesis: none;
       text-rendering: optimizeLegibility;
