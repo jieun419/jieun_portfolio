@@ -1,10 +1,9 @@
-function App() {
+import { Front } from './pages/Home/Front.tsx';
 
+export default function App() {
   return (
     <>
-      <h2>dd</h2>
+      <Front />
     </>
-  )
+  );
 }
-
-export default App
