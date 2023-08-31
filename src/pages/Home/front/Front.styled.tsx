@@ -4,9 +4,11 @@ export const MainComponent = tw.main`
   flex
   items-center
   flex-col
-  bg-[#EFEFF1]  
-  h-screen
+  bg-[#EFEFF1]
+  h-auto
   justify-between
+  px-10
+  pt-10
 `;
 
 export const TxtWrap = tw.section`
@@ -50,4 +52,31 @@ export const StTxt = tw.strong`
 export const SubTxt = tw.p`
   font-normal
   text-xl
+`;
+
+export const SocialList = tw.div`
+  flex
+  gap-5
+  w-full
+`;
+
+export const SocialLink = tw.a`
+  flex
+  gap-1
+  items-center
+  flex-col
+
+  font-medium
+  relative
+  after:content-['']
+  after:w-full
+  after:h-1
+  after:bg-black
+  after:block
+`;
+
+export const InfoTxt = tw.div`
+  absolute
+  left-10
+  bottom-10
 `;
