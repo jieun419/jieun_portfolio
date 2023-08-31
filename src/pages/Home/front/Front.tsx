@@ -1,83 +1,12 @@
-// import { styled } from 'styled-components'
 import myImg from '../../../assets/images/jieun_img.webp';
-// import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt } from './Front.styled';
-import tw from 'tailwind-styled-components';
-
-export const MainComponent = tw.main`
-  flex
-  items-center
-  flex-col
-  bg-[#EFEFF1]  
-  h-screen
-  justify-between
-  px-10
-`;
-
-export const TxtWrap = tw.section`
-  flex
-  items-center
-  flex-col
-  mb-20
-  w-full
-  mt-36
-`;
-
-export const BgTxt = tw.p`
-  text-[10rem]
-  font-black
-  text-white
-  absolute
-  z-[-1]
-  top-0
-  left-2/4
-  w-full
-  translate-y-[-70%]
-  translate-x-[-50%]
-`;
-
-export const MainTit = tw.h2`
-  text-5xl
-  font-black
-  text-black
-  font-normal
-  mb-6
-  relative
-  z-10
-  w-full
-  text-center
-`;
-
-export const StTxt = tw.strong`
-  font-black
-`;
-
-export const SubTxt = tw.p`
-  font-normal
-  text-xl
-`;
-
-const SocialList = tw.div`
-  flex
-  gap-5
-  w-full
-`;
-
-const SocialLink = tw.a`
-  font-medium
-  relative
-  after:content-['']
-  after:w-full
-  after:h-1
-  after:bg-black
-  after:block
-`;
+import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt } from './Front.styled';
 
 function Front() {
   return (
     <MainComponent>
       <SocialList>
-        <SocialLink href="">Velog</SocialLink>
-        <SocialLink href="">Github</SocialLink>
+        <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>Velog</SocialLink>
+        <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>Github</SocialLink>
       </SocialList>
       <TxtWrap>
         <MainTit>
@@ -88,6 +17,10 @@ function Front() {
         <SubTxt>포기하지 않고 책임감있게 일하는 개발자입니다.</SubTxt>
       </TxtWrap>
       <img src={myImg} alt="최지은 인물 사진" />
+      <InfoTxt>
+        <p>crg1050@gmail.com</p>
+        <span>update. 23. 08. 31</span>
+      </InfoTxt>
     </MainComponent>
   )
 }
