@@ -1,6 +1,10 @@
 import tw from 'tailwind-styled-components';
 import ProjectCard from '../../../components/Cards/ProjectCard';
 
+type ProjectProps = {
+  id: string;
+}
+
 export const ProjectComponent = tw.article`
   grid
   grid-cols-4
@@ -13,15 +17,15 @@ export const ProjectComponent = tw.article`
   max-2xl:grid-cols-4
 `;
 
-function Project() {
+function Project({ id }: ProjectProps) {
   return (
-    <ProjectComponent>
-      <ProjectCard/>
-      <ProjectCard/>
-      <ProjectCard/>
-      <ProjectCard/>
-      <ProjectCard/>
-      <ProjectCard/>
+    <ProjectComponent id={id}>
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </ProjectComponent>
   );
 }

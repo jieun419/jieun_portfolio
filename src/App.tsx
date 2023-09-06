@@ -19,7 +19,7 @@ export const RightWrap = tw.article`
   flex
   flex-col
   flex-2
-  gap-20
+  gap-60
 `
 
 export default function App() {
@@ -30,8 +30,8 @@ export default function App() {
       <Container>
         <Nav />
         <RightWrap>
-          <Project />
-          <Record />
+          <Project id='project'/>
+          <Record id='record' />
         </RightWrap>
       </Container>
     </>
