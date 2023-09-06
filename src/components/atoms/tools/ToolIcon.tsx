@@ -9,7 +9,7 @@ export const IconBox = tw.div`
   bg-[#0C0C0C]
   w-full
   h-0
-  pb-[100%]
+  pb-[3.125rem]
   flex
   flex-1
   items-center
