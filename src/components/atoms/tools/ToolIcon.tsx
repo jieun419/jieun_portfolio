@@ -1,17 +1,17 @@
 import tw from 'tailwind-styled-components';
 
-type IconT = {
-  stack: string;
+type StackIconProps = {
+  stack?: string;
+  width?: string;
 };
 
-export const IconBox = tw.div`
+export const IconBox = tw.div<StackIconProps>`
   relative
   bg-[#0C0C0C]
-  w-full
+  ${(props) => props.width}
   h-0
-  pb-[100%]
+  pb-[3.125rem]
   flex
-  flex-1
   items-center
   justify-center
   rounded-2xl
@@ -19,16 +19,17 @@ export const IconBox = tw.div`
 
 export const Img = tw.img`
   absolute
-  w-2/1
+  w-2/4
+  h-1/2
   inset-2/4
   translate-y-[-50%]
   translate-x-[-50%]
 `;
 
-function StackIcon({ stack }: IconT) {
+function StackIcon({ stack, width }: StackIconProps) {
   const SRC_NAME = 'src/assets/icons/icon_';
   return (
-    <IconBox>
+    <IconBox width={width}>
       <Img src={`${SRC_NAME}${stack}.svg`} alt={`${stack}`} />
     </IconBox>
   )

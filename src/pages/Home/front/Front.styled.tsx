@@ -1,17 +1,22 @@
 import tw from 'tailwind-styled-components';
 
 export const MainComponent = tw.main`
+  sticky
+  top-0
+  z-[-1]
+  h-screen
   flex
   items-center
   flex-col
-  bg-[#EFEFF1]
-  h-auto
+  bg-[#EFEFF1]  
   justify-between
   px-10
   pt-10
 `;
 
 export const TxtWrap = tw.section`
+  absolute
+  top-12
   flex
   items-center
   flex-col
@@ -79,4 +84,10 @@ export const InfoTxt = tw.div`
   absolute
   left-10
   bottom-10
+`;
+
+export const Img = tw.img`
+  absolute
+  bottom-0
+  h-[calc(100vh-40vh)]
 `;

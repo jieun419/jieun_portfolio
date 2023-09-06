@@ -70,6 +70,7 @@ export const Button = tw.button`
   border-[1px]
   border-solid
   border-white
+  text-white
   rounded
   transition
   hover:bg-[#232323]
