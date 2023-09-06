@@ -1,5 +1,5 @@
 import myImg from '../../../assets/images/jieun_img.webp';
-import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt } from './Front.styled';
+import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img } from './Front.styled';
 
 function Front() {
   return (
@@ -16,7 +16,7 @@ function Front() {
         <SubTxt>사용자를 생각하는 역지사지 마인드,</SubTxt>
         <SubTxt>포기하지 않고 책임감있게 일하는 개발자입니다.</SubTxt>
       </TxtWrap>
-      <img src={myImg} alt="최지은 인물 사진" />
+      <Img src={myImg} alt="최지은 인물 사진" />
       <InfoTxt>
         <p>crg1050@gmail.com</p>
         <span>update. 23. 08. 31</span>

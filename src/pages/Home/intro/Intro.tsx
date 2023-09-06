@@ -78,7 +78,7 @@ export const StackBox = tw.div`
 export const StackIcons = tw.div`
   grid
   grid-cols-4
-  gap-2
+  gap-1
   w-full
 `;
 
@@ -112,7 +112,7 @@ function Intro() {
                     <SubTit>{key}</SubTit>
                     <StackIcons>
                       {stacks.map((stack) => (
-                        <StackIcon key={idx} stack={stack} />
+                        <StackIcon key={idx} stack={stack} width={`w-[calc(100%-5%)]`} />
                       ))}
                     </StackIcons>
                   </StackBox>
