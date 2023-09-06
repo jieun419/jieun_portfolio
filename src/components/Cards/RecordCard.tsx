@@ -6,9 +6,9 @@ export const CardContainer = tw.section`
   flex
   flex-col
   rounded
+  h-[30rem]
   bg-[#373737]
-  relative
-  
+  relative  
   justify-between
   group
 `;
@@ -26,9 +26,23 @@ export const Tit = tw.h4`
   text-2xl
 `;
 
-export const Txt = tw.p`
+export const RecordUl = tw.ul`
   text-base
   text-[#A6A6A6]
+`;
+
+export const RecordList = tw.li`
+  pl-2.5
+  relative
+
+  before:absolute
+  before:w-1
+  before:h-1
+  before:bg-[#A6A6A6]
+  before:block
+  before:rounded-full
+  before:left-0
+  before:top-[0.625rem]
 `;
 
 export const Tags = tw.div`
@@ -37,28 +51,31 @@ export const Tags = tw.div`
   gap-1
 `;
 
+export const Date = tw.span`
+  text-[#A6A6A6]
+  text-sm
+`;
+
 function RecordCard() {
   return (
     <CardContainer>
       <TxtWrap>
-        <span>2023.03 - 2023.08</span>
+        <Date>2023.03 - 2023.08</Date>
         <Tit>코드스테이츠 프론트엔드 과정 수료</Tit>
-        <Txt>
-          <ul>
-            <li>JavaScript, React 학습</li>
-            <li>20주 동안 매일 강도 높은 과제 수행 및
-              페어 프로그래밍과 코드 리뷰 경험</li>
-            <li>솔로 프로젝트 1회, 협업 프로젝트 2회 진행</li>
-            <li>스터디에 참여하여 개발 공부를 진행하고
-              동료들과 원활한 소통과 커뮤니케이션을 촉진</li>
-          </ul>
-        </Txt>
+        <RecordUl>
+          <RecordList>JavaScript, React 학습</RecordList>
+          <RecordList>20주 동안 매일 강도 높은 과제 수행 및
+            페어 프로그래밍과 코드 리뷰 경험</RecordList>
+          <RecordList>솔로 프로젝트 1회, 협업 프로젝트 2회 진행</RecordList>
+          <RecordList>스터디에 참여하여 개발 공부를 진행하고
+            동료들과 원활한 소통과 커뮤니케이션을 촉진</RecordList>
+        </RecordUl>
       </TxtWrap>
       <Tags>
-        <StackIcon stack={'html'} />
-        <StackIcon stack={'css'} />
-        <StackIcon stack={'ps'} />
-        <StackIcon stack={'ai'} />
+        <StackIcon stack={'html'} width={`w-[50px]`}/>
+        <StackIcon stack={'css'} width={`w-[50px]`}/>
+        <StackIcon stack={'ps'} width={`w-[50px]`}/>
+        <StackIcon stack={'ai'} width={`w-[50px]`}/>
       </Tags>
     </CardContainer>
   );
