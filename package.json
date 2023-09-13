@@ -12,9 +12,11 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
     "styled-components": "^6.0.7",
     "styled-reset": "^4.5.1"
   },

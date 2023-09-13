@@ -1,5 +1,8 @@
 import tw from 'tailwind-styled-components';
+import { useSelector } from 'react-redux';
 import ProjectCard from '../../../components/Cards/ProjectCard';
+import ProjectDetail from '../../detail/ProjectDetail';
+import { RootState } from '../../../store';
 
 type ProjectProps = {
   id: string;
@@ -18,8 +21,14 @@ export const ProjectComponent = tw.article`
 `;
 
 function Project({ id }: ProjectProps) {
+
+  const isModal = useSelector((state: RootState) => state.overlay.isOpen)
+
   return (
     <ProjectComponent id={id}>
+      {isModal
+        ? <ProjectDetail />
+        : null}
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />
