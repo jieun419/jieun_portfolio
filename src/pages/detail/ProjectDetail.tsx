@@ -96,9 +96,7 @@ function ProjectDetail() {
             <DateTxt>2023.07 - 2023.08</DateTxt>
             <DateTxt>6인 (프론트엔드 3명, 백엔드 3명)</DateTxt>
           </ProjectDate>
-          <div>
-            <ProjectScreen projectName={'haru'} />
-          </div>
+          <ProjectScreen projectName={'haru'} />
         </DetailTop>
       </DetailWrap>
     </DetailContainer>

@@ -19,7 +19,7 @@ export const Img = tw.img`
   rounded-[2.125rem]
 `;
 
-function ProjectScreen({projectName}:ThumbnailT) {
+function ProjectScreen({ projectName }: ThumbnailT) {
   const SRC_NAME = 'src/assets/images/thumbnail_';
   return (
     <ScreenContainer>
