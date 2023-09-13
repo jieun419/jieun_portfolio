@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import ProjectCard from '../../../components/Cards/ProjectCard';
+import ProjectDetail from '../../detail/ProjectDetail';
 
 type ProjectProps = {
   id: string;
@@ -20,6 +21,7 @@ export const ProjectComponent = tw.article`
 function Project({ id }: ProjectProps) {
   return (
     <ProjectComponent id={id}>
+      <ProjectDetail />
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />
