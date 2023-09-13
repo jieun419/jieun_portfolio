@@ -1,7 +1,9 @@
-
+import { useState } from 'react';
 import tw from 'tailwind-styled-components';
+
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
+import ToggleBox from '../../components/toggle/ToggleBox';
 
 export const DetailContainer = tw.article`
   fixed
@@ -26,7 +28,6 @@ export const DetailWrap = tw.section`
   relative
   w-full
   max-w-[93.75rem]
-  h-screen
   bg-white
 `;
 
@@ -81,11 +82,56 @@ export const Tags = tw.div`
   gap-1
 `;
 
+export const DetailBody = tw.section`
+  px-[20%]
+  pb-10
+  flex
+  flex-col
+  gap-10
+  text-base
+`;
+
+export const ProjectInfoTxt = tw.p`
+  text-center
+  border-solid
+  border-[#dcdcdc]
+  pb-10
+  border-b-[1px]
+`;
+
+export const PWrap = tw.div`
+  
+`;
+
+export const PTitle = tw.h3`
+  text-2xl
+  font-bold
+  mt-2
+  mb-4
+`;
+
+export const PText = tw.p`
+  text-base
+`;
+
+export const Toggles = tw.div`
+  flex
+  flex-col
+  gap-1
+`;
+
 function ProjectDetail() {
+  const [isToggle, setIsToggle] = useState<boolean>(false)
+
+  const toggleBtn = () => {
+    setIsToggle((prev) => !prev)
+  };
+
   return (
     <DetailContainer>
       <DropShadow />
       <DetailWrap>
+
         <DetailTop>
           <Tags>
             <TagIcon tag={'팀 프로젝트'} />
@@ -98,6 +144,37 @@ function ProjectDetail() {
           </ProjectDate>
           <ProjectScreen projectName={'haru'} />
         </DetailTop>
+
+        <DetailBody>
+          <ProjectInfoTxt>
+            당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다
+
+            하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다.
+            친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다.
+
+            일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다.
+            저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.
+          </ProjectInfoTxt>
+
+          <PWrap>
+            <PTitle>사용 기술</PTitle>
+            <Toggles>
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+            </Toggles>
+          </PWrap>
+          <PWrap>
+            <PTitle>작업 기여도</PTitle>
+            <Toggles>
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
+            </Toggles>
+          </PWrap>
+
+
+        </DetailBody>
       </DetailWrap>
     </DetailContainer>
   )
