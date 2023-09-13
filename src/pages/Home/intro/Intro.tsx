@@ -112,7 +112,7 @@ function Intro() {
                     <SubTit>{key}</SubTit>
                     <StackIcons>
                       {stacks.map((stack) => (
-                        <StackIcon key={idx} stack={stack} width={`w-[calc(100%-5%)]`} />
+                        <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
                       ))}
                     </StackIcons>
                   </StackBox>
