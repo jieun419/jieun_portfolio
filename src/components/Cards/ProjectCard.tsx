@@ -1,8 +1,7 @@
 import tw from 'tailwind-styled-components';
 import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store';
+import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
 
 export const CardContainer = tw.section`
