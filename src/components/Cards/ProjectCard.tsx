@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import TagIcon from '../atoms/tag/tag';
+import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
 
 export const CardContainer = tw.section`
