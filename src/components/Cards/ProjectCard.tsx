@@ -1,6 +1,9 @@
 import tw from 'tailwind-styled-components';
 import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store';
+import { overlayActions } from '../../store/overlay-slice';
 
 export const CardContainer = tw.section`
   overflow-hidden
@@ -73,16 +76,23 @@ export const Button = tw.button`
   text-white
   rounded
   transition
-  hover:bg-[#232323]
+  hover:bg-white
+  hover:text-[#232323]
 `;
 
 function ProjectCard() {
+  const dispatch = useDispatch();
+
+  const toggleModal = () => {
+    dispatch(overlayActions.toggleOverlay());
+  };
+
   return (
     <CardContainer>
       <HoverBox>
         <Tit>HARUMATE (하루메이트)</Tit>
         <BtnBox>
-          <Button>자세히 보기</Button>
+          <Button onClick={toggleModal}>자세히 보기</Button>
           <Button>Github 바로가기</Button>
         </BtnBox>
       </HoverBox>

@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import tw from 'tailwind-styled-components';
+import { useDispatch } from 'react-redux';
 
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
 import ToggleBox from '../../components/toggle/ToggleBox';
+import CloseBtn from '../../components/atoms/button/CloseBtn';
+import LinkBtn from '../../components/atoms/button/LinkBtn';
+import { overlayActions } from '../../store/overlay-slice';
 
 export const DetailContainer = tw.article`
   fixed
@@ -120,8 +124,23 @@ export const Toggles = tw.div`
   gap-1
 `;
 
+export const Btns = tw.div`
+  fixed
+  right-10
+  flex
+  flex-col
+  items-center
+  gap-5
+`;
+
 function ProjectDetail() {
   const [isToggle, setIsToggle] = useState<boolean>(false)
+
+  const dispatch = useDispatch();
+
+  const toggleModal = () => {
+    dispatch(overlayActions.toggleOverlay());
+  };
 
   const toggleBtn = () => {
     setIsToggle((prev) => !prev)
@@ -129,9 +148,15 @@ function ProjectDetail() {
 
   return (
     <DetailContainer>
+      <Btns>
+        <CloseBtn toggleModal={toggleModal} />
+        <LinkBtn link='github_bk' text='github' />
+        <LinkBtn link='link' text='배포 링크' />
+        <LinkBtn link='blog' text='회고 블로그' />
+        <LinkBtn link='review' text='팀원 리뷰' />
+      </Btns>
       <DropShadow />
       <DetailWrap>
-
         <DetailTop>
           <Tags>
             <TagIcon tag={'팀 프로젝트'} />
