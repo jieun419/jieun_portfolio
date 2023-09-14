@@ -7,13 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        mainColorBlack: '#232323',
-        mainColorGray: '#EFEFF1',
-        darkGray: '#0C0C0C',
-        lightGray: '#373737',
-        superLightGray: '#F1F2F5',
-        white: '#fff',
-        black: '#000',
+        'main-color-black': '#232323',
+        'main-color-gray': '#EFEFF1',
+        'dark-gray': '#0C0C0C',
+        'light-gray': '#373737',
+        'super-light-gray': '#F1F2F5',
+        'white': '#fff',
+        'black': '#000',
+      },
+      keyframes: {
+        'right-modal-up': {
+          '0%': { right: '70px', opacity: '0' },
+          '100%': { right: '75px', opacity: '100' },
+        },
+        animation: {
+          'right-modal-up': 'right-modal-up 0.5s'
+        },
+      },
+      border: {
+        'border-t': 'solid transparent',
+        'border-white': 'solid #fff'
       }
     },
   },
