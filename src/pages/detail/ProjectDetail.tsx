@@ -156,7 +156,7 @@ function ProjectDetail() {
 
   return (
     <DetailContainer>
-      <DropShadow />
+      <DropShadow onClick={toggleModal}/>
       <DetailWrap>
         <Btns>
           <CloseBtn toggleModal={toggleModal} />
@@ -197,7 +197,7 @@ function ProjectDetail() {
               <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
             </Toggles>
           </PWrap>
-          
+
           <PWrap>
             <PTitle>작업 기여도</PTitle>
             <Toggles>
