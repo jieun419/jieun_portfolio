@@ -82,8 +82,13 @@ export const Button = tw.button`
 function ProjectCard() {
   const dispatch = useDispatch();
 
+  const lockScroll = () => {
+    document.body.style.overflow = 'hidden';
+  };
+
   const toggleModal = () => {
     dispatch(overlayActions.toggleOverlay());
+    lockScroll();
   };
 
   return (
