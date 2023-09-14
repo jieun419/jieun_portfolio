@@ -15,7 +15,7 @@ export const DetailContainer = tw.article`
   inset-y-0
   z-10
   py-10
-  px-32
+  px-40
   overflow-y-auto
 `;
 
@@ -31,7 +31,8 @@ export const DropShadow = tw.div`
 export const DetailWrap = tw.section`
   relative
   w-full
-  max-w-[93.75rem]
+  
+  mx-auto
   bg-white
 `;
 
@@ -126,11 +127,13 @@ export const Toggles = tw.div`
 
 export const Btns = tw.div`
   fixed
-  right-10
+  top-10
+  right-[3rem]
   flex
   flex-col
   items-center
   gap-5
+  z-10
 `;
 
 function ProjectDetail() {
@@ -138,8 +141,13 @@ function ProjectDetail() {
 
   const dispatch = useDispatch();
 
+  const openScroll = () => {
+    document.body.style.removeProperty('overflow');
+  };
+
   const toggleModal = () => {
     dispatch(overlayActions.toggleOverlay());
+    openScroll();
   };
 
   const toggleBtn = () => {
@@ -148,15 +156,15 @@ function ProjectDetail() {
 
   return (
     <DetailContainer>
-      <Btns>
-        <CloseBtn toggleModal={toggleModal} />
-        <LinkBtn link='github_bk' text='github' />
-        <LinkBtn link='link' text='배포 링크' />
-        <LinkBtn link='blog' text='회고 블로그' />
-        <LinkBtn link='review' text='팀원 리뷰' />
-      </Btns>
       <DropShadow />
       <DetailWrap>
+        <Btns>
+          <CloseBtn toggleModal={toggleModal} />
+          <LinkBtn link='github_bk' text='github' />
+          <LinkBtn link='link' text='배포 링크' />
+          <LinkBtn link='blog' text='회고 블로그' />
+          <LinkBtn link='review' text='팀원 리뷰' />
+        </Btns>
         <DetailTop>
           <Tags>
             <TagIcon tag={'팀 프로젝트'} />
@@ -189,6 +197,7 @@ function ProjectDetail() {
               <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
             </Toggles>
           </PWrap>
+          
           <PWrap>
             <PTitle>작업 기여도</PTitle>
             <Toggles>

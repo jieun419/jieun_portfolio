@@ -1,11 +1,15 @@
 import tw from 'tailwind-styled-components';
+import HoverModal from '../../modal/HoverModal';
 
-export const CloseButton = tw.button`
+export const LinkButton = tw.button`
   flex
   flex-col
   items-center
   justify-center
   gap-1
+  px-3
+  w-full
+  group
 `;
 
 export const IconCircle = tw.i`
@@ -20,19 +24,20 @@ export const IconCircle = tw.i`
 
 export const Text = tw.span`
   text-white
-  text-sm
+  text-xs
   font-medium
 `;
 
 function LinkBtn({ link, text }: { link: string, text: string }) {
   const ICON_URL = 'src/assets/icons/icon_';
   return (
-    <CloseButton>
+    <LinkButton>
       <IconCircle>
         <img src={`${ICON_URL}${link}.svg`} alt={link} />
       </IconCircle>
       <Text>{text}</Text>
-    </CloseButton>
+      <HoverModal />
+    </LinkButton>
   )
 }
 
