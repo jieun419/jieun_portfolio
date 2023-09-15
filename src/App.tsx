@@ -22,6 +22,7 @@ export const RightWrap = tw.article`
   flex-col
   flex-2
   gap-60
+  pb-20
 `
 
 export default function App() {
