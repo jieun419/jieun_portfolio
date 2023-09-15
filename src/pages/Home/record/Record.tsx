@@ -1,9 +1,6 @@
 import tw from 'tailwind-styled-components';
 import RecordCard from '../../../components/Cards/RecordCard';
-
-type RecordProps = {
-  id: string;
-}
+import { TabsPropsT } from '../../../types/type';
 
 export const RecordComponent = tw.article`
   grid
@@ -17,9 +14,9 @@ export const RecordComponent = tw.article`
   max-2xl:grid-cols-4
 `;
 
-function Record({ id }: RecordProps) {
+function Record({ id, navTabs }: TabsPropsT) {
   return (
-    <RecordComponent id={id}>
+    <RecordComponent id={id} ref={navTabs[1].targetRef}>
       <RecordCard />
       <RecordCard />
       <RecordCard />

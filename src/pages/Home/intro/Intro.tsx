@@ -5,6 +5,7 @@ import { MindData, StackData } from '../../../data/introData';
 import tw from 'tailwind-styled-components';
 
 export const IntroComponent = tw.main`
+  relative
   flex
   items-center
   flex-col
@@ -14,6 +15,7 @@ export const IntroComponent = tw.main`
   px-10
   pt-10
   h-screen
+  z-1
 `;
 
 export const Content = tw.section`

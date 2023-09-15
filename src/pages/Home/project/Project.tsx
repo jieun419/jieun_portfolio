@@ -3,16 +3,14 @@ import { useSelector } from 'react-redux';
 import ProjectCard from '../../../components/Cards/ProjectCard';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
-
-type ProjectProps = {
-  id: string;
-}
+import { TabsPropsT } from '../../../types/type';
 
 export const ProjectComponent = tw.article`
   grid
   grid-cols-4
   grid-row-3
   gap-4
+  pt-[3rem]
   h-auto
   max-md:grid-cols-1
   max-lg:grid-cols-2
@@ -20,12 +18,11 @@ export const ProjectComponent = tw.article`
   max-2xl:grid-cols-4
 `;
 
-function Project({ id }: ProjectProps) {
+function Project({ id, navTabs }: TabsPropsT) {
 
   const isModal = useSelector((state: RootState) => state.overlay.isOpen)
-
   return (
-    <ProjectComponent id={id}>
+    <ProjectComponent id={id} ref={navTabs[0].targetRef} >
       {isModal
         ? <ProjectDetail />
         : null}

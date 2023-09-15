@@ -5,6 +5,8 @@ import Front from './pages/Home/front/Front';
 import Intro from './pages/Home/intro/Intro';
 import Project from './pages/Home/project/Project';
 import Record from './pages/Home/record/Record';
+import GoTopBtn from './components/atoms/button/GotoTopBtn';
+import useScrollToTarget from './hooks/useScrollToTarget';
 
 export const Container = tw.main`
   relative
@@ -23,15 +25,22 @@ export const RightWrap = tw.article`
 `
 
 export default function App() {
+
+  const navTabs = [
+    useScrollToTarget('Project'),
+    useScrollToTarget('Record'),
+  ]
+
   return (
     <>
+      <GoTopBtn />
       <Front />
       <Intro />
       <Container>
-        <Nav />
+        <Nav navTabs={navTabs} />
         <RightWrap>
-          <Project id='project'/>
-          <Record id='record' />
+          <Project id='Project' navTabs={navTabs} />
+          <Record id='Record' navTabs={navTabs}/>
         </RightWrap>
       </Container>
     </>

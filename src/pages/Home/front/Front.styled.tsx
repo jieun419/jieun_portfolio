@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components';
 export const MainComponent = tw.main`
   sticky
   top-0
-  z-[-1]
+  z-[0]
   h-screen
   flex
   items-center

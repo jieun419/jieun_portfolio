@@ -1,4 +1,5 @@
 import tw from 'tailwind-styled-components';
+import { TabsPropsT } from '../../types/type';
 
 export const NavContainer = tw.nav`
   sticky
@@ -11,20 +12,27 @@ export const NavContainer = tw.nav`
   h-screen
 `;
 
-export const NavLink = tw.a`
+export const NavLink = tw.button`
   text-[#373737]
   font-black
   text-6xl
   transition
-  hover:text-[#EFEFF1]
 `;
 
-function Nav() {
-  return (
+function Nav({ navTabs }: TabsPropsT) {
+  return (    
     <NavContainer>
-      <NavLink href="#project" title="">Project</NavLink>
-      <NavLink href="#record" title="">Record</NavLink>
-      <NavLink href="" title="">Study</NavLink>
+      {
+        navTabs.map((tab, idx) => (
+          <NavLink
+            key={idx}
+            onClick={tab.scrollToTarget}
+            className={tab.isTarget ? 'text-[#EFEFF1]' : 'text-[#373737] hover:text-[#4a4a4a]'}
+          >
+            {tab.targetName}
+          </NavLink>
+        ))
+      }
     </NavContainer>
   );
 }
