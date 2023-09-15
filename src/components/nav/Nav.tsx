@@ -17,24 +17,22 @@ export const NavLink = tw.button`
   font-black
   text-6xl
   transition
-  hover:text-[#EFEFF1]
 `;
 
 function Nav({ navTabs }: TabsPropsT) {
-  console.log(navTabs)
-  return (
+  return (    
     <NavContainer>
       {
         navTabs.map((tab, idx) => (
-          <NavLink key={idx} onClick={tab.scrollToTarget} className={tab.isTarget ? 'text-[#EFEFF1]' : 'text-[#373737]'}>
+          <NavLink
+            key={idx}
+            onClick={tab.scrollToTarget}
+            className={tab.isTarget ? 'text-[#EFEFF1]' : 'text-[#373737] hover:text-[#4a4a4a]'}
+          >
             {tab.targetName}
           </NavLink>
         ))
       }
-
-      {/* <NavLink onClick={scrollToTarget} className={isTarget ? 'text-[#EFEFF1]' : 'text-[#373737]'}>Project</NavLink>
-      <NavLink onClick={scrollToTarget} className={isTarget ? 'text-[#EFEFF1]' : 'text-[#373737]'}>Record</NavLink>
-      <NavLink>Study</NavLink> */}
     </NavContainer>
   );
 }
