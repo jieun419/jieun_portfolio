@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 import HoverModal from '../../modal/HoverModal';
 
-export const LinkButton = tw.button`
+export const LinkButton = tw.a`
   flex
   flex-col
   items-center
@@ -28,12 +28,19 @@ export const Text = tw.span`
   font-medium
 `;
 
-function LinkBtn({ link, text }: { link: string, text: string }) {
+type LinkProps = {
+  name: string;
+  text: string;
+  link?: string | undefined;
+}
+
+
+function LinkBtn({ name, text, link }: LinkProps) {
   const ICON_URL = 'src/assets/icons/icon_';
   return (
-    <LinkButton>
+    <LinkButton href={link} title='바로가기'>
       <IconCircle>
-        <img src={`${ICON_URL}${link}.svg`} alt={link} />
+        <img src={`${ICON_URL}${name}.svg`} alt={name} />
       </IconCircle>
       <Text>{text}</Text>
       <HoverModal />

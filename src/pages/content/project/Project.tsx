@@ -5,7 +5,7 @@ import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
 import { projectData } from '../../../data/content/projectData';
-import { ProjectDataT } from '../../../types/type';
+import { projectDetailData } from '../../../data/content/projectDetailData';
 
 export const ProjectComponent = tw.article`
   grid
@@ -22,17 +22,35 @@ export const ProjectComponent = tw.article`
 
 function Project({ id, navTabs }: TabsPropsT) {
 
-  const isModal = useSelector((state: RootState) => state.overlay.isOpen)
+  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
 
   return (
     <ProjectComponent id={id} ref={navTabs[0].targetRef} >
-      {isModal
-        ? <ProjectDetail />
-        : null
-      }
-      {projectData.map(( item: ProjectDataT, idx: number) => (
+
+      {isModal ? (
+        projectDetailData.map((item, idx) => (
+          <ProjectDetail
+            key={idx}
+            name={item.name}
+            pointcolor={item.pointcolor}
+            title={item.title}
+            subtext={item.subtext}
+            data={item.data}
+            team={item.team}
+            tag={item.tag}
+            imgurl={item.imgurl}
+            giturl={item.giturl}
+            depoloyurl={item.depoloyurl}
+            blogurl={item.blogurl}
+            tools={item.tools}
+            parts={item.parts}
+          />
+        ))
+      ) : null}
+      {projectData.map((item, idx) => (
         <ProjectCard
           key={idx}
+          name={item.name}
           title={item.title}
           subtext={item.subtext}
           tag={item.tag}

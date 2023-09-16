@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 type ThumbnailT = {
-  projectName: string;
+  imgurl: string;
 };
 
 export const ScreenContainer = tw.div`
@@ -19,11 +19,10 @@ export const Img = tw.img`
   rounded-[2.125rem]
 `;
 
-function ProjectScreen({ projectName }: ThumbnailT) {
-  const SRC_NAME = 'src/assets/images/thumbnail_';
+function ProjectScreen({ imgurl }: ThumbnailT) {
   return (
     <ScreenContainer>
-      <Img src={`${SRC_NAME}${projectName}.webp`} alt={projectName} />
+      <Img src={imgurl} alt='projectScreen' />
     </ScreenContainer>
   );
 }

@@ -95,25 +95,25 @@ export const Button = tw.button`
   hover:text-[#232323]
 `;
 
-function ProjectCard({ title, subtext, tag, imgurl }: ProjectDataT) {
+function ProjectCard({ title, subtext, tag, imgurl, name }: ProjectDataT) {
   const dispatch = useDispatch();
 
   const lockScroll = () => {
     document.body.style.overflow = 'hidden';
   };
 
-  const toggleModal = () => {
+  const toggleModal = (name: string) => {
     dispatch(overlayActions.toggleOverlay());
+    dispatch(overlayActions.targetName(name));
     lockScroll();
   };
 
   return (
     <CardContainer>
-
       <HoverBox>
         <Tit>{title}</Tit>
         <BtnBox>
-          <Button onClick={toggleModal}>자세히 보기</Button>
+          <Button onClick={() => toggleModal(name)}>자세히 보기</Button>
           <Button>Github 바로가기</Button>
         </BtnBox>
       </HoverBox>
@@ -121,6 +121,7 @@ function ProjectCard({ title, subtext, tag, imgurl }: ProjectDataT) {
       <CardThumbnail>
         <ThumbnailImg url={imgurl} />
       </CardThumbnail>
+
       <TxtWrap>
         <Tit>{title}</Tit>
         <Txt>{subtext}</Txt>
