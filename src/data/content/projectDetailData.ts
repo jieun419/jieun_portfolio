@@ -8,7 +8,7 @@ export const projectDetailData = [
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
     tag: ['솔로', '반응형', '포트폴리오'],
-    imgurl: 'src/assets/images/thumbnail_protfolio.webp',
+    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_protfolio.webp',
     giturl: 'https://github.com/jieun419/jieun_portfolio',
     depoloyurl: 'https://jieun-portfolio.vercel.app/',
     blogurl: [{ title: '', url: '' }],
@@ -76,7 +76,7 @@ export const projectDetailData = [
     data: '2023.07 - 2023.08',
     team: '6인 (프론트엔드 3명, 백엔드 3명)',
     tag: ['팀', '반응형'],
-    imgurl: 'src/assets/images/thumbnail_haru.webp',
+    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_haru.webp',
     giturl: 'https://github.com/codestates-seb/seb44_main_006',
     depoloyurl: 'https://harumate.netlify.app/',
     blogurl: [
@@ -149,7 +149,7 @@ export const projectDetailData = [
     data: '2023.07 - 2023.08',
     team: '6인 (프론트엔드 3명, 백엔드 3명)',
     tag: ['팀', '반응형', '클론코딩'],
-    imgurl: 'src/assets/images/thumbnail_stack.webp',
+    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_stack.webp',
     giturl: 'https://github.com/codestates-seb/seb44_pre_015',
     depoloyurl: 'https://mz-developer-15.netlify.app/',
     blogurl: [
@@ -222,7 +222,7 @@ export const projectDetailData = [
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
     tag: ['팀', '반응형', '클론코딩'],
-    imgurl: 'src/assets/images/thumbnail_cozshopping.webp',
+    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_cozshopping.webp',
     giturl: 'https://github.com/jieun419/fe-sprint-coz-shopping',
     depoloyurl: '',
     blogurl: [
