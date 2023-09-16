@@ -1,7 +1,7 @@
 export const projectDetailData = [
   {
     name: 'portfolio',
-    pointcolor: 'before:bg-[#e1e1e1]',
+    pointcolor: 'before:bg-[#373737]',
     title: '지은 포트폴리오',
     subtext:
       '당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다 하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다. 친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다. 일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다. 저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.',
@@ -224,9 +224,26 @@ export const projectDetailData = [
     tag: ['팀', '반응형', '클론코딩'],
     imgurl: 'src/assets/images/thumbnail_cozshopping.webp',
     giturl: 'https://github.com/jieun419/fe-sprint-coz-shopping',
+    depoloyurl: '',
     blogurl: [
       {
-        title: '기능 구현',
+        title: '프로젝트 요구 분석 및 플래닝',
+        url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-1-프로젝트-요구-분석-및-플래닝',
+      },
+      {
+        title: '헤더, 푸터, 4개의 컴포넌트 작업..ing',
+        url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-2-헤더-푸터-4개의-컴포넌트-작업..ing',
+      },
+      {
+        title: '4개의 컴포넌트 작업..ing',
+        url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-3-4개의-컴포넌트-작업..ing',
+      },
+      {
+        title: '메인 화면, 북마크 기능 구현',
+        url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-4-메인-화면-북마크-기능-구현',
+      },
+      {
+        title: '상품 리스트, 북마크 리스트 구현',
         url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-5-상품-리스트-북마크-리스트-구현',
       },
     ],
