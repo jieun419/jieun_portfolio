@@ -1,4 +1,5 @@
 import tw from 'tailwind-styled-components';
+import { ICON_URL } from '../../../utils/constant/constant';
 
 type StackIconProps = {
   stack?: string;
@@ -27,10 +28,9 @@ export const Img = tw.img`
 `;
 
 function StackIcon({ stack, width }: StackIconProps) {
-  const SRC_NAME = 'src/assets/icons/icon_';
   return (
     <IconBox width={width}>
-      <Img src={`${SRC_NAME}${stack}.svg`} alt={`${stack}`} />
+      <Img src={`${ICON_URL}${stack}.svg`} alt={`${stack}`} />
     </IconBox>
   )
 }
