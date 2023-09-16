@@ -36,6 +36,9 @@ export const BgTxt = tw.p`
   w-full
   translate-y-[-70%]
   translate-x-[-50%]
+
+
+  max-md:text-[5rem]
 `;
 
 export const MainTit = tw.h2`
@@ -70,7 +73,8 @@ export const SocialLink = tw.a`
   gap-1
   items-center
   flex-col
-
+  z-20
+ 
   font-medium
   relative
   after:content-['']

@@ -14,6 +14,10 @@ export const CardContainer = tw.section`
   h-[25rem]
   justify-between
   group
+  transition-all
+  hover:shadow-black
+  hover:shadow-2xl
+  hover:translate-y-[-5px]
 `;
 
 export const CardThumbnail = tw.div`
@@ -55,10 +59,10 @@ export const HoverBox = tw.div`
   w-full
   h-full
   p-5
-  bg-[#373737]
+  bg-[#323232]
   opacity-0
   transition
-  group-hover:opacity-90
+  group-hover:opacity-100
 `;
 
 export const BtnBox = tw.div`

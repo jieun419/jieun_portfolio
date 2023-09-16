@@ -26,6 +26,15 @@ export const Content = tw.section`
   items-center
 `;
 
+export const SubJectTit = tw.h2`
+  absolute
+  top-10
+  left-10
+  text-[#EFEFF1]
+  font-black
+  text-6xl
+`;
+
 export const Tit = tw.h3`
   text-4xl
   font-black
@@ -34,6 +43,7 @@ export const Tit = tw.h3`
 export const SubTit = tw.h5`
   text-xl
   font-bold
+  pb-2
 `;
 
 export const LeftWrap = tw.div`
@@ -87,7 +97,7 @@ export const StackIcons = tw.div`
 function Intro() {
   return (
     <IntroComponent>
-      <h2>Intro</h2>
+      <SubJectTit>Intro</SubJectTit>
       <Content>
         <LeftWrap>
           <img src={myImgIm} alt="이모지 이미지" />
@@ -97,9 +107,9 @@ function Intro() {
             <Tit>Mind</Tit>
             <SubTit>{MindData.subtitle}</SubTit>
             <MyMindTxt>
-              서비스를 개발할 때, 사용자가 불편을 겪지 않도록 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br/>
-              스스로 개발을 잘했다 생각해도, 사용자가 이용에 불편을 가지고 있다면 UX를 제대로 고려하지 않았다고 볼 수 있습니다.<br/>
-              그래서 역지사지 마음가짐을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.<br/>
+              서비스를 개발할 때, 사용자가 불편을 겪지 않도록 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br />
+              스스로 개발을 잘했다 생각해도, 사용자가 이용에 불편을 가지고 있다면 UX를 제대로 고려하지 않았다고 볼 수 있습니다.<br />
+              그래서 역지사지 마음가짐을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.<br />
               또한 협업은 성공적인 프로젝트를 위해 중요한 요소라고 생각합니다. 팀원들과의 원활한 커뮤니케이션과 피드백을 통해 구체화 하고 지속적으로 개선하고 싶습니다.
             </MyMindTxt>
           </MyMind>
