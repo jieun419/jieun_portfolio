@@ -170,10 +170,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
-                <LinkBtn name='github_bk' link={giturl} text='github' />
-                <LinkBtn name='link' link={depoloyurl} text='배포 링크' />
-                <LinkBtn name='blog' link={''} text='회고 블로그' />
-                <LinkBtn name='review' link={''} text='팀원 리뷰' />
+                <LinkBtn name='github_bk' giturl={giturl} text='github' />
+                <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
+                <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                {/* <HoverLinkBtn name='review' link={''} text='팀원 리뷰' /> */}
               </Btns>
 
               <DetailTop pointcolor={pointcolor}>
