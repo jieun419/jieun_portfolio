@@ -1,7 +1,21 @@
 import tw from 'tailwind-styled-components';
 import HoverModal from '../../modal/HoverModal';
+import { ICON_URL } from '../../../utils/constant/constant';
 
-export const LinkButton = tw.button`
+type BlogT = {
+  title?: string;
+  url?: string;
+}
+
+type LinkProps = {
+  name: string;
+  text: string;
+  giturl?: string | undefined;
+  depoloyurl?: string | undefined;
+  blog?: BlogT[];
+}
+
+export const LinkButton = tw.a`
   flex
   flex-col
   items-center
@@ -28,17 +42,22 @@ export const Text = tw.span`
   font-medium
 `;
 
-function LinkBtn({ link, text }: { link: string, text: string }) {
-  const ICON_URL = 'src/assets/icons/icon_';
+function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
   return (
-    <LinkButton>
-      <IconCircle>
-        <img src={`${ICON_URL}${link}.svg`} alt={link} />
-      </IconCircle>
-      <Text>{text}</Text>
-      <HoverModal />
-    </LinkButton>
-  )
+    <>
+      {
+        depoloyurl === '' ? null : (
+          <LinkButton href={giturl ? giturl : depoloyurl}>
+            <IconCircle>
+              <img src={`${ICON_URL}${name}.svg`} alt={name} />
+            </IconCircle>
+            <Text>{text}</Text>
+            {blog && <HoverModal blog={blog} />}
+          </LinkButton>
+        )
+      }
+    </>
+  );
 }
 
 export default LinkBtn

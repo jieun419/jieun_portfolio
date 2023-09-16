@@ -1,0 +1,1 @@
+export const ICON_URL = 'src/assets/icons/icon_';

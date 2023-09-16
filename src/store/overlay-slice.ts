@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   isOpen: false,
+  targetName: '',
 };
 
 const overlaySlice = createSlice({
@@ -10,6 +11,9 @@ const overlaySlice = createSlice({
   reducers: {
     toggleOverlay(state) {
       state.isOpen = !state.isOpen;
+    },
+    targetName(state, actions) {
+      state.targetName = actions.payload;
     },
   },
 });

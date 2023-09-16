@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import tw from 'tailwind-styled-components';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
@@ -8,6 +8,12 @@ import ToggleBox from '../../components/toggle/ToggleBox';
 import CloseBtn from '../../components/atoms/button/CloseBtn';
 import LinkBtn from '../../components/atoms/button/LinkBtn';
 import { overlayActions } from '../../store/overlay-slice';
+import { projectDetailDataT } from '../../types/type';
+import { RootState } from '../../store';
+
+interface ColorProps {
+  pointcolor: string;
+}
 
 export const DetailContainer = tw.article`
   fixed
@@ -36,7 +42,7 @@ export const DetailWrap = tw.section`
   bg-white
 `;
 
-export const DetailTop = tw.section`
+export const DetailTop = tw.section<ColorProps>`
   relative
   flex
   flex-col
@@ -50,7 +56,7 @@ export const DetailTop = tw.section`
   before:left-0
   before:w-full
   before:h-[70%]
-  before:bg-[#77D1FD]
+  ${(props) => props.pointcolor ? props.pointcolor : 'before:bg-[#e1e1e1]'}
   before:z-[-1]
 
   after:block
@@ -136,10 +142,10 @@ export const Btns = tw.div`
   z-10
 `;
 
-function ProjectDetail() {
-  const [isToggle, setIsToggle] = useState<boolean>(false)
-
+function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: projectDetailDataT) {
   const dispatch = useDispatch();
+  const [isToggle, setIsToggle] = useState<boolean>(false);
+  const targetName = useSelector((state: RootState) => state.overlay.targetName);
 
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
@@ -155,62 +161,83 @@ function ProjectDetail() {
   };
 
   return (
-    <DetailContainer>
-      <DropShadow onClick={toggleModal}/>
-      <DetailWrap>
-        <Btns>
-          <CloseBtn toggleModal={toggleModal} />
-          <LinkBtn link='github_bk' text='github' />
-          <LinkBtn link='link' text='배포 링크' />
-          <LinkBtn link='blog' text='회고 블로그' />
-          <LinkBtn link='review' text='팀원 리뷰' />
-        </Btns>
-        <DetailTop>
-          <Tags>
-            <TagIcon tag={'팀 프로젝트'} />
-            <TagIcon tag={'반응형'} />
-          </Tags>
-          <ProjectTit>HARUMATE (하루메이트)</ProjectTit>
-          <ProjectDate>
-            <DateTxt>2023.07 - 2023.08</DateTxt>
-            <DateTxt>6인 (프론트엔드 3명, 백엔드 3명)</DateTxt>
-          </ProjectDate>
-          <ProjectScreen projectName={'haru'} />
-        </DetailTop>
+    <>
+      {
+        targetName === name ? (
+          <DetailContainer>
+            <DropShadow onClick={toggleModal} />
+            <DetailWrap>
 
-        <DetailBody>
-          <ProjectInfoTxt>
-            당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다
+              <Btns>
+                <CloseBtn toggleModal={toggleModal} />
+                <LinkBtn name='github_bk' giturl={giturl} text='github' />
+                <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
+                <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                {/* <HoverLinkBtn name='review' link={''} text='팀원 리뷰' /> */}
+              </Btns>
 
-            하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다.
-            친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다.
+              <DetailTop pointcolor={pointcolor}>
+                <Tags>
+                  {
+                    tag.map((tag, idx) => (
+                      <TagIcon key={idx} tag={tag} />
+                    ))
+                  }
+                </Tags>
+                <ProjectTit>{title}</ProjectTit>
+                <ProjectDate>
+                  <DateTxt>{data}</DateTxt>
+                  <DateTxt>{team}</DateTxt>
+                </ProjectDate>
+                <ProjectScreen imgurl={imgurl} />
+              </DetailTop>
 
-            일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다.
-            저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.
-          </ProjectInfoTxt>
+              <DetailBody>
+                <ProjectInfoTxt>
+                  {subtext}
+                </ProjectInfoTxt>
 
-          <PWrap>
-            <PTitle>사용 기술</PTitle>
-            <Toggles>
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-            </Toggles>
-          </PWrap>
+                <PWrap>
+                  <PTitle>사용 기술</PTitle>
+                  <Toggles>
+                    {
+                      tools.map((item, idx) => (
+                        <ToggleBox
+                          key={idx}
+                          title={item.title}
+                          detail={item.detail}
+                          toggleBtn={toggleBtn}
+                          isToggle={isToggle}
+                        />
+                      ))
+                    }
+                  </Toggles>
+                </PWrap>
 
-          <PWrap>
-            <PTitle>작업 기여도</PTitle>
-            <Toggles>
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-              <ToggleBox toggleBtn={toggleBtn} isToggle={isToggle} />
-            </Toggles>
-          </PWrap>
+                <PWrap>
+                  <PTitle>작업 기여도</PTitle>
+                  <Toggles>
+                    {
+                      parts.map((item, idx) => (
+                        <ToggleBox
+                          key={idx}
+                          title={item.title}
+                          detail={item.detail}
+                          toggleBtn={toggleBtn}
+                          isToggle={isToggle}
+                        />
+                      ))
+                    }
+                  </Toggles>
+                </PWrap>
 
 
-        </DetailBody>
-      </DetailWrap>
-    </DetailContainer>
+              </DetailBody>
+            </DetailWrap>
+          </DetailContainer>
+        ) : null
+      }
+    </>
   )
 }
 

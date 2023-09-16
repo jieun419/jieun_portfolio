@@ -44,6 +44,7 @@ export const GotoLink = tw.a`
   py-3
   px-3
   transition-all
+  cursor-pointer
 
   hover:bg-[#e1e1e1]
 `;
@@ -84,16 +85,34 @@ export const Arrow = tw.i`
   before:bg-black
 `;
 
-function HoverModal() {
+type LinkT = {
+  title?: string;
+  url?: string;
+}
+
+interface BlogProps {
+  blog?: LinkT[];
+}
+
+function HoverModal({ blog }: BlogProps) {
   return (
     <HoverModalBox>
       <LinkTit>회고 블로그</LinkTit>
       <LinkList>
-        <GotoLink href='' title='' target=''>
-          <img src={`src/assets/icons/icon_blog.svg`} alt='' />
-          커서 커스터마이징
-          <Arrow />
-        </GotoLink>
+        {
+          blog?.map((item, idx) => (
+            <GotoLink
+              key={idx}
+              href={item.url}
+              title='바로가기(새창)'
+              target='_blank'
+            >
+              <img src={`src/assets/icons/icon_blog.svg`} alt='' />
+              {item.title}
+              <Arrow />
+            </GotoLink>
+          ))
+        }
       </LinkList>
       <Traiangle />
     </HoverModalBox>
