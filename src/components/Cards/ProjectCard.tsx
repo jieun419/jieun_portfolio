@@ -3,31 +3,38 @@ import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
 import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
+import { ProjectDataT } from '../../types/type';
+
 
 export const CardContainer = tw.section`
   overflow-hidden
   flex
   flex-col
+  justify-start
+  gap-8
   rounded
   bg-[#373737]
   relative
   h-[25rem]
-  justify-between
   group
   transition-all
+  
   hover:shadow-black
   hover:shadow-2xl
   hover:translate-y-[-5px]
 `;
 
 export const CardThumbnail = tw.div`
-  
+  overflow-hidden
+  w-full
+  h-[45%]
 `;
 
 export const TxtWrap = tw.div`
-  p-5
+  px-5
   flex
   flex-col
+  justify-start
   gap-3
   text-[#fff]
 `;
@@ -43,25 +50,29 @@ export const Txt = tw.p`
 `;
 
 export const Tags = tw.div`
+  absolute
+  bottom-0
   p-5
   flex
   gap-1
 `;
 
 export const HoverBox = tw.div`
+  absolute
+  z-[3]
   flex
   flex-col
   items-center
   justify-center
   gap-10
   text-white
-  absolute
   w-full
   h-full
   p-5
   bg-[#323232]
   opacity-0
   transition
+
   group-hover:opacity-100
 `;
 
@@ -79,11 +90,12 @@ export const Button = tw.button`
   text-white
   rounded
   transition
+  
   hover:bg-white
   hover:text-[#232323]
 `;
 
-function ProjectCard() {
+function ProjectCard({ title, subtext, tag, imgurl }: ProjectDataT) {
   const dispatch = useDispatch();
 
   const lockScroll = () => {
@@ -97,23 +109,26 @@ function ProjectCard() {
 
   return (
     <CardContainer>
+
       <HoverBox>
-        <Tit>HARUMATE (하루메이트)</Tit>
+        <Tit>{title}</Tit>
         <BtnBox>
           <Button onClick={toggleModal}>자세히 보기</Button>
           <Button>Github 바로가기</Button>
         </BtnBox>
       </HoverBox>
+
       <CardThumbnail>
-        <ThumbnailImg projectName={'haru'} />
+        <ThumbnailImg url={imgurl} />
       </CardThumbnail>
       <TxtWrap>
-        <Tit>HARUMATE (하루메이트)</Tit>
-        <Txt>당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스</Txt>
+        <Tit>{title}</Tit>
+        <Txt>{subtext}</Txt>
       </TxtWrap>
       <Tags>
-        <TagIcon tag={'팀 프로젝트'} />
-        <TagIcon tag={'반응형'} />
+        {tag.map((tags, idx) => (
+          <TagIcon key={idx} tag={tags} />
+        ))}
       </Tags>
     </CardContainer>
   );

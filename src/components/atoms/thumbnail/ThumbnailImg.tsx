@@ -1,18 +1,20 @@
 import tw from 'tailwind-styled-components';
 
 type ThumbnailT = {
-  projectName: string;
+  url: string;
 };
 
 export const Img = tw.img`
+  object-cover
   w-full
+  h-full
 `;
 
-function ThumbnailImg({projectName}:ThumbnailT) {
-  const SRC_NAME = 'src/assets/images/thumbnail_';
+function ThumbnailImg({url}:ThumbnailT) {
+  // const SRC_NAME = 'src/assets/images/thumbnail_';
   return (
     <>
-      <Img src={`${SRC_NAME}${projectName}.webp`} alt={projectName} />
+      <Img src={url} alt='thumbnail' />
     </>
   );
 }

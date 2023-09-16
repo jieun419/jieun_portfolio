@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import StackIcon from '../atoms/tools/ToolIcon';
+import { RecordDataT } from '../../types/type';
 
 export const CardContainer = tw.section`
   overflow-hidden
@@ -24,6 +25,13 @@ export const TxtWrap = tw.div`
 export const Tit = tw.h4`
   font-bold
   text-2xl
+  flex
+  flex-col
+  gap-1
+`;
+
+export const Role = tw.span`
+  text-sm
 `;
 
 export const RecordUl = tw.ul`
@@ -56,26 +64,29 @@ export const Date = tw.span`
   text-sm
 `;
 
-function RecordCard() {
+function RecordCard({ data, title, role, infos, stacks }: RecordDataT) {
   return (
     <CardContainer>
       <TxtWrap>
-        <Date>2023.03 - 2023.08</Date>
-        <Tit>코드스테이츠 프론트엔드 과정 수료</Tit>
+        <Date>{data}</Date>
+        <Tit>
+          {title}
+          <Role>{role}</Role>
+        </Tit>
         <RecordUl>
-          <RecordList>JavaScript, React 학습</RecordList>
-          <RecordList>20주 동안 매일 강도 높은 과제 수행 및
-            페어 프로그래밍과 코드 리뷰 경험</RecordList>
-          <RecordList>솔로 프로젝트 1회, 협업 프로젝트 2회 진행</RecordList>
-          <RecordList>스터디에 참여하여 개발 공부를 진행하고
-            동료들과 원활한 소통과 커뮤니케이션을 촉진</RecordList>
+          {
+            infos.map((info, idx) => (
+              <RecordList key={idx}>{info}</RecordList>
+            ))
+          }
         </RecordUl>
       </TxtWrap>
       <Tags>
-        <StackIcon stack={'html'} width={`w-[50px]`}/>
-        <StackIcon stack={'css'} width={`w-[50px]`}/>
-        <StackIcon stack={'ps'} width={`w-[50px]`}/>
-        <StackIcon stack={'ai'} width={`w-[50px]`}/>
+        {
+          stacks.map((stack, idx) => (
+            <StackIcon key={idx} stack={stack} width={`w-[50px]`} />
+          ))
+        }
       </Tags>
     </CardContainer>
   );

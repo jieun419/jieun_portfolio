@@ -1,6 +1,7 @@
 import tw from 'tailwind-styled-components';
 import RecordCard from '../../../components/Cards/RecordCard';
 import { TabsPropsT } from '../../../types/type';
+import { recordData } from '../../../data/content/recordData';
 
 export const RecordComponent = tw.article`
   grid
@@ -21,10 +22,18 @@ export const RecordComponent = tw.article`
 function Record({ id, navTabs }: TabsPropsT) {
   return (
     <RecordComponent id={id} ref={navTabs[1].targetRef}>
-      <RecordCard />
-      <RecordCard />
-      <RecordCard />
-      <RecordCard />
+      {
+        recordData.map((item, idx) => (
+          <RecordCard
+            key={idx}
+            data={item.data}
+            title={item.title}
+            role={item.role}
+            infos={item.infos}
+            stacks={item.stacks}
+          />
+        ))
+      }
     </RecordComponent>
   );
 }
