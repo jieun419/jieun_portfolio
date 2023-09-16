@@ -1,6 +1,6 @@
 export const projectData = [
   {
-    name: 'protfolio',
+    name: 'portfolio',
     title: '지은 포트폴리오',
     subtext: '저만의 포트폴리오를 만들기 위해 제작했습니다.',
     tag: ['솔로', '반응형', '포트폴리오'],
