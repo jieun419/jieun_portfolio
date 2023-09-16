@@ -1,5 +1,6 @@
 import myImg from '../../../assets/images/jieun_img.webp';
 import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img } from './Front.styled';
+import { UPDATE_DATA } from '../../../utils/constant/constant';
 
 function Front() {
   return (
@@ -19,7 +20,7 @@ function Front() {
       <Img src={myImg} alt="최지은 인물 사진" />
       <InfoTxt>
         <p>crg1050@gmail.com</p>
-        <span>update. 23. 08. 31</span>
+        <span>update. {UPDATE_DATA}</span>
       </InfoTxt>
     </MainComponent>
   )
