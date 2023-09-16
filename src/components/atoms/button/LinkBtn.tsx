@@ -1,5 +1,19 @@
 import tw from 'tailwind-styled-components';
 import HoverModal from '../../modal/HoverModal';
+import { ICON_URL } from '../../../utils/constant/constant';
+
+type BlogT = {
+  title?: string;
+  url?: string;
+}
+
+type LinkProps = {
+  name: string;
+  text: string;
+  giturl?: string | undefined;
+  depoloyurl?: string | undefined;
+  blog?: BlogT[];
+}
 
 export const LinkButton = tw.a`
   flex
@@ -28,24 +42,22 @@ export const Text = tw.span`
   font-medium
 `;
 
-type LinkProps = {
-  name: string;
-  text: string;
-  link?: string | undefined;
-}
-
-
-function LinkBtn({ name, text, link }: LinkProps) {
-  const ICON_URL = 'src/assets/icons/icon_';
+function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
   return (
-    <LinkButton href={link} title='바로가기'>
-      <IconCircle>
-        <img src={`${ICON_URL}${name}.svg`} alt={name} />
-      </IconCircle>
-      <Text>{text}</Text>
-      <HoverModal />
-    </LinkButton>
-  )
+    <>
+      {
+        depoloyurl === '' ? null : (
+          <LinkButton href={giturl ? giturl : depoloyurl}>
+            <IconCircle>
+              <img src={`${ICON_URL}${name}.svg`} alt={name} />
+            </IconCircle>
+            <Text>{text}</Text>
+            {blog && <HoverModal blog={blog} />}
+          </LinkButton>
+        )
+      }
+    </>
+  );
 }
 
 export default LinkBtn
