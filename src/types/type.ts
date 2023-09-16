@@ -13,9 +13,9 @@ export interface TabsPropsT {
   id?: string;
 }
 
-
 export type ProjectDataT = {
   title: string;
+  name: string;
   subtext: string;
   tag: string[];
   imgurl: string;
@@ -27,4 +27,29 @@ export type RecordDataT = {
   role: string;
   infos: string[];
   stacks: string[];
+};
+
+export type projectDetailDataT = {
+  name: string;
+  pointcolor: string;
+  title: string;
+  subtext: string;
+  data: string;
+  team: string;
+  tag: string[];
+  imgurl: string;
+  giturl: string;
+  depoloyurl?: string;
+  blogurl: {
+    title: string;
+    url: string;
+  }[];
+  tools: {
+    title: string;
+    detail: string;
+  }[];
+  parts: {
+    title: string;
+    detail: string;
+  }[];
 };
