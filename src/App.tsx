@@ -1,10 +1,10 @@
 import tw from 'tailwind-styled-components';
 
 import Nav from './components/nav/Nav';
-import Front from './pages/Home/front/Front';
-import Intro from './pages/Home/intro/Intro';
-import Project from './pages/Home/project/Project';
-import Record from './pages/Home/record/Record';
+import Front from './pages/content/front/Front';
+import Intro from './pages/content/intro/Intro';
+import Project from './pages/content/project/Project';
+import Record from './pages/content/record/Record';
 import GoTopBtn from './components/atoms/button/GotoTopBtn';
 import useScrollToTarget from './hooks/useScrollToTarget';
 

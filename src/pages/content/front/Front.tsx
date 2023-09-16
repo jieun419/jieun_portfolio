@@ -5,8 +5,8 @@ function Front() {
   return (
     <MainComponent>
       <SocialList>
-        <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>Velog</SocialLink>
-        <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>Github</SocialLink>
+        <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>Velog</SocialLink>
+        <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>Github</SocialLink>
       </SocialList>
       <TxtWrap>
         <MainTit>
