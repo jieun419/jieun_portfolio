@@ -12,7 +12,7 @@ import { RootState } from '../../store';
 import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 
 type ColorProps = {
-  pointcolor?: string;
+  pointcolor: string;
 }
 
 export const DetailContainer = tw.article`
@@ -187,7 +187,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   <PTitle>사용 기술</PTitle>
                   <Toggles>
                     {
-                      tools && tools.map((item, idx) => (
+                      tools.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}
@@ -202,7 +202,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   <PTitle>작업 기여도</PTitle>
                   <Toggles>
                     {
-                      parts && parts.map((item, idx) => (
+                      parts.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}

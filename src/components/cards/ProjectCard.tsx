@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDataT } from '../../types/type';
 
-
 export const CardContainer = tw.section`
   overflow-hidden
   flex

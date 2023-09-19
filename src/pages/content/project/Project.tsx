@@ -1,11 +1,11 @@
 import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
-import ProjectCard from '@components/cards/ProjectCard';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
 import { projectData } from '../../../data/content/projectData';
 import { projectDetailData } from '../../../data/content/projectDetailData';
+import ProjectCard from '../../../components/cards/ProjectCard';
 
 export const ProjectComponent = tw.article`
   grid
