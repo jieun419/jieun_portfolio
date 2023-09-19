@@ -103,6 +103,7 @@ export const DetailBody = tw.section`
 `;
 
 export const ProjectInfoTxt = tw.p`
+  whitespace-pre-wrap
   text-center
   border-solid
   border-[#dcdcdc]
