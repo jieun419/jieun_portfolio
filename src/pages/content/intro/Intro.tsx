@@ -2,11 +2,11 @@ import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
 
 import myImgIm from '../../../assets/images/jieun_im.webp';
-import StackIcon from '../../../components/atoms/tools/ToolIcon';
+import StackIcon from '@components/atoms/tools/ToolIcon';
 import { MindData, StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
-import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
+import ShowReviewBtn from '@components/button/ShowReviewBtn';
 
 export const IntroComponent = tw.main`
   relative

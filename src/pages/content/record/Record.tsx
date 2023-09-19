@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import RecordCard from '../../../components/cards/RecordCard';
+import RecordCard from '@components/cards/RecordCard';
 import { TabsPropsT } from '../../../types/type';
 import { recordData } from '../../../data/content/recordData';
 
