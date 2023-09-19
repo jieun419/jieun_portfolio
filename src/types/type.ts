@@ -32,12 +32,11 @@ export type RecordDataT = {
 
 export type ProjectDetailDataT = {
   name: string;
-  pointcolor?: string;
+  pointcolor: string;
   title: string;
-  subject?: string;
-  subtext?: string;
-  data?: string;
-  team?: string;
+  subtext: string;
+  data: string;
+  team: string;
   tag: string[];
   imgurl: string;
   giturl: string;
@@ -46,11 +45,11 @@ export type ProjectDetailDataT = {
     title: string;
     url: string;
   }[];
-  tools?: {
+  tools: {
     title: string;
     detail: string;
   }[];
-  parts?: {
+  parts: {
     title: string;
     detail: string;
   }[];
