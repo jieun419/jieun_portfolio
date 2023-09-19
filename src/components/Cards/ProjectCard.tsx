@@ -3,7 +3,7 @@ import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
 import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
-import { projectDetailDataT } from '../../types/type';
+import { ProjectDataT } from '../../types/type';
 
 
 export const CardContainer = tw.section`
@@ -95,7 +95,7 @@ export const Button = tw.button`
   hover:text-[#232323]
 `;
 
-function ProjectCard({ title, subject, tag, imgurl, name, giturl }: projectDetailDataT) {
+function ProjectCard({ title, subject, tag, imgurl, name, giturl }: ProjectDataT) {
   const dispatch = useDispatch();
 
   const lockScroll = () => {

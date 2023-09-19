@@ -7,7 +7,7 @@ import ToggleBox from '../../components/toggle/ToggleBox';
 import CloseBtn from '../../components/button/CloseBtn';
 import LinkBtn from '../../components/button/LinkBtn';
 import { overlayActions } from '../../store/overlay-slice';
-import { projectDetailDataT } from '../../types/type';
+import { ProjectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
 import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 
@@ -134,7 +134,7 @@ export const Btns = tw.div`
   z-10
 `;
 
-function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: projectDetailDataT) {
+function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: ProjectDetailDataT) {
   const dispatch = useDispatch();
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
 

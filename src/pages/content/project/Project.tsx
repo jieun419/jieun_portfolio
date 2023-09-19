@@ -4,6 +4,7 @@ import ProjectCard from '@components/cards/ProjectCard';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
+import { projectData } from '../../../data/content/projectData';
 import { projectDetailData } from '../../../data/content/projectDetailData';
 
 export const ProjectComponent = tw.article`
@@ -46,7 +47,7 @@ function Project({ id, navTabs }: TabsPropsT) {
           />
         ))
       ) : null}
-      {projectDetailData.map((item, idx) => (
+      {projectData.map((item, idx) => (
         <ProjectCard
           key={idx}
           name={item.name}
