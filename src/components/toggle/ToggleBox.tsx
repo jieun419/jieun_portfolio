@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import IcArrow from '../../assets/icons/IcArrow';
+import { useState } from 'react';
 
 export const Toggle = tw.div`
   flex
@@ -15,6 +16,9 @@ export const ToggleName = tw.div`
   py-2
   px-3
   font-medium
+  transition-all
+
+  hover:bg-[#e1e1e1]
 `;
 
 export const ToggleInfo = tw.div`
@@ -22,36 +26,46 @@ export const ToggleInfo = tw.div`
   px-3
 `;
 
-export const PText = tw.p`
+export const PTit = tw.p`
   text-base
 `;
 
+export const PText = tw.p`
+  text-base
+  whitespace-pre-wrap
+  cursor-default
+`;
+
 type ToggleProps = {
-  toggleBtn: () => void;
-  isToggle: boolean;
   title: string;
   detail: string;
 
 };
 
-function ToggleBox({ toggleBtn, isToggle, title, detail }: ToggleProps) {
+function ToggleBox({ title, detail }: ToggleProps) {
+  const [isToggle, setIsToggle] = useState<boolean>(false);
+
+  const toggleBtn = () => {
+    setIsToggle((prev) => !prev)
+  };
+
   return (
     <Toggle>
 
-      <ToggleName onClick={toggleBtn}>
+      <ToggleName id={title} onClick={toggleBtn}>
         <IcArrow isToggle={isToggle} />
-        <PText>{title}</PText>
+        <PTit>{title}</PTit>
       </ToggleName>
 
-      {isToggle
-        ? <ToggleInfo>
+      {
+        isToggle &&
+        <ToggleInfo id={title}>
           <PText>
-          {detail}
+            {detail}
           </PText>
         </ToggleInfo>
-        : null
       }
-    </Toggle >
+    </Toggle>
   );
 }
 

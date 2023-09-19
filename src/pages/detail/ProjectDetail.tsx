@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -145,7 +144,6 @@ export const Btns = tw.div`
 
 function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: projectDetailDataT) {
   const dispatch = useDispatch();
-  const [isToggle, setIsToggle] = useState<boolean>(false);
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
 
   const openScroll = () => {
@@ -155,10 +153,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
   const toggleModal = () => {
     dispatch(overlayActions.toggleOverlay());
     openScroll();
-  };
-
-  const toggleBtn = () => {
-    setIsToggle((prev) => !prev)
   };
 
   return (
@@ -207,8 +201,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                           key={idx}
                           title={item.title}
                           detail={item.detail}
-                          toggleBtn={toggleBtn}
-                          isToggle={isToggle}
                         />
                       ))
                     }
@@ -224,8 +216,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                           key={idx}
                           title={item.title}
                           detail={item.detail}
-                          toggleBtn={toggleBtn}
-                          isToggle={isToggle}
                         />
                       ))
                     }
