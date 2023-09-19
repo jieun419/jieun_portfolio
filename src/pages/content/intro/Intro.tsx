@@ -42,6 +42,7 @@ export const SubJectTit = tw.h2`
 export const Tit = tw.h3`
   text-4xl
   font-black
+  pb-2
 `;
 
 export const SubTit = tw.h5`

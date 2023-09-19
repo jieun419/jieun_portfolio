@@ -9,8 +9,8 @@ export const ShowReviewButton = tw.button`
   flex
   items-center
   justify-between
-  gap-10
-  bg-[#373737]
+  gap-12
+  bg-[#0C0C0C]
   rounded-full
   py-3
   px-5
@@ -25,13 +25,13 @@ export const ShowReviewButton = tw.button`
   after:rounded-full
   after:w-full
   after:h-full
-  after:bg-[#EFEFF1]
+  after:bg-[#666]
   after:opacity-0
   after:z-[0]
   after:transition-all
   
   hover:after:opacity-10
-  hover:after:scale-y-[1.2]
+  hover:after:scale-y-[1.22]
   hover:after:scale-x-[1.06]
 `;
 
@@ -49,7 +49,6 @@ export const ArrowWrap = tw.span`
   rotate-90
 `;
 
-
 function ShowReviewBtn() {
   const dispatch = useDispatch();
 
@@ -64,7 +63,6 @@ function ShowReviewBtn() {
   };
 
   return (
-
     <ShowReviewButton onClick={() => toggleModal('review')}>
       <BtnTxt>팀원 리뷰 보기</BtnTxt>
       <ArrowWrap>
