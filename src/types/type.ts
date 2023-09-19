@@ -31,24 +31,25 @@ export type RecordDataT = {
 
 export type projectDetailDataT = {
   name: string;
-  pointcolor: string;
+  pointcolor?: string;
   title: string;
-  subtext: string;
-  data: string;
-  team: string;
+  subject?: string;
+  subtext?: string;
+  data?: string;
+  team?: string;
   tag: string[];
   imgurl: string;
   giturl: string;
   depoloyurl?: string;
-  blogurl: {
+  blogurl?: {
     title: string;
     url: string;
   }[];
-  tools: {
+  tools?: {
     title: string;
     detail: string;
   }[];
-  parts: {
+  parts?: {
     title: string;
     detail: string;
   }[];

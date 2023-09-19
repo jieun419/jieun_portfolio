@@ -3,6 +3,7 @@ export const projectDetailData = [
     name: 'portfolio',
     pointcolor: 'before:bg-[#373737]',
     title: '지은 포트폴리오',
+    subject: '저만의 포트폴리오를 만들기 위해 제작했습니다.',
     subtext:
       '노션, 템플릿 소스 등을 이용할 수 있었지만 저만의 포트폴리오 사이트를 가지고 싶어 제작했습니다.\n 주요 색상인 black & white로 전체적으로 심플함을 줬습니다.',
     data: '2023.08 - 2023.09',
@@ -57,6 +58,7 @@ export const projectDetailData = [
     name: 'haru',
     pointcolor: 'before:bg-[#77D1FD]',
     title: '하루메이트',
+    subject: '당일 일정을 만들고 친구에게 손쉽게 공유할 수 있는 서비스입니다.',
     subtext:
       '당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다.\n 하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다. \n 친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다. \n\n 일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다. \n 저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.',
     data: '2023.07 - 2023.08',
@@ -131,6 +133,7 @@ export const projectDetailData = [
     name: 'stack',
     pointcolor: 'before:bg-[#FA9B59]',
     title: '스택오버플로우',
+    subject: '스택오버플로우 사이트를 클론 코딩하며 UI/UX 측면도 고려하며 진행했습니다.',
     subtext:
       '랜덤의 팀원들과 정해진 주제인 스택오버플로우 사이트를 클론 코딩 하며 프로젝트 경험을 쌓았습니다. \n 짧은 기간이였지만 기존 사이트의 UI/UX 측면도 고려하고, 기간 내에 구현 할 수 있는지와 없는지 확인하며 진행했습니다.',
     data: '2023.06 - 2023.07',
@@ -196,6 +199,7 @@ export const projectDetailData = [
     name: 'coz',
     pointcolor: 'before:bg-[#6a57e0]',
     title: 'Coz Shopping',
+    subject: '주어진 요구 명세서를 확인하며 작업했습니다.',
     subtext:
       '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다. \n 짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인 github를 학습 하는데 많은 도움이 되었습니다.',
     data: '2023.07 - 2023.08',
