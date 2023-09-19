@@ -52,14 +52,14 @@ function ToggleBox({ title, detail }: ToggleProps) {
   return (
     <Toggle>
 
-      <ToggleName id={title} onClick={toggleBtn}>
+      <ToggleName onClick={toggleBtn}>
         <IcArrow isToggle={isToggle} />
         <PTit>{title}</PTit>
       </ToggleName>
 
       {
         isToggle &&
-        <ToggleInfo id={title}>
+        <ToggleInfo>
           <PText>
             {detail}
           </PText>
