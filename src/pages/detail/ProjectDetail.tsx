@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
 import ToggleBox from '../../components/toggle/ToggleBox';
-import CloseBtn from '../../components/atoms/button/CloseBtn';
-import LinkBtn from '../../components/atoms/button/LinkBtn';
+import CloseBtn from '../../components/button/CloseBtn';
+import LinkBtn from '../../components/button/LinkBtn';
 import { overlayActions } from '../../store/overlay-slice';
 import { projectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
+import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 
 interface ColorProps {
   pointcolor: string;
@@ -22,15 +23,6 @@ export const DetailContainer = tw.article`
   py-10
   px-40
   overflow-y-auto
-`;
-
-export const DropShadow = tw.div`
-  fixed
-  inset-x-0
-  inset-y-0
-  bg-black
-  opacity-60
-  z-[-1]
 `;
 
 export const DetailWrap = tw.section`
@@ -160,7 +152,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
       {
         targetName === name ? (
           <DetailContainer>
-            <DropShadow onClick={toggleModal} />
+            <DropShadow toggleModal={toggleModal} />
             <DetailWrap>
 
               <Btns>

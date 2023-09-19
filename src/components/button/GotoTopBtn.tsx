@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import IcLineArrow from '../../../assets/icons/IcLinekArrow';
+import IcLineArrow from '../../assets/icons/IcLinekArrow';
 
 export const TopButton = tw.button`
   fixed

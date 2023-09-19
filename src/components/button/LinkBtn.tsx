@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
-import HoverModal from '../../modal/HoverModal';
-import { ICON_URL } from '../../../utils/constant/constant';
+import HoverModal from '../modal/HoverModal';
+import { ICON_URL } from '../../utils/constant/constant';
 
 type BlogT = {
   title?: string;
