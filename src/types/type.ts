@@ -16,9 +16,10 @@ export interface TabsPropsT {
 export type ProjectDataT = {
   title: string;
   name: string;
-  subtext: string;
+  subject: string;
   tag: string[];
   imgurl: string;
+  giturl: string;
 };
 
 export type RecordDataT = {
@@ -29,26 +30,27 @@ export type RecordDataT = {
   stacks: string[];
 };
 
-export type projectDetailDataT = {
+export type ProjectDetailDataT = {
   name: string;
-  pointcolor: string;
+  pointcolor?: string;
   title: string;
-  subtext: string;
-  data: string;
-  team: string;
+  subject?: string;
+  subtext?: string;
+  data?: string;
+  team?: string;
   tag: string[];
   imgurl: string;
   giturl: string;
   depoloyurl?: string;
-  blogurl: {
+  blogurl?: {
     title: string;
     url: string;
   }[];
-  tools: {
+  tools?: {
     title: string;
     detail: string;
   }[];
-  parts: {
+  parts?: {
     title: string;
     detail: string;
   }[];

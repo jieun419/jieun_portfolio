@@ -1,8 +1,12 @@
-import myImgIm from '../../../assets/images/jieun_im.webp';
-import StackIcon from '../../../components/atoms/tools/ToolIcon';
-import { MindData, StackData } from '../../../data/introData';
-
 import tw from 'tailwind-styled-components';
+import { useSelector } from 'react-redux';
+
+import myImgIm from '../../../assets/images/jieun_im.webp';
+import StackIcon from '@components/atoms/tools/ToolIcon';
+import { MindData, StackData } from '../../../data/introData';
+import ReviewDetail from '../../detail/ReviewDetail';
+import { RootState } from '../../../store';
+import ShowReviewBtn from '@components/button/ShowReviewBtn';
 
 export const IntroComponent = tw.main`
   relative
@@ -38,6 +42,7 @@ export const SubJectTit = tw.h2`
 export const Tit = tw.h3`
   text-4xl
   font-black
+  pb-2
 `;
 
 export const SubTit = tw.h5`
@@ -48,7 +53,10 @@ export const SubTit = tw.h5`
 
 export const LeftWrap = tw.div`
   flex
+  flex-col
+  gap-10
   justify-center
+  items-center
   flex-1
 `;
 
@@ -95,13 +103,21 @@ export const StackIcons = tw.div`
 `;
 
 function Intro() {
+  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+
   return (
     <IntroComponent>
-      <SubJectTit>Intro</SubJectTit>
+
+      {isModal ? <ReviewDetail name='review' /> : null}
+
+      <SubJectTit>About me</SubJectTit>
       <Content>
+
         <LeftWrap>
           <img src={myImgIm} alt="이모지 이미지" />
+          <ShowReviewBtn />
         </LeftWrap>
+
         <RightWrap>
           <MyMind>
             <Tit>Mind</Tit>
@@ -133,6 +149,7 @@ function Intro() {
             </StackWrap>
           </Stacks>
         </RightWrap>
+
       </Content>
     </IntroComponent >
   );

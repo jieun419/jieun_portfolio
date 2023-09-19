@@ -37,7 +37,6 @@ export const BgTxt = tw.p`
   translate-y-[-70%]
   translate-x-[-50%]
 
-
   max-md:text-[5rem]
 `;
 
@@ -94,4 +93,18 @@ export const Img = tw.img`
   absolute
   bottom-0
   h-[calc(100vh-40vh)]
+`;
+
+export const ScrollArrowBox = tw.div`
+  absolute
+  bottom-5
+  left-[50%]
+  translate-x-[-50%]
+  z-[20]
+  flex
+  flex-col
+  items-center
+  rotate-180
+
+  animate-bounce
 `;

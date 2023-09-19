@@ -5,7 +5,7 @@ import Front from './pages/content/front/Front';
 import Intro from './pages/content/intro/Intro';
 import Project from './pages/content/project/Project';
 import Record from './pages/content/record/Record';
-import GoTopBtn from './components/atoms/button/GotoTopBtn';
+import GoTopBtn from './components/button/GotoTopBtn';
 import useScrollToTarget from './hooks/useScrollToTarget';
 
 export const Container = tw.main`

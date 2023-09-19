@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
-import ProjectCard from '../../../components/Cards/ProjectCard';
+import ProjectCard from '@components/cards/ProjectCard';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
@@ -52,9 +52,10 @@ function Project({ id, navTabs }: TabsPropsT) {
           key={idx}
           name={item.name}
           title={item.title}
-          subtext={item.subtext}
+          subject={item.subject}
           tag={item.tag}
           imgurl={item.imgurl}
+          giturl={item.giturl}
         />
       ))}
     </ProjectComponent>

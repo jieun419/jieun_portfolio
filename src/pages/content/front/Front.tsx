@@ -1,10 +1,25 @@
 import myImg from '../../../assets/images/jieun_img.webp';
-import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img } from './Front.styled';
+import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img, ScrollArrowBox } from './Front.styled';
 import { UPDATE_DATA } from '../../../utils/constant/constant';
+import IcLineArrow from '../../../assets/icons/IcLinekArrow';
 
 function Front() {
   return (
     <MainComponent>
+      <ScrollArrowBox>
+        <IcLineArrow
+          width='25'
+          height='18'
+          color='#fff'
+          direction='M26 2L14 14L2 2'
+        />
+         <IcLineArrow
+          width='25'
+          height='18'
+          color='#fff'
+          direction='M26 2L14 14L2 2'
+        />
+      </ScrollArrowBox>
       <SocialList>
         <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>Velog</SocialLink>
         <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>Github</SocialLink>

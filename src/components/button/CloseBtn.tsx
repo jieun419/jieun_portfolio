@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import IconClose from '../../../assets/icons/icon_close.svg';
+import IconClose from '../../assets/icons/icon_close.svg';
 
 export const CloseButton = tw.button`
   w-[40px]
