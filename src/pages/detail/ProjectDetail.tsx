@@ -11,8 +11,8 @@ import { projectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
 import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 
-interface ColorProps {
-  pointcolor: string;
+type ColorProps = {
+  pointcolor?: string;
 }
 
 export const DetailContainer = tw.article`
@@ -160,7 +160,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 <LinkBtn name='github_bk' giturl={giturl} text='github' />
                 <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
                 <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
-                {/* <HoverLinkBtn name='review' link={''} text='팀원 리뷰' /> */}
               </Btns>
 
               <DetailTop pointcolor={pointcolor}>
@@ -188,7 +187,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   <PTitle>사용 기술</PTitle>
                   <Toggles>
                     {
-                      tools.map((item, idx) => (
+                      tools && tools.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}
@@ -203,7 +202,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   <PTitle>작업 기여도</PTitle>
                   <Toggles>
                     {
-                      parts.map((item, idx) => (
+                      parts && parts.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}
