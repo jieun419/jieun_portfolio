@@ -20,8 +20,18 @@ export default {
           '0%': { right: '70px', opacity: '0' },
           '100%': { right: '75px', opacity: '100' },
         },
+        'scale-zoomin': {
+          '0%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        'scale-zoomin-bgtxt': {
+          '0%': { transform: 'scale(1.2) translateY(-70%) translateX(-50%)' },
+          '100%': { transform: 'scale(1) translateY(-70%) translateX(-50%)' },
+        },
         animation: {
-          'right-modal-up': 'right-modal-up 0.5s'
+          'right-modal-up': 'right-modal-up 0.5s',
+          'scale-zoomin': 'scale-zoomin 3s',
+          'scale-zoomin-bgtxt': 'scale-zoomin-bgtxt 3s',
         },
       },
       border: {

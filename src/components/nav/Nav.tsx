@@ -7,7 +7,6 @@ export const NavContainer = tw.nav`
   flex
   flex-col
   gap-3
-  text-6xl
   w-[10vw]
   h-screen
 `;
@@ -17,6 +16,9 @@ export const NavLink = tw.button`
   font-black
   text-6xl
   transition
+
+  max-md:text-4xl
+  max-lg:text-5xl
 `;
 
 function Nav({ navTabs }: TabsPropsT) {

@@ -14,9 +14,10 @@ export const ProjectComponent = tw.article`
   gap-4
   pt-[3rem]
   h-auto
+
   max-md:grid-cols-1
   max-lg:grid-cols-2
-  max-xl:grid-cols-3
+  max-xl:grid-cols-3  
   max-2xl:grid-cols-4
 `;
 

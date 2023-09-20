@@ -20,6 +20,8 @@ export const IntroComponent = tw.main`
   pt-10
   h-screen
   z-1
+
+  max-lg:h-auto
 `;
 
 export const Content = tw.section`
@@ -28,6 +30,8 @@ export const Content = tw.section`
   items-center
   text-[#EFEFF1]
   items-center
+  
+  max-lg:flex-col
 `;
 
 export const SubJectTit = tw.h2`
@@ -37,6 +41,10 @@ export const SubJectTit = tw.h2`
   text-[#EFEFF1]
   font-black
   text-6xl
+
+  max-lg:flex-col 
+  max-lg:static 
+  max-lg:w-full
 `;
 
 export const Tit = tw.h3`
@@ -90,6 +98,8 @@ export const StackWrap = tw.div`
   grid 
   grid-cols-3 
   gap-4
+
+  max-md:grid-cols-1  
 `;
 
 export const StackBox = tw.div`
