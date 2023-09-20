@@ -37,7 +37,8 @@ export const BgTxt = tw.p`
   translate-y-[-70%]
   translate-x-[-50%]
 
-  max-md:text-[5rem]
+  max-md:text-[4rem]
+  max-lg:text-[6rem]
 `;
 
 export const MainTit = tw.h2`
@@ -50,6 +51,9 @@ export const MainTit = tw.h2`
   z-10
   w-full
   text-center
+
+  max-md:text-xl
+  max-lg:text-3xl
 `;
 
 export const StTxt = tw.strong`
@@ -59,6 +63,9 @@ export const StTxt = tw.strong`
 export const SubTxt = tw.p`
   font-normal
   text-xl
+
+  max-md:text-sm
+  max-lg:text-base
 `;
 
 export const SocialList = tw.div`
@@ -92,7 +99,9 @@ export const InfoTxt = tw.div`
 export const Img = tw.img`
   absolute
   bottom-0
+  w-fit
   h-[calc(100vh-40vh)]
+  transition-all
 `;
 
 export const ScrollArrowBox = tw.div`
