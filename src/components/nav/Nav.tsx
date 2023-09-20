@@ -9,7 +9,7 @@ export const NavContainer = tw.nav`
   gap-3
   w-auto
   h-screen
-  z-10
+  z-[2]
 
   max-md:flex-row
   max-md:bg-[#232323]/50
