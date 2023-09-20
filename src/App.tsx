@@ -14,7 +14,11 @@ export const Container = tw.main`
   w-full
   flex
   p-10
-  gap-32
+  gap-14
+  max-md:flex-col
+  max-md:gap-0
+  max-ls:gap-5
+  max-xl:gap-10
 `;
 
 export const RightWrap = tw.article`

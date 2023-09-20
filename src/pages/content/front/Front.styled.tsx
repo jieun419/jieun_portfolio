@@ -99,9 +99,11 @@ export const InfoTxt = tw.div`
 export const Img = tw.img`
   absolute
   bottom-0
-  w-fit
+  w-auto
   h-[calc(100vh-40vh)]
   transition-all
+
+  max-md:min-w-max
 `;
 
 export const ScrollArrowBox = tw.div`
