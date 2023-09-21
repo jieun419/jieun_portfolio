@@ -12,7 +12,7 @@ export const recordData = [
     stacks: ['html', 'css', 'javascript', 'react', 'github', 'figma'],
   },
   {
-    data: '2021.04 - 2023.09',
+    data: '2021.04 - 2022.09',
     title: '건국사이버 평생교육원',
     role: '@ 웹 디자인',
     infos: [
@@ -24,7 +24,7 @@ export const recordData = [
     stacks: ['html', 'css', 'ps', 'ai'],
   },
   {
-    data: '2017.05 - 2022.04',
+    data: '2017.05 - 2021.04',
     title: '(주) 비전트리',
     role: '@ 웹 디자인',
     infos: [

@@ -16,6 +16,8 @@ export const DetailContainer = tw.article`
   py-10
   px-40
   overflow-y-auto
+
+  max-md:px-10
 `;
 
 export const DetailWrap = tw.section`
