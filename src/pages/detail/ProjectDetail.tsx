@@ -23,6 +23,8 @@ export const DetailContainer = tw.article`
   py-10
   px-40
   overflow-y-auto
+
+  max-md:px-0
 `;
 
 export const DetailWrap = tw.section`
@@ -91,6 +93,8 @@ export const DetailBody = tw.section`
   flex-col
   gap-10
   text-base
+
+  max-md:px-[5%]
 `;
 
 export const ProjectInfoTxt = tw.p`
@@ -132,6 +136,12 @@ export const Btns = tw.div`
   items-center
   gap-5
   z-10
+
+  max-md:flex-row
+  max-md:top-0
+  max-md:gap-1
+  max-md:bg-white/50
+  max-md:py-2
 `;
 
 function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: ProjectDetailDataT) {

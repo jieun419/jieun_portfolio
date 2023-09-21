@@ -12,6 +12,8 @@ export const ScreenContainer = tw.div`
   p-3
   w-[calc(100vw-60vw)]
   rounded-[2.125rem]
+
+  max-md:w-[calc(100vw-10vw)]
 `;
 
 export const Img = tw.img`
