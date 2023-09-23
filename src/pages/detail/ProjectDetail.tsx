@@ -25,6 +25,7 @@ export const DetailContainer = tw.article`
   overflow-y-auto
 
   max-md:px-0
+  max-md:py-0
 `;
 
 export const DetailWrap = tw.section`
@@ -33,6 +34,8 @@ export const DetailWrap = tw.section`
   
   mx-auto
   bg-white
+
+  max-md:h-auto
 `;
 
 export const DetailTop = tw.section<ColorProps>`
@@ -137,11 +140,26 @@ export const Btns = tw.div`
   gap-5
   z-10
 
-  max-md:flex-row
+  max-md:sticky
+  max-md:flex-row-reverse
+  max-md:justify-between
   max-md:top-0
-  max-md:gap-1
-  max-md:bg-white/50
+  max-md:rignt-0
+  max-md:bg-white
+  max-md:backdrop-blur-sm
+  max-md:px-3
   max-md:py-2
+  max-md:border-solid
+  max-md:border-b
+  max-md:border-[#dcdcdc]
+`;
+
+export const ContBtns = tw.div`
+  flex
+  flex-col
+  gap-5
+  max-md:flex-row
+  max-md:gap-4
 `;
 
 function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: ProjectDetailDataT) {
@@ -167,9 +185,11 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
-                <LinkBtn name='github_bk' giturl={giturl} text='github' />
-                <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
-                <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                <ContBtns>
+                  <LinkBtn name='github_bk' giturl={giturl} text='github' />
+                  <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
+                  <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                </ContBtns>
               </Btns>
 
               <DetailTop pointcolor={pointcolor}>

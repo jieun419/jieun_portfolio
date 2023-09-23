@@ -16,6 +16,7 @@ export const ProjectComponent = tw.article`
   h-auto
 
   max-md:grid-cols-1
+  max-md:pt-[5rem]
   max-lg:grid-cols-2
   max-xl:grid-cols-3  
   max-2xl:grid-cols-4

@@ -9,11 +9,11 @@ export const NavContainer = tw.nav`
   gap-3
   w-auto
   h-screen
-  z-[2]
+  z-[10]
 
   max-md:flex-row
-  max-md:bg-[#232323]/50
-  max-md:py-2
+  max-md:bg-[#232323]
+  max-md:py-3
   max-md:top-0
   max-md:w-full
   max-md:h-auto
@@ -26,7 +26,7 @@ export const NavLink = tw.button`
   text-6xl
   transition
 
-  max-md:text-2xl
+  max-md:text-3xl
   max-lg:text-5xl
 `;
 
