@@ -13,6 +13,7 @@ export const RecordComponent = tw.article`
   mt-[3rem]
     
   max-md:grid-cols-1
+  max-md:pt-[5rem]
   max-lg:grid-cols-2
   max-lg:h-auto
   max-xl:grid-cols-3

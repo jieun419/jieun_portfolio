@@ -10,7 +10,7 @@ export const ReviewCardContainer = tw.div`
   h-auto
   w-full
   backdrop-blur-sm
-  bg-white/60
+  bg-white/80
 `;
 
 export const ReviewBox = tw.div`

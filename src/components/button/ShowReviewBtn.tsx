@@ -10,7 +10,7 @@ export const ShowReviewButton = tw.button`
   items-center
   justify-between
   gap-12
-  bg-[#0C0C0C]
+  bg-[#efeff1]
   rounded-full
   py-3
   px-5
@@ -25,27 +25,27 @@ export const ShowReviewButton = tw.button`
   after:rounded-full
   after:w-full
   after:h-full
-  after:bg-[#666]
+  after:bg-[#fff]
   after:opacity-0
   after:z-[0]
   after:transition-all
   
-  hover:after:opacity-10
+  hover:after:opacity-40
   hover:after:scale-y-[1.22]
   hover:after:scale-x-[1.06]
 `;
 
 export const BtnTxt = tw.span`
   relative
-  z-1
-  text-white
+  z-[2]
+  text-[#232323]
   font-bold
   text-sm
 `;
 
 export const ArrowWrap = tw.span`
   relative
-  z-1
+  z-[2]
   rotate-90
 `;
 
@@ -69,7 +69,7 @@ function ShowReviewBtn() {
         <IcLineArrow
           width='13'
           height='13'
-          color='#fff'
+          color='#232323'
         />
       </ArrowWrap>
     </ShowReviewButton>
