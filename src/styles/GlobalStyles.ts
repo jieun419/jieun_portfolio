@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyles = createGlobalStyle`
     // 적용시킬 css 입력
@@ -36,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
         border: 0;
         font-size: 1rem;
         vertical-align: baseline;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, div,
+    dl, dt, dd, ol, ul, li, form, label, table {
+        white-space: pre-wrap;
     }
     
     ol, ul {

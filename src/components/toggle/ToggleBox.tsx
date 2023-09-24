@@ -32,7 +32,6 @@ export const PTit = tw.p`
 
 export const PText = tw.p`
   text-base
-  whitespace-pre-wrap
   cursor-default
 `;
 
