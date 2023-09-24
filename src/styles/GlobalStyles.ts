@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
        box-sizing: border-box;
     }
 
+    html {
+        height: -webkit-fill-available;
+    }
+
     body {
       font-family: 'Noto Sans KR', sans-serif;
 
@@ -22,6 +26,9 @@ const GlobalStyles = createGlobalStyle`
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-text-size-adjust: 100%;
+      min-height: 100vh;
+     /* mobile viewport bug fix */
+     min-height: -webkit-fill-available;
     }
 
     a {
