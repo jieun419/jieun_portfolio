@@ -13,7 +13,6 @@ export const MainComponent = tw.main`
   px-10
   pt-10
 
-
   max-sm:pt-5
   max-sm:px-5
 `;
@@ -26,9 +25,9 @@ export const TxtWrap = tw.section`
   flex-col
   mb-20
   w-full
-  mt-36
+  mt-[calc(100vh-85vh)]
 
-  max-sm:mt-20
+  max-sm:mt-[calc(100vh-90vh)]
 `;
 
 export const BgTxt = tw.p`
@@ -109,7 +108,7 @@ export const Img = tw.img`
   h-[calc(100vh-40vh)]
   transition-all
 
-  max-sm:h-[calc(100vh-30vh)]
+  max-sm:h-[calc(100vh-35vh)]
 `;
 
 export const ScrollArrowBox = tw.div`
