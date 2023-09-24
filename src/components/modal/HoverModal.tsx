@@ -2,21 +2,26 @@ import tw from 'tailwind-styled-components';
 import { ICON_URL } from '../../utils/constant/constant';
 
 export const HoverModalBox = tw.div`
-  hidden
+  hidden-
   absolute
-  right-[75px]
-  w-[300px]
+  right-[4.6875rem]
+  w-[18.75rem]
   h-auto
   bg-white
   rounded-sm
-  shadow-md
+  drop-shadow-md
   p-3
-  z-[-1]
+  z-[10]
   transition-all
   cursor-default
-  mt-[-20px]
+  mt-[-1.25rem]
 
   group-hover:block animate-[right-modal-up_0.5s]
+
+  max-md:right-0
+  max-md:left-[-1rem]
+  max-md:top-[4.5rem]
+  max-sm:w-[calc(100vw-38vw)]
 `;
 
 export const LinkTit = tw.span`
@@ -62,6 +67,12 @@ export const Traiangle = tw.div`
   border-r-[10px] border-r-[transparent]
   border-solid
   rounded-sm
+
+  max-md:rotate-[270deg]
+  max-md:top-[-0.6rem]
+  max-md:right-[0]
+  max-md:left-[1.5rem]
+  
 `;
 
 export const Arrow = tw.i`

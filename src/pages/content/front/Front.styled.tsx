@@ -103,8 +103,6 @@ export const Img = tw.img`
   h-[calc(100vh-40vh)]
   transition-all
 
-  max-ms:w-[calc(100vw-20vw)]
-  max-ms:h-auto
 `;
 
 export const ScrollArrowBox = tw.div`
