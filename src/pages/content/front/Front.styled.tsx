@@ -12,6 +12,10 @@ export const MainComponent = tw.main`
   justify-between
   px-10
   pt-10
+
+
+  max-sm:pt-5
+  max-sm:px-5
 `;
 
 export const TxtWrap = tw.section`
@@ -23,6 +27,8 @@ export const TxtWrap = tw.section`
   mb-20
   w-full
   mt-36
+
+  max-sm:mt-20
 `;
 
 export const BgTxt = tw.p`
@@ -37,7 +43,7 @@ export const BgTxt = tw.p`
   translate-y-[-70%]
   translate-x-[-50%]
 
-  max-md:text-[4rem]
+  max-sm:text-[4rem]
   max-lg:text-[6rem]
 `;
 
@@ -52,7 +58,7 @@ export const MainTit = tw.h2`
   w-full
   text-center
 
-  max-md:text-xl
+  max-sm:text-xl
   max-lg:text-3xl
 `;
 
@@ -103,6 +109,7 @@ export const Img = tw.img`
   h-[calc(100vh-40vh)]
   transition-all
 
+  max-sm:h-[calc(100vh-30vh)]
 `;
 
 export const ScrollArrowBox = tw.div`
