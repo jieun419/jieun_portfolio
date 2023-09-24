@@ -2,7 +2,7 @@ import tw from 'tailwind-styled-components';
 import { ICON_URL } from '../../utils/constant/constant';
 
 export const HoverModalBox = tw.div`
-  hidden-
+  hidden
   absolute
   right-[4.6875rem]
   w-[18.75rem]
