@@ -15,20 +15,22 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
 
-      line-height: 1.5;
-      font-weight: 400;
-      letter-spacing: -1px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: -1px;
 
-      font-synthesis: none;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-text-size-adjust: 100%;
-      min-height: 100vh;
-     /* mobile viewport bug fix */
-     min-height: -webkit-fill-available;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+
+        /*ios 모바일 화면 버그*/
+        height: 100vh;
+        height: -webkit-fill-available;
+        height: fill-available;
     }
 
     a {
