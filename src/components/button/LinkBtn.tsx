@@ -16,6 +16,7 @@ type LinkProps = {
 }
 
 export const LinkButton = tw.a`
+  relative
   flex
   flex-col
   items-center
