@@ -23,7 +23,6 @@ export const ReviewBox = tw.div`
 
 export const ReviewTxt = tw.p`
   text-base
-  whitespace-pre-wrap
   text-[#232323]
   font-medium
 `;

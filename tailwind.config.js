@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main-color-black': '#232323',
-        'main-color-gray': '#EFEFF1',
+        'main-black': '#232323',
+        'main-gray': '#EFEFF1',
         'dark-gray': '#0C0C0C',
         'light-gray': '#373737',
         'super-light-gray': '#F1F2F5',
@@ -34,10 +34,6 @@ export default {
           'scale-zoomin-bgtxt': 'scale-zoomin-bgtxt 3s',
         },
       },
-      border: {
-        'border-t': 'solid transparent',
-        'border-white': 'solid #fff'
-      }
     },
   },
   plugins: [

@@ -84,7 +84,6 @@ export const MyMind = tw.div`
   flex
   flex-col
   gap-3
-  whitespace-pre-wrap
 `;
 
 export const MyMindTxt = tw.p`
