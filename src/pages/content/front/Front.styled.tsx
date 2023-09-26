@@ -115,14 +115,16 @@ export const InfoTxt = tw.span`
   max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
-export const Img = tw.img`
+export const Img = tw.img<IsMobile>`
   absolute
   bottom-0
   w-auto
   h-[calc(100vh-40vh)]
   transition-all
 
-  max-sm:h-[calc(100vh-40vh)]
+  ${props => props.isMobile ? 'max-sm:h-[calc(var(--vh,1vh)*60)]' : 'max-sm:h-[calc(100vh-40vh)]'}
+
+  
 `;
 
 export const ScrollArrowBox = tw.div`
