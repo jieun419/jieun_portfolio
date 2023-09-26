@@ -12,7 +12,6 @@ function Front() {
   useEffect(() => {
     if (isMobile) {
       vhRef.current = window.innerHeight * 0.01;
-      // vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vhRef.current}px`);
     }
   }, [isMobile]);
