@@ -3,6 +3,9 @@ import reset from 'styled-reset';
 
 const GlobalStyles = createGlobalStyle`
     // 적용시킬 css 입력
+    :root {
+        --vh: 100%;
+    }
     
     ${reset}
 
@@ -29,8 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
         /*ios 모바일 화면 버그*/
         height: 100vh;
-        height: -webkit-fill-available;
-        height: fill-available;
+        height: var(--vh);
     }
 
     a {
