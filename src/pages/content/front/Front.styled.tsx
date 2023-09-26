@@ -104,6 +104,9 @@ export const InfoTxtWrap = tw.div`
   absolute
   left-10
   bottom-10
+
+  max-sm:left-5
+  max-sm:bottom-5
 `;
 
 export const InfoTxt = tw.span`
@@ -123,8 +126,6 @@ export const Img = tw.img<IsMobile>`
   transition-all
 
   ${props => props.isMobile ? 'max-sm:h-[calc(var(--vh,1vh)*60)]' : 'max-sm:h-[calc(100vh-40vh)]'}
-
-  
 `;
 
 export const ScrollArrowBox = tw.div`
