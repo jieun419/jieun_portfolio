@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 import myImg from '../../../assets/images/jieun_img.webp';
-import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img, ScrollArrowBox } from './Front.styled';
+import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxtWrap, InfoTxt, Img, ScrollArrowBox } from './Front.styled';
 import { UPDATE_DATA } from '../../../utils/constant/constant';
 import IcLineArrow from '../../../assets/icons/IcLinekArrow';
 
@@ -46,10 +46,10 @@ function Front() {
         <SubTxt>포기하지 않고 책임감있게 일하는 개발자입니다.</SubTxt>
       </TxtWrap>
       <Img src={myImg} alt="최지은 인물 사진" />
-      <InfoTxt>
-        <p>crg1050@gmail.com</p>
-        <span>update. {UPDATE_DATA}</span>
-      </InfoTxt>
+      <InfoTxtWrap>
+        <InfoTxt>crg1050@gmail.com</InfoTxt>
+        <InfoTxt>update. {UPDATE_DATA}</InfoTxt>
+      </InfoTxtWrap>
     </MainComponent>
   )
 }
