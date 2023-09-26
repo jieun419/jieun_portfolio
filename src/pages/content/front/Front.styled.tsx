@@ -100,14 +100,19 @@ export const SocialLink = tw.a`
   after:block
 `;
 
-export const InfoTxt = tw.div`
+export const InfoTxtWrap = tw.div`
   absolute
   left-10
   bottom-10
+`;
+
+export const InfoTxt = tw.span`
+  block
   text-base
 
-  max-ms:text-sm
-  drop-shadow-[0px_0px_2px_rgba(255,255,255,1)]
+  max-sm:text-sm
+  max-sm:text-[#fff]
+  max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
 export const Img = tw.img`
@@ -117,7 +122,7 @@ export const Img = tw.img`
   h-[calc(100vh-40vh)]
   transition-all
 
-  max-sm:h-[calc(100vh-35vh)]
+  max-sm:h-[calc(100vh-40vh)]
 `;
 
 export const ScrollArrowBox = tw.div`
