@@ -33,6 +33,9 @@ export default {
           'scale-zoomin': 'scale-zoomin 3s',
           'scale-zoomin-bgtxt': 'scale-zoomin-bgtxt 3s',
         },
+        dropShadow: {
+          'md': '5px 4px 3px rgba(255, 255, 255, 0.25)',
+        }
       },
     },
   },

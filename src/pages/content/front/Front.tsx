@@ -1,11 +1,24 @@
+import { useEffect, useRef } from 'react';
+
 import myImg from '../../../assets/images/jieun_img.webp';
 import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, SocialLink, InfoTxt, Img, ScrollArrowBox } from './Front.styled';
 import { UPDATE_DATA } from '../../../utils/constant/constant';
 import IcLineArrow from '../../../assets/icons/IcLinekArrow';
 
 function Front() {
+  const vhRef = useRef(0);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  useEffect(() => {
+    if (isMobile) {
+      vhRef.current = window.innerHeight * 0.01;
+      // vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vhRef.current}px`);
+    }
+  }, [isMobile]);
+
   return (
-    <MainComponent>
+    <MainComponent isMobile={isMobile}>
       <ScrollArrowBox>
         <IcLineArrow
           width='25'
@@ -13,7 +26,7 @@ function Front() {
           color='#fff'
           direction='M26 2L14 14L2 2'
         />
-         <IcLineArrow
+        <IcLineArrow
           width='25'
           height='18'
           color='#fff'

@@ -1,6 +1,10 @@
 import tw from 'tailwind-styled-components';
 
-export const MainComponent = tw.main`
+type IsMobile = {
+  isMobile: boolean
+}
+
+export const MainComponent = tw.main<IsMobile>`
   sticky
   top-0
   z-[-1]
@@ -13,6 +17,7 @@ export const MainComponent = tw.main`
   px-10
   pt-10
 
+  ${props => props.isMobile ? 'max-sm:h-[calc(var(--vh,1vh)*100)]' : 'max-sm:h-screen'}
   max-sm:pt-5
   max-sm:px-5
 `;
@@ -99,6 +104,10 @@ export const InfoTxt = tw.div`
   absolute
   left-10
   bottom-10
+  text-base
+
+  max-ms:text-sm
+  drop-shadow-[0px_0px_2px_rgba(255,255,255,1)]
 `;
 
 export const Img = tw.img`
