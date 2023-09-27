@@ -47,9 +47,19 @@ export const projectDetailData = [
     ],
     parts: [
       {
-        title: '기획 구성 및 UI/UX 디자인',
+        title: '기획 및 내용 구체화',
         detail:
-          '무채색인 black & white로 심플함을 줬습니다. 또한 UX 측면을 고려하며 제작하려고 노력했습니다.',
+          '포트폴리오를 만들려는 의도를 파악하고 순서를 배치 했습니다.\n저를 모르는 불특정 다수가 보기에 간략하게 저에 대한 소개를 작성했고, \n 프로젝트, 이력 등 중요도 순으로 배치했습니다. ',
+      },
+      {
+        title: 'UI/UX 디자인',
+        detail:
+          '무채색인 black & white로 심플함을 주고, 차분하고 안정되는 느낌을 주었습니다.\n또한 UX 측면을 고려하며 디자인하려고 노력했습니다.',
+      },
+      {
+        title: '퍼블리싱',
+        detail:
+          '',
       },
     ],
   },
@@ -107,23 +117,27 @@ export const projectDetailData = [
     parts: [
       {
         title: '기획 구성',
-        detail: '',
+        detail: '쉽고 간단하게 일정을 만들고 공유할 수 있는 서비스를 제작하고자 했습니다.',
+      },
+      {
+        title: '헤더 푸터 작업',
+        detail: '헤더 스크롤 유무에 따라 스타일을 다르게 주었습니다. 로그인 후 유저 프로필 사진 클릭 시 메뉴가 나오도록 작업했습니다.\n푸터의 팀원 이름 마우스 호버 시 역할이 보여지는 재미요소를 넣었고, 클릭 시 팀원 github로 이동 됩니다.',
       },
       {
         title: '메인 페이지 작업 및 커서 커스터마이징 구현',
-        detail: '',
+        detail: '메인 페이지는 다른 프로젝트와 다르게 조금 독특했던 점은 커서 커스터마이징였습니다.\n이미지를 이용해 쉽게 마무리할 수 있었지만 마우스 이벤트할 경우 사용자 경험에 좋지 않다 생각했습니다.\nwindow position 및 여러 코드를 참고하여 구현하게 되었습니다.',
       },
       {
-        title: '마이 페이지 작업',
-        detail: '',
+        title: '마이 페이지 작업 및 유저 닉네임 RU',
+        detail: '마이 페이지 반응형 및 유저 닉네임 수정할 수 있도록 작업했습니다.',
       },
       {
-        title: '설정 페이지 작업 및 유저 닉네임 RU',
-        detail: '',
+        title: '설정 페이지 작업',
+        detail: '설정 페이지 반응형 및 로그인, 로그아웃을 추가했습니다.',
       },
       {
-        title: '전반적인 UI/UX 디자인 총괄 및 로고 디자인',
-        detail: '',
+        title: '전반적인 디자인 총괄 및 로고 디자인',
+        detail: '전반적인 UI 디자인을 맡았습니다. UX의 경우 팀원들과 상의하며 수정했습니다.\n로고의 경우 다른 플랫폼 디자인을 활용하려고 했으나 저작권 이슈로 직접 디자인하게 되었습니다.',
       },
     ],
   },
@@ -179,16 +193,16 @@ export const projectDetailData = [
     ],
     parts: [
       {
-        title: '기획 및 UI 디자인',
-        detail: '',
+        title: '기획 및 UI/UX 디자인',
+        detail: '팀원들과 오버플로우 홈페이지 UX를 분석하했습니다. 짧았던 작업 기간을 고려해 기술들을 레벨로 나눴습니다.',
       },
       {
         title: '질문 작성 / 수정하기 페이지 작업',
-        detail: '',
+        detail: '질문 작성 / 수정하기 페이지 반응형 작업을 2인 1조로 진행했습니다.',
       },
       {
         title: '질문 작성 / 수정하기 태그 CU',
-        detail: '',
+        detail: '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n태그는 최대 3개 까지만 추가할 수 있고, 3개 초과 시 다른 태그 선택이 안 되도록 작업했습니다.',
       },
     ],
   },
@@ -197,7 +211,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#6a57e0]',
     title: 'Coz Shopping',
     subtext:
-      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다. \n 짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인 github를 학습 하는데 많은 도움이 되었습니다.',
+      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다. \n 짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인 git, github를 학습 하는데 많은 도움이 되었습니다.',
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
     tag: ['팀', '반응형', '클론코딩'],
@@ -236,22 +250,95 @@ export const projectDetailData = [
       {
         title: 'Redux Toolkit',
         detail:
-          'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. \n Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
+          'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다.\nRedux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
       },
       {
         title: 'Styled Component',
         detail:
-        'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다. \n 컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다.',
+          'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다.\n컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다.',
       },
     ],
     parts: [
       {
         title: '북마크 구현',
-        detail: '',
+        detail: 'localStorage를 활용해 북마크 버튼 클릭 시 북마크 리스트에 추가 되도록 했습니다.\n또한 새로고침 되어도 유지가 되고 북마크 취소할 경우 북마크에서 삭제될 수 있도록 했습니다.',
       },
       {
-        title: '타입에 따른 상태 다른게 보이기',
+        title: '타입에 따른 상태 다르게 보이기',
+        detail: '요구사항에서 총 4가지 컨텐츠가 있었도 다른 내용을 표기했습니다. 이부분 참고하여 타입에 따라 다르게 표기 되도록 작업했습니다.',
+      },
+    ],
+  },
+  {
+    name: 'hancom',
+    pointcolor: 'before:bg-[#0b4da1]',
+    title: '한컴아카데미 온라인',
+    subtext:
+      'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼된 홈페이지입니다.\n클라이언트가 제공한 기획서 및 디자인을 확인하고 요구 사항을 참고하여 작업 했습니다.',
+    data: '2022 - 약 6개월',
+    team: '기여도 70%',
+    tag: ['팀', '반응형', '퍼블리싱'],
+    imgurl: '/src/assets/images/thumbnail_hancom.webp',
+    giturl: '',
+    depoloyurl: 'https://online.hancomacademy.com/',
+    blogurl: [],
+    tools: [
+      {
+        title: 'HTML/CSS',
+        detail: 'HTML, CSS언어로 마크업 작업을 했습니다.',
+      },
+    ],
+    parts: [
+      {
+        title: '고객 응대',
+        detail:
+          '담당자 분과 직접 소통하며 일정 조율 및 요구사항을 체크했습니다.',
+      },
+      {
+        title: '기타 페이지 디자인',
+        detail: '디자인 시안을 받지 못한 페이지 등을 디자인했습니다. (게시판 등)',
+      },
+      {
+        title: '퍼블리싱',
+        detail:
+          '마크업은 물론 요구사항을 확인하고 slick slider 라이브러리 등을 활용했습니다.\n간단한 토글 버튼 등은 JQuery를 사용했습니다.',
+      },
+    ],
+  },
+  {
+    name: 'woojieun',
+    pointcolor: 'before:bg-[#46a6bb]',
+    title: '우지은 스피치랩',
+    subtext:
+      '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다.\n클라이언트가 제공한 기획서를 확인하고 요구 사항을 참고하여 작업 했습니다.\n반응형이 아닌 PC/Mobile 도메인이 분리되어 있습니다.',
+    data: '2021 - 약 10개월',
+    team: '기여도 80%',
+    tag: ['팀', '분리형', '디자인', '퍼블리싱'],
+    imgurl: '/src/assets/images/thumbnail_woojieun.webp',
+    giturl: '',
+    depoloyurl: 'https://wspeechlab.com/',
+    blogurl: [],
+    tools: [
+      {
+        title: 'HTML/CSS',
         detail: '',
+      },
+    ],
+    parts: [
+      {
+        title: '고객 응대',
+        detail:
+          '담당자 분과 직접 소통하며 일정 조율 및 요구사항을 체크했습니다.',
+      },
+      {
+        title: '웹 디자인 (PC, Mobile)',
+        detail:
+          '기존 본사 홈페이지를 참고한 디자인으로 해당 홈페이지에 들어와도 위화감이 없도록 디자인 했습니다.',
+      },
+      {
+        title: '퍼블리싱',
+        detail:
+          '마크업은 물론 요구사항을 확인하고 slick slider 라이브러리 등을 활용했습니다.\n간단한 토글 버튼 등은 JQuery를 사용했습니다.',
       },
     ],
   },
