@@ -39,9 +39,8 @@ export const projectData = [
   {
     name: 'hancom',
     title: '한컴아카데미 온라인',
-    subject: 'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼된 홈페이지입니다.',
+    subject: 'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼한 홈페이지입니다.',
     tag: ['장기', '반응형', '퍼블리싱'],
-    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_hancom.webp',
     depoloyurl: 'https://online.hancomacademy.com/',
   },
   {
@@ -49,7 +48,6 @@ export const projectData = [
     title: '우지은스피치랩',
     subject: '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다.',
     tag: ['장기', '분리형', '디자인', '퍼블리싱'],
-    imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_woojieun.webp',
     depoloyurl: 'https://wspeechlab.com/',
   },
 ];

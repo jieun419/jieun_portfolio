@@ -11,8 +11,9 @@ import { ProjectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
 import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 
-type ColorProps = {
-  pointcolor: string;
+type ProjectDataProps = {
+  pointcolor?: string;
+  imgurl?: string;
 }
 
 export const DetailContainer = tw.article`
@@ -28,17 +29,17 @@ export const DetailContainer = tw.article`
   max-md:py-0
 `;
 
-export const DetailWrap = tw.section`
+export const DetailWrap = tw.section<ProjectDataProps>`
   relative
   w-full
-  
   mx-auto
   bg-white
+  ${(props) => props.imgurl ? 'h-auto' : 'h-screen'}
 
   max-md:h-auto
 `;
 
-export const DetailTop = tw.section<ColorProps>`
+export const DetailTop = tw.section<ProjectDataProps>`
   relative
   flex
   flex-col
@@ -50,9 +51,9 @@ export const DetailTop = tw.section<ColorProps>`
   before:absolute
   before:top-0 
   before:left-0
-  before:w-full
-  before:h-[70%]
+  before:w-full  
   ${(props) => props.pointcolor ? props.pointcolor : 'before:bg-[#e1e1e1]'}
+  ${(props) => props.imgurl ? 'before:h-[70%]' : 'before:h-[85%]'}
   before:z-[-1]
 
   after:block
@@ -60,7 +61,7 @@ export const DetailTop = tw.section<ColorProps>`
   after:top-0 
   after:left-0
   after:w-full
-  after:h-[70%]
+  ${(props) => props.imgurl ? 'after:h-[70%]' : 'after:h-[85%]'}
   after:bg-gradient-to-t from-[#00000045]
   after:z-[-1]
 `;
@@ -185,13 +186,13 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
                 <ContBtns>
-                  {giturl !== '' && <LinkBtn name='github_bk' giturl={giturl} text='github' />}
+                  {giturl && <LinkBtn name='github_bk' giturl={giturl} text='github' />}
                   <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
-                  {blogurl?.length !== 0 && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
+                  {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
                 </ContBtns>
               </Btns>
 
-              <DetailTop pointcolor={pointcolor}>
+              <DetailTop pointcolor={pointcolor} imgurl={imgurl}>
                 <Tags>
                   {
                     tag.map((tag, idx) => (
@@ -204,7 +205,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   <DateTxt>{data}</DateTxt>
                   <DateTxt>{team}</DateTxt>
                 </ProjectDate>
-                <ProjectScreen imgurl={imgurl} />
+                {imgurl && <ProjectScreen imgurl={imgurl} />}
               </DetailTop>
 
               <DetailBody>

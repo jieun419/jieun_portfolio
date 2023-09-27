@@ -18,7 +18,7 @@ export type ProjectDataT = {
   name: string;
   subject: string;
   tag: string[];
-  imgurl: string;
+  imgurl?: string;
   giturl?: string;
   depoloyurl?: string;
 };
@@ -39,8 +39,8 @@ export type ProjectDetailDataT = {
   data: string;
   team: string;
   tag: string[];
-  imgurl: string;
-  giturl: string;
+  imgurl?: string;
+  giturl?: string;
   depoloyurl?: string;
   blogurl?: {
     title: string;
