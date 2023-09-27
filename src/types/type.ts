@@ -19,7 +19,8 @@ export type ProjectDataT = {
   subject: string;
   tag: string[];
   imgurl: string;
-  giturl: string;
+  giturl?: string;
+  depoloyurl?: string;
 };
 
 export type RecordDataT = {

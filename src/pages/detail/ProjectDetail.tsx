@@ -185,9 +185,9 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
                 <ContBtns>
-                  <LinkBtn name='github_bk' giturl={giturl} text='github' />
+                  {giturl !== '' && <LinkBtn name='github_bk' giturl={giturl} text='github' />}
                   <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
-                  <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                  {blogurl?.length !== 0 && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
                 </ContBtns>
               </Btns>
 
@@ -213,7 +213,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 </ProjectInfoTxt>
 
                 <PWrap>
-                  <PTitle>사용 기술</PTitle>
+                  <PTitle>사용 기술 및 언어</PTitle>
                   <Toggles>
                     {
                       tools.map((item, idx) => (
