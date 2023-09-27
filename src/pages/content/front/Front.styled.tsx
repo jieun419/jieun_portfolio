@@ -7,7 +7,6 @@ type IsMobile = {
 export const MainComponent = tw.main<IsMobile>`
   sticky
   top-0
-  z-[-1]
   h-screen
   flex
   items-center
@@ -85,6 +84,7 @@ export const SocialList = tw.div`
 `;
 
 export const SocialLink = tw.a`
+relative
   flex
   gap-1
   items-center
@@ -114,7 +114,7 @@ export const InfoTxt = tw.span`
   text-base
 
   max-sm:text-sm
-  max-sm:text-[#fff]
+  max-sm:text-[#EFEFF1]
   max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
