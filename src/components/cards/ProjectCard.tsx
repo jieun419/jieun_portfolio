@@ -94,7 +94,7 @@ export const Button = tw.button`
   hover:text-[#232323]
 `;
 
-function ProjectCard({ title, subject, tag, imgurl, name, giturl }: ProjectDataT) {
+function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {
   const dispatch = useDispatch();
 
   const lockScroll = () => {
@@ -113,7 +113,11 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl }: ProjectDataT
         <Tit>{title}</Tit>
         <BtnBox>
           <Button onClick={() => toggleModal(name)}>자세히 보기</Button>
-          <Button onClick={() => window.open(giturl)}>Github 바로가기</Button>
+          {depoloyurl ? (
+            <Button onClick={() => window.open(depoloyurl)}>사이트 바로가기</Button>
+          ) : (
+            <Button onClick={() => window.open(giturl)}>Github 바로가기</Button>
+          )}
         </BtnBox>
       </HoverBox>
 
