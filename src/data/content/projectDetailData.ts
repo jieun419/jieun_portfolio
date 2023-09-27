@@ -292,11 +292,7 @@ export const projectDetailData = [
     data: '2022 - 약 6개월',
     team: '기여도 70%',
     tag: ['팀', '반응형', '퍼블리싱'],
-    imgurl:
-      'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_hancom.webp',
-    giturl: '',
     depoloyurl: 'https://online.hancomacademy.com/',
-    blogurl: [],
     tools: [
       {
         title: 'HTML/CSS',
@@ -330,11 +326,7 @@ export const projectDetailData = [
     data: '2021 - 약 10개월',
     team: '기여도 80%',
     tag: ['팀', '분리형', '디자인', '퍼블리싱'],
-    imgurl:
-      'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_woojieun.webp',
-    giturl: '',
     depoloyurl: 'https://wspeechlab.com/',
-    blogurl: [],
     tools: [
       {
         title: 'HTML/CSS',

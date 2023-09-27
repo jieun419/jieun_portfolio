@@ -5,6 +5,10 @@ import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDataT } from '../../types/type';
 
+type ProjectDataProps = {
+  imgurl?: string;
+}
+
 export const CardContainer = tw.section`
   overflow-hidden
   flex
@@ -29,13 +33,14 @@ export const CardThumbnail = tw.div`
   h-[45%]
 `;
 
-export const TxtWrap = tw.div`
+export const TxtWrap = tw.div<ProjectDataProps>`
   px-5
   flex
   flex-col
   justify-start
   gap-3
   text-[#fff]
+  ${(props) => !props.imgurl && 'mt-10'}
 `;
 
 export const Tit = tw.h4`
@@ -121,11 +126,13 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
         </BtnBox>
       </HoverBox>
 
-      <CardThumbnail>
-        <ThumbnailImg url={imgurl} />
-      </CardThumbnail>
+      {imgurl && (
+        <CardThumbnail>
+          <ThumbnailImg url={imgurl} />
+        </CardThumbnail>
+      )}
 
-      <TxtWrap>
+      <TxtWrap imgurl={imgurl}>
         <Tit>{title}</Tit>
         <Txt>{subject}</Txt>
       </TxtWrap>
