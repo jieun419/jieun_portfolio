@@ -12,7 +12,7 @@ export const NavContainer = tw.nav`
 
   max-md:flex-row
   max-md:bg-[#232323]
-  max-md:z-[10]
+  max-md:z-[2]
   max-md:py-3
   max-md:top-0
   max-md:w-full
