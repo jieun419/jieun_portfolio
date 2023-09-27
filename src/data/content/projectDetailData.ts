@@ -12,7 +12,12 @@ export const projectDetailData = [
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_protfolio.webp',
     giturl: 'https://github.com/jieun419/jieun_portfolio',
     depoloyurl: 'https://jieun-portfolio.vercel.app/',
-    blogurl: [{ title: '', url: '' }],
+    blogurl: [
+      {
+        title: '모바일 환경에서 100vh 이슈',
+        url: 'https://velog.io/@crg1050/포트폴리오-모바일-환경에서-100vh-이슈',
+      },
+    ],
     tools: [
       {
         title: 'Vite',
@@ -58,8 +63,7 @@ export const projectDetailData = [
       },
       {
         title: '퍼블리싱',
-        detail:
-          '',
+        detail: '',
       },
     ],
   },
@@ -117,19 +121,23 @@ export const projectDetailData = [
     parts: [
       {
         title: '기획 구성',
-        detail: '쉽고 간단하게 일정을 만들고 공유할 수 있는 서비스를 제작하고자 했습니다.',
+        detail:
+          '쉽고 간단하게 일정을 만들고 공유할 수 있는 서비스를 제작하고자 했습니다.',
       },
       {
         title: '헤더 푸터 작업',
-        detail: '헤더 스크롤 유무에 따라 스타일을 다르게 주었습니다. 로그인 후 유저 프로필 사진 클릭 시 메뉴가 나오도록 작업했습니다.\n푸터의 팀원 이름 마우스 호버 시 역할이 보여지는 재미요소를 넣었고, 클릭 시 팀원 github로 이동 됩니다.',
+        detail:
+          '헤더 스크롤 유무에 따라 스타일을 다르게 주었습니다. 로그인 후 유저 프로필 사진 클릭 시 메뉴가 나오도록 작업했습니다.\n푸터의 팀원 이름 마우스 호버 시 역할이 보여지는 재미요소를 넣었고, 클릭 시 팀원 github로 이동 됩니다.',
       },
       {
         title: '메인 페이지 작업 및 커서 커스터마이징 구현',
-        detail: '메인 페이지는 다른 프로젝트와 다르게 조금 독특했던 점은 커서 커스터마이징였습니다.\n이미지를 이용해 쉽게 마무리할 수 있었지만 마우스 이벤트할 경우 사용자 경험에 좋지 않다 생각했습니다.\nwindow position 및 여러 코드를 참고하여 구현하게 되었습니다.',
+        detail:
+          '메인 페이지는 다른 프로젝트와 다르게 조금 독특했던 점은 커서 커스터마이징였습니다.\n이미지를 이용해 쉽게 마무리할 수 있었지만 마우스 이벤트할 경우 사용자 경험에 좋지 않다 생각했습니다.\nwindow position 및 여러 코드를 참고하여 구현하게 되었습니다.',
       },
       {
         title: '마이 페이지 작업 및 유저 닉네임 RU',
-        detail: '마이 페이지 반응형 및 유저 닉네임 수정할 수 있도록 작업했습니다.',
+        detail:
+          '마이 페이지 반응형 및 유저 닉네임 수정할 수 있도록 작업했습니다.',
       },
       {
         title: '설정 페이지 작업',
@@ -137,7 +145,8 @@ export const projectDetailData = [
       },
       {
         title: '전반적인 디자인 총괄 및 로고 디자인',
-        detail: '전반적인 UI 디자인을 맡았습니다. UX의 경우 팀원들과 상의하며 수정했습니다.\n로고의 경우 다른 플랫폼 디자인을 활용하려고 했으나 저작권 이슈로 직접 디자인하게 되었습니다.',
+        detail:
+          '전반적인 UI 디자인을 맡았습니다. UX의 경우 팀원들과 상의하며 수정했습니다.\n로고의 경우 다른 플랫폼 디자인을 활용하려고 했으나 저작권 이슈로 직접 디자인하게 되었습니다.',
       },
     ],
   },
@@ -194,15 +203,18 @@ export const projectDetailData = [
     parts: [
       {
         title: '기획 및 UI/UX 디자인',
-        detail: '팀원들과 오버플로우 홈페이지 UX를 분석하했습니다. 짧았던 작업 기간을 고려해 기술들을 레벨로 나눴습니다.',
+        detail:
+          '팀원들과 오버플로우 홈페이지 UX를 분석하했습니다. 짧았던 작업 기간을 고려해 기술들을 레벨로 나눴습니다.',
       },
       {
         title: '질문 작성 / 수정하기 페이지 작업',
-        detail: '질문 작성 / 수정하기 페이지 반응형 작업을 2인 1조로 진행했습니다.',
+        detail:
+          '질문 작성 / 수정하기 페이지 반응형 작업을 2인 1조로 진행했습니다.',
       },
       {
         title: '질문 작성 / 수정하기 태그 CU',
-        detail: '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n태그는 최대 3개 까지만 추가할 수 있고, 3개 초과 시 다른 태그 선택이 안 되도록 작업했습니다.',
+        detail:
+          '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n태그는 최대 3개 까지만 추가할 수 있고, 3개 초과 시 다른 태그 선택이 안 되도록 작업했습니다.',
       },
     ],
   },
@@ -261,11 +273,13 @@ export const projectDetailData = [
     parts: [
       {
         title: '북마크 구현',
-        detail: 'localStorage를 활용해 북마크 버튼 클릭 시 북마크 리스트에 추가 되도록 했습니다.\n또한 새로고침 되어도 유지가 되고 북마크 취소할 경우 북마크에서 삭제될 수 있도록 했습니다.',
+        detail:
+          'localStorage를 활용해 북마크 버튼 클릭 시 북마크 리스트에 추가 되도록 했습니다.\n또한 새로고침 되어도 유지가 되고 북마크 취소할 경우 북마크에서 삭제될 수 있도록 했습니다.',
       },
       {
         title: '타입에 따른 상태 다르게 보이기',
-        detail: '요구사항에서 총 4가지 컨텐츠가 있었도 다른 내용을 표기했습니다. 이부분 참고하여 타입에 따라 다르게 표기 되도록 작업했습니다.',
+        detail:
+          '요구사항에서 총 4가지 컨텐츠가 있었도 다른 내용을 표기했습니다. 이부분 참고하여 타입에 따라 다르게 표기 되도록 작업했습니다.',
       },
     ],
   },
@@ -278,7 +292,8 @@ export const projectDetailData = [
     data: '2022 - 약 6개월',
     team: '기여도 70%',
     tag: ['팀', '반응형', '퍼블리싱'],
-    imgurl: '/src/assets/images/thumbnail_hancom.webp',
+    imgurl:
+      'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_hancom.webp',
     giturl: '',
     depoloyurl: 'https://online.hancomacademy.com/',
     blogurl: [],
@@ -296,7 +311,8 @@ export const projectDetailData = [
       },
       {
         title: '기타 페이지 디자인',
-        detail: '디자인 시안을 받지 못한 페이지 등을 디자인했습니다. (게시판 등)',
+        detail:
+          '디자인 시안을 받지 못한 페이지 등을 디자인했습니다. (게시판 등)',
       },
       {
         title: '퍼블리싱',
@@ -314,7 +330,8 @@ export const projectDetailData = [
     data: '2021 - 약 10개월',
     team: '기여도 80%',
     tag: ['팀', '분리형', '디자인', '퍼블리싱'],
-    imgurl: '/src/assets/images/thumbnail_woojieun.webp',
+    imgurl:
+      'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_woojieun.webp',
     giturl: '',
     depoloyurl: 'https://wspeechlab.com/',
     blogurl: [],
