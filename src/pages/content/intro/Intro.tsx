@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -9,6 +9,7 @@ import { MindData, StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
+import { positionActions } from '../../../store/position-slice';
 
 
 export const IntroComponent = tw.main`
@@ -121,13 +122,14 @@ export const StackIcons = tw.div`
 `;
 
 function Intro() {
+  const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ['0 1', `${isMobile ? '0.5 1' : '1 1'}`]
+    offset: ['0 1', `${isMobile ? '0.8 1' : '1 1'}`]
   });
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 2]);
   const yPosition = useTransform(
@@ -140,6 +142,12 @@ function Intro() {
     [0, 1],
     ['20%', '0%']
   );
+
+  useTransform(scrollYProgress, (pos) => {
+    return pos === 1 ?
+      dispatch(positionActions.PositionStyle('relative')) :
+      dispatch(positionActions.PositionStyle('sticky'))
+  });
 
   return (
     <IntroComponent>
