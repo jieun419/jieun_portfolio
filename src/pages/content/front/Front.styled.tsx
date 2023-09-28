@@ -1,4 +1,5 @@
 import tw from 'tailwind-styled-components';
+import { motion } from 'framer-motion';
 
 type IsMobile = {
   isMobile: boolean
@@ -50,7 +51,7 @@ export const BgTxt = tw.p`
   max-lg:text-[6rem]
 `;
 
-export const MainTit = tw.h2`
+export const MainTit = tw(motion.h2)`
   text-5xl
   font-black
   text-black
@@ -69,7 +70,7 @@ export const StTxt = tw.strong`
   font-black
 `;
 
-export const SubTxt = tw.p`
+export const SubTxt = tw(motion.p)`
   font-normal
   text-xl
 
@@ -118,7 +119,7 @@ export const InfoTxt = tw.span`
   max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
-export const Img = tw.img<IsMobile>`
+export const Img = tw(motion.img)<IsMobile>`
   absolute
   bottom-0
   w-auto
