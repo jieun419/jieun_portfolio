@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
-function useScrollToTarget(nameed: string) {
+function useScrollToTarget(targetName: string) {
   const [isTarget, setIsTarget] = useState<boolean>(false);
   const targetRef = useRef<HTMLElement>(null);
-  const targetName = nameed;
 
   const targetId = targetRef.current?.id;
   const scrollToTarget = () => {
