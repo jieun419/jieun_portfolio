@@ -6,8 +6,6 @@ type IsMobile = {
 }
 
 export const MainComponent = tw.main<IsMobile>`
-  sticky
-  top-0
   h-screen
   flex
   items-center
