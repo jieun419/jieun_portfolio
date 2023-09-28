@@ -1,5 +1,7 @@
 import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import myImgIm from '../../../assets/images/jieun_im.webp';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
@@ -8,6 +10,7 @@ import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
 
+
 export const IntroComponent = tw.main`
   relative
   flex
@@ -15,12 +18,12 @@ export const IntroComponent = tw.main`
   flex-col
   justify-center
   bg-[#232323]
-  h-auto
   px-10
   pt-10
   h-screen
   z-1
 
+  max-lg:overflow-hidden
   max-lg:h-auto
   max-lg:py-20
 `;
@@ -119,48 +122,81 @@ export const StackIcons = tw.div`
 
 function Intro() {
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ['0 1', `${isMobile ? '0.5 1' : '1 1'}`]
+  });
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 2]);
+  const yPosition = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['-10%', '0%']
+  );
+  const xPosition = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['20%', '0%']
+  );
 
   return (
     <IntroComponent>
 
-      {isModal ? <ReviewDetail name='review' /> : null}
+      {isModal && <ReviewDetail name='review' />}
 
       <SubJectTit>About me</SubJectTit>
       <Content>
+        <motion.div
+          ref={scrollRef}
+          style={{
+            opacity: opacity,
+            y: yPosition
+          }}
+        >
+          <LeftWrap>
+            <Img src={myImgIm} alt="이모지 이미지" />
+            <ShowReviewBtn />
+          </LeftWrap>
+        </motion.div>
 
-        <LeftWrap>
-          <Img src={myImgIm} alt="이모지 이미지" />
-          <ShowReviewBtn />
-        </LeftWrap>
+        <motion.div
+          ref={scrollRef}
+          style={{
+            opacity: opacity,
+            x: xPosition,
+          }}
+        >
+          <RightWrap>
+            <MyMind>
+              <Tit>Mind</Tit>
+              <SubTit>{MindData.subtitle}</SubTit>
+              <MyMindTxt>
+                {MindData.text}
+              </MyMindTxt>
+            </MyMind>
 
-        <RightWrap>
-          <MyMind>
-            <Tit>Mind</Tit>
-            <SubTit>{MindData.subtitle}</SubTit>
-            <MyMindTxt>
-              {MindData.text}
-            </MyMindTxt>
-          </MyMind>
-
-          <Stacks>
-            <Tit>Skill & Tools</Tit>
-            <StackWrap>
-              {
-                //* key = 제목, stacks = 기술 스택
-                Object.entries(StackData.stack).map(([key, stacks], idx) => (
-                  <StackBox key={idx}>
-                    <SubTit>{key}</SubTit>
-                    <StackIcons>
-                      {stacks.map((stack) => (
-                        <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
-                      ))}
-                    </StackIcons>
-                  </StackBox>
-                ))
-              }
-            </StackWrap>
-          </Stacks>
-        </RightWrap>
+            <Stacks>
+              <Tit>Skill & Tools</Tit>
+              <StackWrap>
+                {
+                  //* key = 제목, stacks = 기술 스택
+                  Object.entries(StackData.stack).map(([key, stacks], idx) => (
+                    <StackBox key={idx}>
+                      <SubTit>{key}</SubTit>
+                      <StackIcons>
+                        {stacks.map((stack) => (
+                          <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
+                        ))}
+                      </StackIcons>
+                    </StackBox>
+                  ))
+                }
+              </StackWrap>
+            </Stacks>
+          </RightWrap>
+        </motion.div>
 
       </Content>
     </IntroComponent >

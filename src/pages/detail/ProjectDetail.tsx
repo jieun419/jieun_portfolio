@@ -34,7 +34,7 @@ export const DetailWrap = tw.section<ProjectDataProps>`
   w-full
   mx-auto
   bg-white
-  ${(props) => props.imgurl ? 'h-auto' : 'h-screen'}
+  ${(props) => !props.imgurl && 'h-screen'}
 
   max-md:h-auto
 `;
@@ -181,7 +181,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
         targetName === name ? (
           <DetailContainer>
             <DropShadow toggleModal={toggleModal} />
-            <DetailWrap>
+            <DetailWrap imgurl={imgurl}>
 
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />

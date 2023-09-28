@@ -29,7 +29,7 @@ function Project({ id, navTabs }: TabsPropsT) {
   return (
     <ProjectComponent id={id} ref={navTabs[0].targetRef} >
 
-      {isModal ? (
+      {isModal && (
         projectDetailData.map((item, idx) => (
           <ProjectDetail
             key={idx}
@@ -48,7 +48,7 @@ function Project({ id, navTabs }: TabsPropsT) {
             parts={item.parts}
           />
         ))
-      ) : null}
+      )}
       {projectData.map((item, idx) => (
         <ProjectCard
           key={idx}
