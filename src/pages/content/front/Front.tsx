@@ -61,7 +61,7 @@ function Front() {
       </TxtWrap>
 
       <Img
-        initial={{ scale: 1.1 }}
+        initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2 }}
         src={myImg}

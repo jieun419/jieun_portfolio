@@ -12,6 +12,7 @@ export const Container = tw.main`
   flex
   p-10
   gap-14
+  z-[2]
   
   max-md:flex-col
   max-md:gap-0
