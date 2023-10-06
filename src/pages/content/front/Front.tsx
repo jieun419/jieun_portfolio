@@ -7,18 +7,18 @@ import { UPDATE_DATA } from '../../../utils/constant/constant';
 import IcLineArrow from '../../../assets/icons/IcLinekArrow';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store';
+import { isMobile } from '../../../utils/isMobile';
 
 function Front() {
   const isPosition = useSelector((state:RootState) => state.position.isPosition)
   const vhRef = useRef(0);
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   useEffect(() => {
     if (isMobile) {
       vhRef.current = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vhRef.current}px`);
     }
-  }, [isMobile]);
+  }, []);
 
   return (
     <motion.main className={`top-0 ${isPosition}`}>
