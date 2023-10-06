@@ -4,10 +4,9 @@ function useScrollToTarget(targetName: string) {
   const [isTarget, setIsTarget] = useState<boolean>(false);
   const targetRef = useRef<HTMLElement>(null);
 
-  const targetId = targetRef.current?.id;
   const scrollToTarget = () => {
     //* 해당 영역으로 스크롤 이동하기    
-    document.querySelector(`#${targetId}`)?.scrollIntoView({
+    document.querySelector(`#${targetName}`)?.scrollIntoView({
       behavior: 'smooth'
     })
   };

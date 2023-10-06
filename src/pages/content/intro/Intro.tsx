@@ -10,6 +10,7 @@ import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
 import { positionActions } from '../../../store/position-slice';
+import { isMobile } from '../../../utils/isMobile';
 
 
 export const IntroComponent = tw.main`
@@ -124,7 +125,6 @@ export const StackIcons = tw.div`
 function Intro() {
   const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

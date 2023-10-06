@@ -1,5 +1,45 @@
 export const projectDetailData = [
   {
+    name: 'ssthing',
+    pointcolor: 'before:bg-[#373737]',
+    title: 'SSTHING',
+    subtext:
+      '우주가 컨셉인 회사 소개 홈페이지입니다. 디자인 시안을 figma로 확인하며\n최대한 클라이언트가 요구한 디자인과 기능을 비슷하게 작업하려고 노력했습니다.',
+    data: '2023.10 - 약 3일',
+    team: '2인 (프론트)',
+    tag: ['팀', '반응형', '퍼블리싱'],
+    depoloyurl: 'https://ssting.io/',    
+    tools: [
+      {
+        title: 'React',
+        detail:
+          'React는 컴포넌트 기반으로 하며, 가상 DOM을 활용해 웹 애플리케이션의 성능을 최적화 합니다. 컴포넌트 재사용성을 높이고, 상태 관리를 용이하게 할 수 있습니다.',
+      },
+      {
+        title: 'TypeScript',
+        detail:
+          'TypeScript는 정적 타입을 지원하는 JavaScript 슈퍼셋 언어로, 코드를 실행하기 전 오류를 잡아 줄 수 있습니다.',
+      },
+      {
+        title: 'Styled Components',
+        detail:
+          'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다. 컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다. 또한 tailwind 사용시 클래스가 길어져 코드가 지저분해 지는 단점을 보완해 줍니다.',
+      },
+    ],
+    parts: [
+      {
+        title: '헤더 작업',
+        detail:
+          '각 메뉴 클릭 시 해당 섹션으로 이동 되도록했습니다. 또한 서브페이지에서도 해당 메뉴 클릭 시 메인에서 해당 영역으로 이동 되도록 localStorage를 활용해 작업했습니다.',
+      },
+      {
+        title: '퍼블리싱',
+        detail:
+          '디자인된 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.\n각 섹션을 팀원과 나눠 PC 부터 Mobile 환경까지 반응형 작업을 했습니다.\n또한 디자이너가 요구한 시안을 확인하며 배경 위치를 조절했습니다.',
+      },
+    ],
+  },
+  {
     name: 'portfolio',
     pointcolor: 'before:bg-[#373737]',
     title: '지은 포트폴리오',
@@ -63,8 +103,8 @@ export const projectDetailData = [
       },
       {
         title: '퍼블리싱',
-        detail: '',
-      },
+        detail: '직접 디자인한 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.',
+      }
     ],
   },
   {
@@ -210,7 +250,7 @@ export const projectDetailData = [
       {
         title: '질문 작성 / 수정하기 페이지 작업',
         detail:
-          '질문 작성 / 수정하기 페이지 작업을 2일 1조로 협력하며 진행했습니다.',
+          '질문 작성 / 수정하기 페이지 작업을 2인 1조로 협력하며 진행했습니다.',
       },
       {
         title: '질문 작성 / 수정하기 태그 CU',
@@ -280,7 +320,7 @@ export const projectDetailData = [
       {
         title: '타입에 따른 상태 다르게 보이기',
         detail:
-          '요구사항에서 총 4가지 컨텐츠가 있었도 다른 내용을 표기했습니다. 이부분 참고하여 타입에 따라 다르게 표기 되도록 작업했습니다.',
+          '요구사항에서 총 4가지 컨텐츠가 있었고 다른 내용을 표기했습니다. 이부분 참고하여 타입에 따라 다르게 표기 되도록 작업했습니다.',
       },
     ],
   },
@@ -302,7 +342,7 @@ export const projectDetailData = [
       },
       {
         title: 'JQuery',
-        detail: '',
+        detail: 'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
     parts: [
@@ -346,7 +386,7 @@ export const projectDetailData = [
       },
       {
         title: 'JQuery',
-        detail: '',
+        detail: 'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
     parts: [

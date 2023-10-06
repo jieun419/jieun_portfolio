@@ -1,5 +1,12 @@
 export const projectData = [
   {
+    name: 'ssthing',
+    title: 'SSHTING',
+    subject: '우주가 컨셉인 회사 소개 홈페이지입니다.',
+    tag: ['팀', '반응형', '퍼블리싱'],
+    depoloyurl: 'https://ssting.io/',
+  },
+  {
     name: 'portfolio',
     title: '지은 포트폴리오',
     subject: '저만의 포트폴리오를 만들기 위해 제작했습니다.',
