@@ -67,9 +67,6 @@ function Front() {
         </TxtWrap>
 
         <Img
-          initial={{ y: 10 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 1 }}
           src={myImg}
           isMobile={isMobile}
           alt="최지은 인물 사진"
