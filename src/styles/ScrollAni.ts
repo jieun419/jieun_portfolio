@@ -25,7 +25,7 @@ export const ScrollAni = styled.div<Props>`
   @keyframes scroll {
     0% {
       opacity: 0;
-      transform: translateY(-50px);
+      transform: translateY(-80px);
     }
     100% {
       opacity: 1;

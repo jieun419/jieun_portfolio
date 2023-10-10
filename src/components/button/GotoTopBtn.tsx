@@ -5,7 +5,7 @@ export const TopButton = tw.button`
   fixed
   bottom-5
   right-5
-  z-[10]
+  z-[3]
   shadow-lg
   w-[50px]
   h-[50px]
