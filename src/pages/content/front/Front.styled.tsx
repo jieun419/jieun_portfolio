@@ -126,7 +126,7 @@ export const Img = tw(motion.img) <IsMobile>`
   h-[calc(100vh-40vh)]
   transition-all
 
-  ${props => props.isMobile ? 'max-sm:h-[calc(var(--vh,1vh)*60)]' : 'max-sm:h-[calc(100vh-40vh)]'}
+  max-sm:h-[calc(100vh-40vh)]
 `;
 
 export const ScrollArrowBox = tw.div`
