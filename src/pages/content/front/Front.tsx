@@ -10,7 +10,7 @@ import { RootState } from '../../../store';
 import { isMobile } from '../../../utils/isMobile';
 
 function Front() {
-  const isPosition = useSelector((state:RootState) => state.position.isPosition)
+  const isPosition = useSelector((state: RootState) => state.position.isPosition)
   const vhRef = useRef(0);
 
   useEffect(() => {

@@ -8,7 +8,7 @@ export const projectDetailData = [
     data: '2023.10 - 약 3일',
     team: '2인 (프론트)',
     tag: ['팀', '반응형', '퍼블리싱'],
-    depoloyurl: 'https://ssting.io/',    
+    depoloyurl: 'https://ssting.io/',
     tools: [
       {
         title: 'React',
@@ -103,8 +103,9 @@ export const projectDetailData = [
       },
       {
         title: '퍼블리싱',
-        detail: '직접 디자인한 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.',
-      }
+        detail:
+          '직접 디자인한 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.',
+      },
     ],
   },
   {
@@ -342,7 +343,8 @@ export const projectDetailData = [
       },
       {
         title: 'JQuery',
-        detail: 'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
+        detail:
+          'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
     parts: [
@@ -386,7 +388,8 @@ export const projectDetailData = [
       },
       {
         title: 'JQuery',
-        detail: 'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
+        detail:
+          'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
     parts: [

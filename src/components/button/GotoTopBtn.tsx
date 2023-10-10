@@ -18,7 +18,7 @@ export const TopButton = tw.button`
 
 function GoTopBtn() {
   const goToTop = () => {
-    window.scrollTo({top:0, left:0, behavior:'smooth'});
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
   return (
     <TopButton onClick={goToTop}>
