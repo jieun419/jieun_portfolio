@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        background-color: #232323;
         font-family: 'Noto Sans KR', sans-serif;
 
         line-height: 1.5;

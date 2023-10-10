@@ -6,6 +6,8 @@ import { TabsPropsT } from '../../../types/type';
 import { projectData } from '../../../data/content/projectData';
 import { projectDetailData } from '../../../data/content/projectDetailData';
 import ProjectCard from '../../../components/cards/ProjectCard';
+import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import ScrollAni from '../../../styles/ScrollAni';
 
 export const ProjectComponent = tw.article`
   grid
@@ -25,10 +27,10 @@ export const ProjectComponent = tw.article`
 function Project({ id, navTabs }: TabsPropsT) {
 
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const { scrollRef, scrollEl } = useScrollAnimation();
 
   return (
-    <ProjectComponent id={id} ref={navTabs[0].targetRef} >
-
+    <>
       {isModal && (
         projectDetailData.map((item, idx) => (
           <ProjectDetail
@@ -49,19 +51,24 @@ function Project({ id, navTabs }: TabsPropsT) {
           />
         ))
       )}
-      {projectData.map((item, idx) => (
-        <ProjectCard
-          key={idx}
-          name={item.name}
-          title={item.title}
-          subject={item.subject}
-          tag={item.tag}
-          imgurl={item.imgurl}
-          giturl={item.giturl}
-          depoloyurl={item.depoloyurl}
-        />
-      ))}
-    </ProjectComponent>
+
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+        <ProjectComponent id={id} ref={navTabs[0].targetRef} >
+          {projectData.map((item, idx) => (
+            <ProjectCard
+              key={idx}
+              name={item.name}
+              title={item.title}
+              subject={item.subject}
+              tag={item.tag}
+              imgurl={item.imgurl}
+              giturl={item.giturl}
+              depoloyurl={item.depoloyurl}
+            />
+          ))}
+        </ProjectComponent>
+      </ScrollAni>
+    </>
   );
 }
 

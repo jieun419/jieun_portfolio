@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useSelector } from 'react-redux';
+// import { useEffect, useRef, useState } from 'react';
+// import { useScroll, useTransform } from "framer-motion";
 
 import myImgIm from '../../../assets/images/jieun_im.webp';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
@@ -9,9 +9,10 @@ import { MindData, StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
-import { positionActions } from '../../../store/position-slice';
-import { isMobile } from '../../../utils/isMobile';
-
+// import { positionActions } from '../../../store/position-slice';
+// import { isMobile } from '../../../utils/isMobile';
+import ScrollAni from '../../../styles/ScrollAni';
+import useScrollAnimation from '../../../hooks/useScrollAnimation';
 
 export const IntroComponent = tw.main`
   relative
@@ -123,31 +124,16 @@ export const StackIcons = tw.div`
 `;
 
 function Intro() {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const { scrollRef, scrollEl } = useScrollAnimation();
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ['0 1', `${isMobile ? '0.8 1' : '1 1'}`]
-  });
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 2]);
-  const yPosition = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['-10%', '0%']
-  );
-  const xPosition = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['20%', '0%']
-  );
+  // useTransform(scrollYProgress, (pos) => {
+  //   return pos === 1 ?
+  //     dispatch(positionActions.PositionStyle('relative')) :
+  //     dispatch(positionActions.PositionStyle('sticky'))
+  // });
 
-  useTransform(scrollYProgress, (pos) => {
-    return pos === 1 ?
-      dispatch(positionActions.PositionStyle('relative')) :
-      dispatch(positionActions.PositionStyle('sticky'))
-  });
 
   return (
     <IntroComponent>
@@ -155,28 +141,13 @@ function Intro() {
       {isModal && <ReviewDetail name='review' />}
 
       <SubJectTit>About me</SubJectTit>
-      <Content>
-        <motion.div
-          ref={scrollRef}
-          style={{
-            opacity: opacity,
-            y: yPosition
-          }}
-        >
+      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+        <Content>
           <LeftWrap>
             <Img src={myImgIm} alt="이모지 이미지" />
             <ShowReviewBtn />
           </LeftWrap>
-        </motion.div>
-
-        <motion.div
-          ref={scrollRef}
-          style={{
-            opacity: opacity,
-            x: xPosition,
-          }}
-        >
-          <RightWrap>
+          <RightWrap ref={scrollRef}>
             <MyMind>
               <Tit>Mind</Tit>
               <SubTit>{MindData.subtitle}</SubTit>
@@ -204,9 +175,8 @@ function Intro() {
               </StackWrap>
             </Stacks>
           </RightWrap>
-        </motion.div>
-
-      </Content>
+        </Content>
+      </ScrollAni>
     </IntroComponent >
   );
 }

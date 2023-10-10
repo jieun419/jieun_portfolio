@@ -20,7 +20,7 @@ export const recordData = [
       'HTML / CSS 활용해 자사 및 타사 이상 웹 사이트 구축',
       '자사 / 타사 유지보수',
       '홍보 랜딩페이지 디자인',
-      '고객 응대'
+      '고객 응대',
     ],
     stacks: ['html', 'css', 'ps', 'ai'],
   },
@@ -33,7 +33,7 @@ export const recordData = [
       'HTML, CSS 활용해 자사 및 타사 웹 사이트 구축',
       '자사 / 타사 유지보수',
       '홍보물 및 랜딩페이지 디자인',
-      '고객 응대'
+      '고객 응대',
     ],
     stacks: ['html', 'css', 'ps', 'ai'],
   },
@@ -44,7 +44,7 @@ export const recordData = [
     infos: [
       '컴퓨터 정보과 2년제 졸업',
       '웹 관련 언어 학습',
-      'CS 관련 전공 학습'
+      'CS 관련 전공 학습',
     ],
     stacks: ['html', 'css', 'ps', 'ai'],
   },

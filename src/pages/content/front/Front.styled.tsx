@@ -14,6 +14,8 @@ export const MainComponent = tw.main<IsMobile>`
   justify-between
   px-10
   pt-10
+  sticky
+  top-0
 
   ${props => props.isMobile ? 'max-sm:h-[calc(var(--vh,1vh)*100)]' : 'max-sm:h-screen'}
   max-sm:pt-5
@@ -117,7 +119,7 @@ export const InfoTxt = tw.span`
   max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
-export const Img = tw(motion.img)<IsMobile>`
+export const Img = tw(motion.img) <IsMobile>`
   absolute
   bottom-0
   w-auto

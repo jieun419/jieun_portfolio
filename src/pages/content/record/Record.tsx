@@ -2,6 +2,8 @@ import tw from 'tailwind-styled-components';
 import RecordCard from '../../../components/cards/RecordCard';
 import { TabsPropsT } from '../../../types/type';
 import { recordData } from '../../../data/content/recordData';
+import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import ScrollAni from '../../../styles/ScrollAni';
 
 export const RecordComponent = tw.article`
   grid
@@ -22,21 +24,24 @@ export const RecordComponent = tw.article`
 `;
 
 function Record({ id, navTabs }: TabsPropsT) {
+  const { scrollRef, scrollEl } = useScrollAnimation();
   return (
-    <RecordComponent id={id} ref={navTabs[1].targetRef}>
-      {
-        recordData.map((item, idx) => (
-          <RecordCard
-            key={idx}
-            data={item.data}
-            title={item.title}
-            role={item.role}
-            infos={item.infos}
-            stacks={item.stacks}
-          />
-        ))
-      }
-    </RecordComponent>
+    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+      <RecordComponent id={id} ref={navTabs[1].targetRef}>
+        {
+          recordData.map((item, idx) => (
+            <RecordCard
+              key={idx}
+              data={item.data}
+              title={item.title}
+              role={item.role}
+              infos={item.infos}
+              stacks={item.stacks}
+            />
+          ))
+        }
+      </RecordComponent>
+    </ScrollAni>
   );
 }
 

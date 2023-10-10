@@ -9,6 +9,8 @@ export const CloseButton = tw.button`
   justify-center
   bg-[#373737]
   rounded-full
+
+  hover:bg-[#525252]
 `;
 
 function CloseBtn({ toggleModal }: { toggleModal: () => void }) {
