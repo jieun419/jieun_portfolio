@@ -13,7 +13,7 @@ const FooterContainer = tw.footer`
   justify-center
 `;
 
-const Count = tw.a`
+const Count = tw.div`
   
 `;
 
@@ -24,7 +24,7 @@ const FooterTxt = tw.p`
 function Footer() {
   return (
     <FooterContainer>
-      <Count href="https://hits.seeyoufarm.com">
+      <Count>
         <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjieun-portfolio.vercel.app%2Fhit-counter&count_bg=%232323&title_bg=%232323&icon=&icon_color=%23E7E7E7&title=&edge_flat=true" />
       </Count>
       <FooterTxt>
