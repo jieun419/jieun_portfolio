@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
-import { useSelector } from 'react-redux';
-// import { useEffect, useRef, useState } from 'react';
-// import { useScroll, useTransform } from "framer-motion";
+import { useDispatch, useSelector } from 'react-redux';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import myImgIm from '../../../assets/images/jieun_im.webp';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
@@ -9,8 +9,8 @@ import { MindData, StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
-// import { positionActions } from '../../../store/position-slice';
-// import { isMobile } from '../../../utils/isMobile';
+import { positionActions } from '../../../store/position-slice';
+import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 
@@ -124,60 +124,70 @@ export const StackIcons = tw.div`
 `;
 
 function Intro() {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const moScrollRef = useRef<HTMLDivElement>(null);
+
   const { scrollRef, scrollEl } = useScrollAnimation();
 
-  // useTransform(scrollYProgress, (pos) => {
-  //   return pos === 1 ?
-  //     dispatch(positionActions.PositionStyle('relative')) :
-  //     dispatch(positionActions.PositionStyle('sticky'))
-  // });
+  const { scrollYProgress } = useScroll({
+    target: moScrollRef,
+    offset: ['0 1', `${isMobile ? '0.8 1' : '1 1'}`]
+  });
+
+  useTransform(scrollYProgress, (pos) => {
+    return pos === 1 ?
+      dispatch(positionActions.PositionStyle('relative')) :
+      dispatch(positionActions.PositionStyle('sticky'))
+  });
 
 
   return (
-    <IntroComponent>
+    <motion.div ref={moScrollRef}>
+      <IntroComponent>
 
-      {isModal && <ReviewDetail name='review' />}
+        {isModal && <ReviewDetail name='review' />}
 
-      <SubJectTit>About me</SubJectTit>
-      <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
-        <Content>
-          <LeftWrap>
-            <Img src={myImgIm} alt="이모지 이미지" />
-            <ShowReviewBtn />
-          </LeftWrap>
-          <RightWrap ref={scrollRef}>
-            <MyMind>
-              <Tit>Mind</Tit>
-              <SubTit>{MindData.subtitle}</SubTit>
-              <MyMindTxt>
-                {MindData.text}
-              </MyMindTxt>
-            </MyMind>
+        <SubJectTit>About me</SubJectTit>
+        <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+          <Content>
+            <LeftWrap>
+              <Img src={myImgIm} alt="이모지 이미지" />
+              <ShowReviewBtn />
+            </LeftWrap>
+            <RightWrap ref={scrollRef}>
+              <MyMind>
+                <Tit>Mind</Tit>
+                <SubTit>{MindData.subtitle}</SubTit>
+                <MyMindTxt>
+                  {MindData.text}
+                </MyMindTxt>
+              </MyMind>
 
-            <Stacks>
-              <Tit>Skill & Tools</Tit>
-              <StackWrap>
-                {
-                  //* key = 제목, stacks = 기술 스택
-                  Object.entries(StackData.stack).map(([key, stacks], idx) => (
-                    <StackBox key={idx}>
-                      <SubTit>{key}</SubTit>
-                      <StackIcons>
-                        {stacks.map((stack) => (
-                          <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
-                        ))}
-                      </StackIcons>
-                    </StackBox>
-                  ))
-                }
-              </StackWrap>
-            </Stacks>
-          </RightWrap>
-        </Content>
-      </ScrollAni>
-    </IntroComponent >
+              <Stacks>
+                <Tit>Skill & Tools</Tit>
+                <StackWrap>
+                  {
+                    //* key = 제목, stacks = 기술 스택
+                    Object.entries(StackData.stack).map(([key, stacks], idx) => (
+                      <StackBox key={idx}>
+                        <SubTit>{key}</SubTit>
+                        <StackIcons>
+                          {stacks.map((stack) => (
+                            <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
+                          ))}
+                        </StackIcons>
+                      </StackBox>
+                    ))
+                  }
+                </StackWrap>
+              </Stacks>
+            </RightWrap>
+          </Content>
+        </ScrollAni>
+      </IntroComponent >
+    </motion.div>
+
   );
 }
 
