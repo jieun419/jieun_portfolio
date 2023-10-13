@@ -2,7 +2,7 @@ import Front from './pages/content/front/Front';
 import Intro from './pages/content/intro/Intro';
 import GoTopBtn from './components/button/GotoTopBtn';
 import Contents from './pages/content/Contents';
-import Footer from './pages/content/footer/Footer';
+import Footer from './components/footer/Footer';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       <Front />
       <Intro />
       <Contents />
-      <Footer/>
+      <Footer />
     </>
   );
 }

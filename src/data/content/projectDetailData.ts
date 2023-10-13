@@ -6,7 +6,7 @@ export const projectDetailData = [
     subtext:
       '우주가 컨셉인 회사 소개 홈페이지입니다. 디자인 시안을 figma로 확인하며\n최대한 클라이언트가 요구한 디자인과 기능을 비슷하게 작업하려고 노력했습니다.',
     data: '2023.10 - 약 3일',
-    team: '2인 (프론트)',
+    team: '2인 (프론트엔드 2명)',
     tag: ['팀', '반응형', '퍼블리싱'],
     depoloyurl: 'https://ssting.io/',
     tools: [
@@ -56,6 +56,10 @@ export const projectDetailData = [
       {
         title: '모바일 환경에서 100vh 이슈',
         url: 'https://velog.io/@crg1050/포트폴리오-모바일-환경에서-100vh-이슈',
+      },
+      {
+        title: '나의 포트폴리오 만들기 회고',
+        url: 'https://velog.io/@crg1050/나의-포트폴리오-만들기',
       },
     ],
     tools: [
