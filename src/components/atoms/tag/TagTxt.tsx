@@ -17,7 +17,7 @@ export const TagTxt = tw.span`
 `;
 
 function TagIcon({ tag }: TagT) {
-  return  <TagTxt>{tag}</TagTxt>
+  return <TagTxt>{tag}</TagTxt>
 }
 
 export default TagIcon;

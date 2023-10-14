@@ -1,9 +1,10 @@
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import myImgIm from '../../../assets/images/jieun_im.webp';
+import myImgIm from '../../../assets/images/jieun_im1.webp';
+import myImgImOn from '../../../assets/images/jieun_im2.webp';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { MindData, StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
@@ -13,6 +14,8 @@ import { positionActions } from '../../../store/position-slice';
 import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import { TagTxt } from '../../../components/atoms/tag/TagTxt';
+import { BoldUnderLineTxt } from '../../../components/atoms/text/BoldUnderLine';
 
 export const IntroComponent = tw.main`
   relative
@@ -33,7 +36,7 @@ export const IntroComponent = tw.main`
 
 export const Content = tw.section`
   flex
-  gap-10
+  gap-20
   items-center
   text-[#EFEFF1]
   items-center
@@ -78,12 +81,20 @@ export const LeftWrap = tw.div`
 export const RightWrap = tw.div`
   flex
   flex-col
-  flex-1
-  gap-10
+  flex-2
+  gap-20
 `;
 
 export const Img = tw.img`
   max-md:w-[80vw]
+`;
+
+export const FlexBox = tw.div`
+  flex
+  flex-col
+  justify-center
+  items-center
+  gap-1
 `;
 
 export const MyMind = tw.div`
@@ -127,6 +138,7 @@ function Intro() {
   const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
+  const [isImgChange, setIsImgChange] = useState(false);
 
   const { scrollRef, scrollEl } = useScrollAnimation();
 
@@ -141,6 +153,10 @@ function Intro() {
       dispatch(positionActions.PositionStyle('sticky'))
   });
 
+  const handelImgChange = () => {
+    setIsImgChange(prev => !prev)
+  };
+
 
   return (
     <motion.div ref={moScrollRef}>
@@ -152,15 +168,30 @@ function Intro() {
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
           <Content>
             <LeftWrap>
-              <Img src={myImgIm} alt="이모지 이미지" />
-              <ShowReviewBtn />
+              <FlexBox>
+                <Img src={isImgChange ? myImgImOn : myImgIm} alt="이모지 이미지" />
+                <div>
+                  <TagTxt># 끈기</TagTxt>
+                  <TagTxt># 책임감</TagTxt>
+                  <TagTxt># 역지사지</TagTxt>
+                  <TagTxt># 소통</TagTxt>
+                </div>
+              </FlexBox>
+              <ShowReviewBtn handelImgChange={handelImgChange}>팀원 리뷰 보기</ShowReviewBtn>
             </LeftWrap>
             <RightWrap ref={scrollRef}>
               <MyMind>
                 <Tit>Mind</Tit>
-                <SubTit>{MindData.subtitle}</SubTit>
+                <SubTit>
+                  {MindData.subtitle}
+                </SubTit>
                 <MyMindTxt>
-                  {MindData.text}
+                  서비스를 개발할 때, <BoldUnderLineTxt>사용자가 불편을 겪지 않도록</BoldUnderLineTxt> 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br />
+                  스스로 개발을 잘했다 생각해도, 사용자가 이용에 불편을 가지고 있다면 UX를 제대로 고려하지 않았다고 볼 수 있습니다.<br />
+                  그래서 <BoldUnderLineTxt>역지사지 마음가짐</BoldUnderLineTxt>을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.<br /><br />
+
+                  또한 협업은 성공적인 프로젝트를 위해 중요한 요소라고 생각합니다.<br />
+                  <BoldUnderLineTxt>팀원들과의 원활한 커뮤니케이션과 피드백</BoldUnderLineTxt>을 통해 구체화 하고 지속적으로 개선하고 싶습니다.
                 </MyMindTxt>
               </MyMind>
 
