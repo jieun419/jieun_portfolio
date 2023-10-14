@@ -8,6 +8,7 @@ import { MainComponent, TxtWrap, MainTit, StTxt, BgTxt, SubTxt, SocialList, Soci
 import { UPDATE_DATA } from '../../../utils/constant/constant';
 import IcLineArrow from '../../../assets/icons/IcLinekArrow';
 import { isMobile } from '../../../utils/isMobile';
+import { BoldTxt } from '../../../components/atoms/text/BoldText';
 
 function Front() {
   const vhRef = useRef(0);
@@ -21,7 +22,7 @@ function Front() {
   }, []);
 
   return (
-    <motion.main className={`top-0 ${isPosition}`}>
+    <motion.div className={`top-0 ${isPosition}`}>
       <MainComponent isMobile={isMobile}>
         <ScrollArrowBox>
           <IcLineArrow
@@ -58,13 +59,13 @@ function Front() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 0.8, delay: 0.8 }}
           >
-            사용자를 생각하는 역지사지 마인드,</SubTxt>
+            사용자를 생각하는 <BoldTxt>역지사지</BoldTxt> 마인드,</SubTxt>
           <SubTxt
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}
           >
-            포기하지 않고 책임감있게 일하는 개발자입니다.</SubTxt>
+            포기하지 않고 <BoldTxt>책임감</BoldTxt>있게 일하는 개발자입니다.</SubTxt>
         </TxtWrap>
 
         <Img
@@ -77,7 +78,7 @@ function Front() {
           <InfoTxt>update. {UPDATE_DATA}</InfoTxt>
         </InfoTxtWrap>
       </MainComponent>
-    </motion.main>
+    </motion.div>
 
   )
 }

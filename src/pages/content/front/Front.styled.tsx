@@ -10,7 +10,8 @@ export const MainComponent = tw.main<IsMobile>`
   flex
   items-center
   flex-col
-  bg-[#EFEFF1]  
+  bg-main
+  bg-cover
   justify-between
   px-10
   pt-10
@@ -131,7 +132,7 @@ export const Img = tw(motion.img) <IsMobile>`
 
 export const ScrollArrowBox = tw.div`
   absolute
-  bottom-5
+  bottom-10
   left-[50%]
   translate-x-[-50%]
   z-[20]

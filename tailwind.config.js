@@ -37,6 +37,9 @@ export default {
           'md': '5px 4px 3px rgba(255, 255, 255, 0.25)',
         }
       },
+      backgroundImage: {
+        'main': 'url("./src/assets/images/front_bg.jpg")'
+      },
     },
   },
   plugins: [
