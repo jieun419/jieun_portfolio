@@ -5,14 +5,14 @@ import Project from '../content/project/Project';
 import Record from '../content/record/Record';
 import useScrollToTarget from '../../hooks/useScrollToTarget';
 
-export const Container = tw.main`
+export const Container = tw.section`
   relative
   bg-[#232323]
   w-full
   flex
   p-10
   gap-14
-  z-[2]
+  z-1
   
   max-md:flex-col
   max-md:gap-0
@@ -20,7 +20,7 @@ export const Container = tw.main`
   max-xl:gap-10
 `;
 
-export const RightWrap = tw.article`
+export const RightWrap = tw.section`
   flex
   flex-col
   flex-2
