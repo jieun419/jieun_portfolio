@@ -49,7 +49,10 @@ export const ArrowWrap = tw.span`
   rotate-90
 `;
 
-function ShowReviewBtn() {
+function ShowReviewBtn({ children, handelImgChange }: {
+  children: React.ReactNode;
+  handelImgChange?: () => void;
+}) {
   const dispatch = useDispatch();
 
   const lockScroll = () => {
@@ -63,8 +66,8 @@ function ShowReviewBtn() {
   };
 
   return (
-    <ShowReviewButton onClick={() => toggleModal('review')}>
-      <BtnTxt>팀원 리뷰 보기</BtnTxt>
+    <ShowReviewButton onMouseEnter={handelImgChange} onMouseLeave={handelImgChange} onClick={() => toggleModal('review')}>
+      <BtnTxt>{children}</BtnTxt>
       <ArrowWrap>
         <IcLineArrow
           width='13'
