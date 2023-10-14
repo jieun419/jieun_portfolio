@@ -43,10 +43,12 @@ function Project({ id, navTabs }: TabsPropsT) {
             team={item.team}
             tag={item.tag}
             imgurl={item.imgurl}
+            detailimginfo={item.detailimginfo}
             giturl={item.giturl}
             depoloyurl={item.depoloyurl}
             blogurl={item.blogurl}
             tools={item.tools}
+            featinfo={item.featinfo}
             parts={item.parts}
           />
         ))
