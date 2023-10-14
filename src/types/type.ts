@@ -1,5 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 
+export type ChildernT = {
+  children: React.ReactNode;
+};
+
 export type TabsProps = {
   targetRef: React.RefObject<HTMLElement>;
   scrollToTarget: () => void;
@@ -40,6 +44,10 @@ export type ProjectDetailDataT = {
   team: string;
   tag: string[];
   imgurl?: string;
+  detailimginfo?: {
+    imgurl: string;
+    subject: string;
+  }[];
   giturl?: string;
   depoloyurl?: string;
   blogurl?: {
@@ -50,6 +58,7 @@ export type ProjectDetailDataT = {
     title: string;
     detail: string;
   }[];
+  featinfo: string[];
   parts: {
     title: string;
     detail: string;
