@@ -4,7 +4,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#373737]',
     title: 'SSTHING',
     subtext:
-      '우주가 컨셉인 회사 소개 홈페이지입니다. 디자인 시안을 figma로 확인하며\n최대한 클라이언트가 요구한 디자인과 기능을 비슷하게 작업하려고 노력했습니다.',
+      '우주가 컨셉인 회사 소개 홈페이지입니다.\n디자인 시안을 figma로 확인하며 최대한 클라이언트가 요구한 디자인과 기능을 비슷하게 작업하려고 노력했습니다.',
     data: '2023.10 - 약 3일',
     team: '2인 (프론트엔드 2명)',
     tag: ['팀', '반응형', '퍼블리싱'],
@@ -26,6 +26,10 @@ export const projectDetailData = [
           'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다. 컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다. 또한 tailwind 사용시 클래스가 길어져 코드가 지저분해 지는 단점을 보완해 줍니다.',
       },
     ],
+    featinfo: [
+      '우주를 컨셉으로한 홈페이지',
+      'nav 메뉴 클릭 시 원하는 영역으로 이동',
+    ],
     parts: [
       {
         title: '헤더 작업',
@@ -44,12 +48,44 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#373737]',
     title: '지은 포트폴리오',
     subtext:
-      '노션, 템플릿 소스 등을 이용할 수 있었지만 저만의 포트폴리오 사이트를 가지고 싶어 제작했습니다.  주요 색상인 black & white로 전체적으로 심플함을 줬습니다.',
+      '노션, 템플릿 소스 등을 이용할 수 있었지만 저만의 포트폴리오 사이트를 가지고 싶어 제작했습니다.\n주요 색상인 black & white로 전체적으로 심플함을 줬습니다.',
     data: '2023.08 - 2023.09',
     team: '1인 (솔로)',
     tag: ['솔로', '반응형', '포트폴리오'],
     imgurl:
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_protfolio.webp',
+    detailimginfo: [
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273940311-0a5e824d-ba90-488f-be48-f6fef893890b.png',
+        subject: '메인 화면',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273941704-d5959682-0490-41f7-baab-fbfcfa05f04d.png',
+        subject: '나에 대한 소개 화면',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273941863-5ed32e92-bdb3-4114-a3eb-51a14eee0621.png',
+        subject: '프로젝트 리스트 화면',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273941995-5c170752-19e6-439f-a11a-20833c296756.png',
+        subject: '이력 및 학력 화면',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273945396-bfd4bdd6-4b84-446f-b9bd-844f7a4ea60f.png',
+        subject: '프로젝트 상세 내용 모달 창',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/273946285-1825ce2d-1c45-4809-b194-e4fd8a442172.png',
+        subject: '팀원 리뷰 상세 내용 모달 창',
+      },
+    ],
     giturl: 'https://github.com/jieun419/jieun_portfolio',
     depoloyurl: 'https://jieun-portfolio.vercel.app/',
     blogurl: [
@@ -62,6 +98,7 @@ export const projectDetailData = [
         url: 'https://velog.io/@crg1050/나의-포트폴리오-만들기',
       },
     ],
+    featinfo: [],
     tools: [
       {
         title: 'Vite',
@@ -117,12 +154,44 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#77D1FD]',
     title: '하루메이트',
     subtext:
-      '당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다.  하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다. 친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다.   일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다. 저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.',
+      '당일 일정에서 하루,친구의 mate를 합쳐서 서비스명을 “하루메이트”로 짓게 되었습니다.\n하루메이트는 당일 일정을 만들고 친구에게 손쉽게 공유 할 수 있는 서비스입니다.\n친구와 놀러가기 위해서 계획을 짤 때 일정을 편리하게 공유하면 좋겠다는 생각으로 부터 시작되었습니다.\n\n일정 생성 과정이 지나치게 복잡한 서비스들이 대부분입니다.\n저희의 목표는 사용자들이 더욱 쉽고 간편하게 일정을 만들고 공유 할 수 있는 서비스를 제공하는 것입니다.',
     data: '2023.07 - 2023.08',
     team: '6인 (프론트엔드 3명, 백엔드 3명)',
     tag: ['팀', '반응형'],
     imgurl:
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_haru.webp',
+    detailimginfo: [
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255490884-6341a0f3-e248-4af3-9733-4846c1ae7c51.png',
+        subject: '메인 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255491184-93dca001-e946-4665-8093-c50dcdb6aad0.png',
+        subject: '일정등록 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255491417-fef65d05-d4b6-4462-9239-86b715b3789b.png',
+        subject: '커뮤니티 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255491568-89573d57-166d-456d-ae5d-df5928d4d50b.png',
+        subject: '마이 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255491604-a97df5fd-ebe5-4ab1-b93a-93d655772683.png',
+        subject: '설정 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/77836614/255491649-f757bcdb-6a4a-4594-ad92-f6a87ef8d6e3.png',
+        subject: '랜딩 페이지',
+      },
+    ],
     giturl: 'https://github.com/codestates-seb/seb44_main_006',
     depoloyurl: 'https://harumate.netlify.app/',
     blogurl: [
@@ -130,6 +199,12 @@ export const projectDetailData = [
         title: '프로젝트 회고',
         url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기main-project-회고',
       },
+    ],
+    featinfo: [
+      '카카오 맵 API를 활용해 장소 표시 및 검색',
+      '마이페이지에서 일정 등록, 수정, 삭제',
+      '친구에게 일정 공유하기(링크, 카카오톡 링크)',
+      '다른 사람들이 공유한 일정 확인할 수 있는 커뮤니케이션',
     ],
     tools: [
       {
@@ -201,12 +276,44 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#FA9B59]',
     title: '스택오버플로우',
     subtext:
-      '랜덤의 팀원들과 정해진 주제인 스택오버플로우 사이트를 클론 코딩 하며 프로젝트 경험을 쌓았습니다. 짧은 기간이였지만 기존 사이트의 UI/UX 측면도 고려하고, 기간 내에 구현 할 수 있는지와 없는지 확인하며 진행했습니다.',
+      '랜덤의 팀원들과 정해진 주제인 스택오버플로우 사이트를 클론 코딩 하며 프로젝트 경험을 쌓았습니다.\n짧은 기간이였지만 기존 사이트의 UI/UX 측면도 고려하고, 기간 내에 구현 할 수 있는지와 없는지 확인하며 진행했습니다.',
     data: '2023.06 - 2023.07',
     team: '6인 (프론트엔드 3명, 백엔드 3명)',
     tag: ['팀', '반응형', '클론코딩'],
     imgurl:
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_stack.webp',
+    detailimginfo: [
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023604-d8d39315-78f2-4069-99a2-0f7f7ab444e4.png',
+        subject: '메인 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023704-d9b53a20-6fa7-4ae4-a8b3-9d7275ba4690.png',
+        subject: '로그인 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023765-882f2706-ff02-466f-87cc-895a8aca66d6.png',
+        subject: '검색 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023788-40a8e6e6-9373-40c0-bdd8-c227689a04c1.png',
+        subject: '질문 작성/수정 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023810-1df4778b-6748-4f30-a005-39039e189d3b.png',
+        subject: '질문 뷰 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/249023826-e00977d9-57f2-4ad9-b4f0-27927946373c.png',
+        subject: '마이 페이지',
+      },
+    ],
     giturl: 'https://github.com/codestates-seb/seb44_pre_015',
     depoloyurl: 'https://mz-developer-15.netlify.app/',
     blogurl: [
@@ -246,6 +353,13 @@ export const projectDetailData = [
           'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다. 컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다. 또한 tailwind 사용시 클래스가 길어져 코드가 지저분해 지는 단점을 보완해 줍니다.',
       },
     ],
+    featinfo: [
+      'API를 활용한 질문 리스트 확인 및 검색',
+      '질문 등록 및 수정',
+      '질문 상세내용 확인 및 답변/댓글 달기',
+      '질문/답변에 대한 하트 추가',
+      '마이페이지에서 본인 활동 확인',
+    ],
     parts: [
       {
         title: '기획 및 UI/UX 디자인',
@@ -269,12 +383,34 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#6a57e0]',
     title: 'Coz Shopping',
     subtext:
-      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다. 짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인 git, github를 학습 하는데 많은 도움이 되었습니다.',
+      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다.\n짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인\nGit, Github를 학습 하는데 많은 도움이 되었습니다.',
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
     tag: ['팀', '반응형', '클론코딩'],
     imgurl:
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_cozshopping.webp',
+    detailimginfo: [
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/239165066-c8cb8e8f-fb28-4a71-9eba-a1c41bdc5e3d.png',
+        subject: '메인 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/239165560-b196d6ab-7038-415d-9e09-a7a9a09f76a1.png',
+        subject: '상품 이미지 클릭 시 모달창 표시',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/239166014-9738b70d-eb5b-4fd0-b939-2e912bc1b41a.png',
+        subject: '상품 리스트 페이지',
+      },
+      {
+        imgurl:
+          'https://user-images.githubusercontent.com/109754988/239166344-d78cd67c-0690-4908-b9f0-e5a7baed0b5d.png',
+        subject: '북마크 상품 리스트 페이지',
+      },
+    ],
     giturl: 'https://github.com/jieun419/fe-sprint-coz-shopping',
     depoloyurl: '',
     blogurl: [
@@ -298,6 +434,12 @@ export const projectDetailData = [
         title: '상품 리스트, 북마크 리스트 구현',
         url: 'https://velog.io/@crg1050/코드스테이츠-FE-44기-솔로-프로젝트-5-상품-리스트-북마크-리스트-구현',
       },
+    ],
+    featinfo: [
+      'API를 활용한 리스트 확인',
+      'LocalStrage를 활용한 북마크 기능',
+      '해당 컨텐츠 클릭 시 모달로 이미지 크게 보기',
+      '상품 리스트 타입에 따라 필터링 (탭 메뉴)',
     ],
     tools: [
       {
@@ -334,7 +476,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#0b4da1]',
     title: '한컴아카데미 온라인',
     subtext:
-      'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼된 홈페이지입니다. 클라이언트가 제공한 기획서 및 디자인을 확인하고 요구 사항을 참고하여 작업 했습니다.',
+      'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼된 홈페이지입니다.\n클라이언트가 제공한 기획서 및 디자인을 확인하고 요구 사항을 참고하여 작업 했습니다.',
     data: '2022 - 약 6개월',
     team: '기여도 70%',
     tag: ['팀', '반응형', '퍼블리싱'],
@@ -351,6 +493,7 @@ export const projectDetailData = [
           'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
+    featinfo: [],
     parts: [
       {
         title: '담당자와의 직접적인 소통',
@@ -379,7 +522,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#46a6bb]',
     title: '우지은 스피치랩',
     subtext:
-      '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다. 클라이언트가 제공한 기획서를 확인하고 요구 사항을 참고하여 작업 했습니다. 반응형이 아닌 PC/Mobile 도메인이 분리되어 있습니다.',
+      '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다.\n클라이언트가 제공한 기획서를 확인하고 요구 사항을 참고하여 작업 했습니다. 반응형이 아닌 PC/Mobile 도메인이 분리되어 있습니다.',
     data: '2021 - 약 10개월',
     team: '기여도 80%',
     tag: ['팀', '분리형', '디자인', '퍼블리싱'],
@@ -396,6 +539,7 @@ export const projectDetailData = [
           'JQuery는 자바스크립트 언어를 간편하게 사용할 수 있도록 단순화시킨 오픈 소스 기반의 자바스크립트 라이브러리입니다.',
       },
     ],
+    featinfo: [],
     parts: [
       {
         title: '담당자와의 직접적인 소통',
