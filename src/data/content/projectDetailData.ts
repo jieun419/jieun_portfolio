@@ -121,7 +121,7 @@ export const projectDetailData = [
           'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
       },
       {
-        title: 'Tailwind',
+        title: 'Tailwind CSS',
         detail:
           'Tailwind는 CSS 프레임워크로, 클래스 기반 스타일링을 합니다. 일관된 디자인을 단시간에 쉽게 구현할 수 있습니다.',
       },
@@ -343,7 +343,7 @@ export const projectDetailData = [
           'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
       },
       {
-        title: 'Tailwind',
+        title: 'Tailwind CSS',
         detail:
           'Tailwind는 CSS 프레임워크로, 클래스 기반 스타일링을 합니다. 일관된 디자인을 단시간에 쉽게 구현할 수 있습니다.',
       },
