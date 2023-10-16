@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import myImgIm from '../../../assets/images/jieun_im1.webp';
 import myImgImOn from '../../../assets/images/jieun_im2.webp';
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
-import { MindData, StackData } from '../../../data/introData';
+import { StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
 import { RootState } from '../../../store';
 import ShowReviewBtn from '../../../components/button/ShowReviewBtn';
@@ -105,6 +105,7 @@ export const MyMind = tw.div`
 
 export const MyMindTxt = tw.p`
   text-base
+  mb-5
 `;
 
 export const StackSpacing = tw.div`
@@ -134,7 +135,7 @@ export const StackIcons = tw.div`
   w-full
 `;
 
-function Intro() {
+function AboutMe() {
   const dispatch = useDispatch()
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
@@ -160,7 +161,7 @@ function Intro() {
 
   return (
     <motion.div ref={moScrollRef}>
-      <IntroComponent>
+      <IntroComponent id='aboutme'>
 
         {isModal && <ReviewDetail name='review' />}
 
@@ -171,7 +172,7 @@ function Intro() {
               <FlexBox>
                 <Img src={isImgChange ? myImgImOn : myImgIm} alt="이모지 이미지" />
                 <div>
-                  <TagTxt># 끈기</TagTxt>
+                  <TagTxt># 끈기있게</TagTxt>
                   <TagTxt># 책임감</TagTxt>
                   <TagTxt># 역지사지</TagTxt>
                   <TagTxt># 소통</TagTxt>
@@ -183,14 +184,19 @@ function Intro() {
               <MyMind>
                 <Tit>Mind</Tit>
                 <SubTit>
-                  {MindData.subtitle}
+                  사용자를 생각하는 역지사지 마인드.
                 </SubTit>
                 <MyMindTxt>
                   서비스를 개발할 때, <BoldUnderLineTxt>사용자가 불편을 겪지 않도록</BoldUnderLineTxt> 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br />
                   스스로 개발을 잘했다 생각해도, 사용자가 이용에 불편을 가지고 있다면 UX를 제대로 고려하지 않았다고 볼 수 있습니다.<br />
-                  그래서 <BoldUnderLineTxt>역지사지 마음가짐</BoldUnderLineTxt>을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.<br /><br />
+                  그래서 <BoldUnderLineTxt>역지사지 마음가짐</BoldUnderLineTxt>을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.
+                </MyMindTxt>
 
-                  또한 협업은 성공적인 프로젝트를 위해 중요한 요소라고 생각합니다.<br />
+                <SubTit>
+                  소통은 중요한 요소.
+                </SubTit>
+                <MyMindTxt>
+                  협업은 성공적인 프로젝트를 위해 중요한 요소라고 생각합니다.<br />
                   <BoldUnderLineTxt>팀원들과의 원활한 커뮤니케이션과 피드백</BoldUnderLineTxt>을 통해 구체화 하고 지속적으로 개선하고 싶습니다.
                 </MyMindTxt>
               </MyMind>
@@ -222,4 +228,4 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default AboutMe;
