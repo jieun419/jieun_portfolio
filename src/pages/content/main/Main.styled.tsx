@@ -12,6 +12,7 @@ export const MainComponent = tw.main<IsMobile>`
   items-center
   flex-col
   justify-between
+  bg-mainGray
   px-10
   pt-10
   sticky
