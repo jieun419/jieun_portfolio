@@ -7,7 +7,7 @@ export const CloseButton = tw.button`
   flex
   items-center
   justify-center
-  bg-[#373737]
+  bg-lightGray
   rounded-full
 
   hover:bg-[#525252]

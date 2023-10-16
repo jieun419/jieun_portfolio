@@ -12,7 +12,7 @@ export const ToggleName = tw.div`
   flex
   gap-2
   items-center
-  bg-[#EFEFF1]
+  bg-mainGray
   py-2
   px-3
   font-medium

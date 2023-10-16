@@ -16,7 +16,7 @@ export const CardContainer = tw.section`
   justify-start
   gap-8
   rounded
-  bg-[#373737]
+  bg-lightGray
   relative
   h-[25rem]
   group
@@ -39,7 +39,7 @@ export const TxtWrap = tw.div<ProjectDataProps>`
   flex-col
   justify-start
   gap-3
-  text-[#fff]
+  text-white
   ${(props) => !props.imgurl && 'mt-10'}
 `;
 
@@ -96,7 +96,7 @@ export const Button = tw.button`
   transition
   
   hover:bg-white
-  hover:text-[#232323]
+  hover:text-mainBlack
 `;
 
 function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {

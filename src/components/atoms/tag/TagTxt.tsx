@@ -9,7 +9,7 @@ export const TagTxt = tw.span`
   items-center
   justify-center
   text-xs
-  text-[#fff]
+  text-white
   bg-[#232323]
   px-3
   py-1

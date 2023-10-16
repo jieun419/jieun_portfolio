@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main-black': '#232323',
-        'main-gray': '#EFEFF1',
-        'dark-gray': '#0C0C0C',
-        'light-gray': '#373737',
-        'super-light-gray': '#F1F2F5',
+        'mainBlack': '#232323',
+        'mainGray': '#EFEFF1',
+        'darkGray': '#0C0C0C',
+        'lightGray': '#373737',
+        'superLightGray': '#F1F2F5',
         'white': '#fff',
         'black': '#000',
       },

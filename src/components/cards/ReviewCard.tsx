@@ -23,7 +23,7 @@ export const ReviewBox = tw.div`
 
 export const ReviewTxt = tw.p`
   text-base
-  text-[#232323]
+  text-mainBlack
   font-medium
 `;
 

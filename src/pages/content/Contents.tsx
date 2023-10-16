@@ -7,7 +7,7 @@ import useScrollToTarget from '../../hooks/useScrollToTarget';
 
 export const Container = tw.section`
   relative
-  bg-[#232323]
+  bg-mainBlack
   w-full
   flex
   p-10

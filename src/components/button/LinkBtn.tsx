@@ -54,7 +54,7 @@ export const Text = tw.span`
   text-xs
   font-medium
 
-  max-md:text-[#232323]
+  max-md:text-mainBlack
   max-md:hidden
 `;
 

@@ -5,7 +5,7 @@ const FooterContainer = tw.footer`
   z-1
   px-10
   py-20
-  bg-[#232323]
+  bg-mainBlack
   flex
   flex-col
   gap-2

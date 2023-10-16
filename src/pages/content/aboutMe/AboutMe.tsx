@@ -23,7 +23,7 @@ export const IntroComponent = tw.main`
   items-center
   flex-col
   justify-center
-  bg-[#232323]
+  bg-mainBlack
   px-10
   pt-10
   h-screen
@@ -38,7 +38,7 @@ export const Content = tw.section`
   flex
   gap-20
   items-center
-  text-[#EFEFF1]
+  text-mainGray
   items-center
   
   max-lg:flex-col
@@ -48,7 +48,7 @@ export const SubJectTit = tw.h2`
   absolute
   top-10
   left-10
-  text-[#EFEFF1]
+  text-mainGray
   font-black
   text-6xl
 

@@ -10,7 +10,7 @@ export const ShowReviewButton = tw.button`
   items-center
   justify-between
   gap-12
-  bg-[#efeff1]
+  bg-mainGray
   rounded-full
   py-3
   px-5
@@ -25,7 +25,7 @@ export const ShowReviewButton = tw.button`
   after:rounded-full
   after:w-full
   after:h-full
-  after:bg-[#fff]
+  after:bg-white
   after:opacity-0
   after:z-[0]
   after:transition-all
@@ -38,7 +38,7 @@ export const ShowReviewButton = tw.button`
 export const BtnTxt = tw.span`
   relative
   z-[2]
-  text-[#232323]
+  text-mainBlack
   font-bold
   text-sm
 `;

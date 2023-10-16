@@ -17,7 +17,7 @@ export const InfoTxt = tw.span`
   text-base
 
   max-sm:text-sm
-  max-sm:text-[#EFEFF1]
+  max-sm:text-mainGray
   max-sm:drop-shadow-[0px_0px_1px_#000000]
 `;
 
