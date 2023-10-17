@@ -306,7 +306,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                     <PWrap>
                       <PTitle>
                         작업 화면
-                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다.</PSubText>
+                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다.<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
                       </PTitle>
 
                       <ImgContList>
