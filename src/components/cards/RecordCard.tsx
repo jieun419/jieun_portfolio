@@ -8,7 +8,7 @@ export const CardContainer = tw.section`
   flex-col
   rounded
   h-[30rem]
-  bg-[#373737]
+  bg-lightGray
   relative  
   justify-between
   group
@@ -19,7 +19,7 @@ export const TxtWrap = tw.div`
   flex
   flex-col
   gap-3
-  text-[#fff]
+  text-white
 `;
 
 export const Tit = tw.h4`

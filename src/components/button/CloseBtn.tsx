@@ -7,13 +7,13 @@ export const CloseButton = tw.button`
   flex
   items-center
   justify-center
-  bg-[#373737]
+  bg-lightGray
   rounded-full
 
   hover:bg-[#525252]
 `;
 
-function CloseBtn({ toggleModal }: { toggleModal: () => void }) {
+function CloseBtn({ toggleModal }: { toggleModal?: () => void }) {
   return (
     <CloseButton onClick={toggleModal}>
       <img src={IconClose} alt="Close" />

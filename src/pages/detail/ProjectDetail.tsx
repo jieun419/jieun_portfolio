@@ -10,17 +10,19 @@ import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
 import DropShadow from '../../components/atoms/dropShadow/DropShadow';
+import ProjectImgCard from '../../components/cards/ProjectImgCard';
+import ImgDetailModal from '../../components/modal/ImgDetailModal';
 
 type ProjectDataProps = {
   pointcolor?: string;
   imgurl?: string;
 }
 
-export const DetailContainer = tw.article`
+export const DetailContainer = tw.section`
   fixed
   inset-x-0
   inset-y-0
-  z-10
+  z-[20]
   py-10
   px-40
   overflow-y-auto
@@ -34,7 +36,9 @@ export const DetailWrap = tw.section<ProjectDataProps>`
   w-full
   mx-auto
   bg-white
-  ${(props) => !props.imgurl && 'h-screen'}
+  pb-10
+  min-h-screen
+  h-auto
 
   max-md:h-auto
 `;
@@ -120,6 +124,12 @@ export const PTitle = tw.h3`
   mb-4
 `;
 
+export const PSubText = tw.p`
+  text-sm
+  font-medium
+  text-[#999]
+`;
+
 export const PText = tw.p`
   text-base
 `;
@@ -162,9 +172,38 @@ export const ContBtns = tw.div`
   max-md:gap-4
 `;
 
-function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts }: ProjectDetailDataT) {
+export const PDetailList = tw.ul`
+  flex
+  flex-col
+  gap-1
+`;
+
+export const Li = tw.li`
+  pl-2.5
+  relative
+
+  before:absolute
+  before:w-1
+  before:h-1
+  before:bg-[#000]
+  before:block
+  before:rounded-full
+  before:left-0
+  before:top-[0.625rem]
+`;
+
+export const ImgContList = tw.div`
+  grid
+  grid-cols-3
+  gap-3
+  max-xl:grid-cols-2
+`;
+
+function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts, featinfo, detailimginfo }: ProjectDetailDataT) {
   const dispatch = useDispatch();
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
+  const targetId = useSelector((state: RootState) => state.overlay.targetId);
+  const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
 
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
@@ -173,6 +212,11 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
   const toggleModal = () => {
     dispatch(overlayActions.toggleOverlay());
     openScroll();
+  };
+
+  const toggleImgModal = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    dispatch(overlayActions.toggleImgOverlay());
+    dispatch(overlayActions.targetId(e.currentTarget.id));
   };
 
   return (
@@ -212,6 +256,20 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 <ProjectInfoTxt>
                   {subtext}
                 </ProjectInfoTxt>
+                {
+                  featinfo.length !== 0 && (
+                    <PWrap>
+                      <PTitle>주요 기능</PTitle>
+                      <PDetailList>
+                        {
+                          featinfo.map((list, idx) => (
+                            <Li key={idx}>{list}</Li>
+                          ))
+                        }
+                      </PDetailList>
+                    </PWrap>
+                  )
+                }
 
                 <PWrap>
                   <PTitle>사용 기술 및 언어</PTitle>
@@ -243,7 +301,33 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   </Toggles>
                 </PWrap>
 
+                {
+                  detailimginfo && (
+                    <PWrap>
+                      <PTitle>
+                        작업 화면
+                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다.<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
+                      </PTitle>
 
+                      <ImgContList>
+
+                        {imgModal && (<ImgDetailModal imgUrl={detailimginfo && detailimginfo[targetId].imgurl} />)}
+
+                        {
+                          detailimginfo?.map((el, idx) => (
+                            <ProjectImgCard
+                              key={idx}
+                              id={idx}
+                              imgurl={el.imgurl}
+                              subject={el.subject}
+                              toggleImgModal={toggleImgModal}
+                            />
+                          ))
+                        }
+                      </ImgContList>
+                    </PWrap>
+                  )
+                }
               </DetailBody>
             </DetailWrap>
           </DetailContainer>

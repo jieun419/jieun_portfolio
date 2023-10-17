@@ -11,7 +11,7 @@ export const NavContainer = tw.nav`
   h-screen
 
   max-md:flex-row
-  max-md:bg-[#232323]
+  max-md:bg-mainBlack
   max-md:z-[2]
   max-md:py-3
   max-md:top-0
@@ -21,7 +21,7 @@ export const NavContainer = tw.nav`
 `;
 
 export const NavLink = tw.button`
-  text-[#373737]
+  text-lightGray
   font-black
   text-6xl
   transition
@@ -31,14 +31,14 @@ export const NavLink = tw.button`
 `;
 
 function Nav({ navTabs }: TabsPropsT) {
-  return (    
+  return (
     <NavContainer>
       {
         navTabs.map((tab, idx) => (
           <NavLink
             key={idx}
             onClick={tab.scrollToTarget}
-            className={tab.isTarget ? 'text-[#EFEFF1]' : 'text-[#373737] hover:text-[#4a4a4a]'}
+            className={tab.isTarget ? 'text-mainGray' : 'text-lightGray hover:text-[#4a4a4a]'}
           >
             {tab.targetName}
           </NavLink>

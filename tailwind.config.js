@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'main-black': '#232323',
-        'main-gray': '#EFEFF1',
-        'dark-gray': '#0C0C0C',
-        'light-gray': '#373737',
-        'super-light-gray': '#F1F2F5',
+        'mainBlack': '#232323',
+        'mainGray': '#EFEFF1',
+        'darkGray': '#0C0C0C',
+        'lightGray': '#373737',
+        'superLightGray': '#F1F2F5',
         'white': '#fff',
         'black': '#000',
       },
@@ -36,6 +36,9 @@ export default {
         dropShadow: {
           'md': '5px 4px 3px rgba(255, 255, 255, 0.25)',
         }
+      },
+      backgroundImage: {
+        'main': 'url("./src/assets/images/front_bg.jpg")'
       },
     },
   },

@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 type DropShadowProps = {
-  toggleModal: () => void;
+  toggleModal?: () => void;
 }
 
 export const DropShadowWrap = tw.div`
