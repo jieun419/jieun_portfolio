@@ -2,6 +2,7 @@ export const ICON_URL =
   'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
 
 export const UPDATE_DATA = '23. 10. 17';
+export const EMAILL = 'crg1050@gmail.com';
 
 export const OPACITY_0 = { opacity: 0 };
 export const OPACITY_1 = { opacity: 1 };
