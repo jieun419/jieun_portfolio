@@ -4,8 +4,8 @@ const FooterContainer = tw.footer`
   relative
   z-1
   px-10
-  py-20
-  bg-mainBlack
+  py-10
+  bg-superLightGray
   flex
   flex-col
   gap-2

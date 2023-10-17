@@ -6,7 +6,7 @@ import { DelayT } from '../../types/type';
 
 export const ScrollArrowBox = tw(motion.div)`
   absolute
-  bottom-10
+  bottom-[3rem]
   left-[50%]
   translate-x-[-50%]
   z-[20]
