@@ -1,6 +1,11 @@
 import tw from 'tailwind-styled-components';
 import IcRest from '../../assets/icons/IcRest';
 
+type ReviewProps = {
+  name: string;
+  review: string;
+};
+
 export const ReviewCardContainer = tw.div`
   flex
   flex-col
@@ -11,6 +16,10 @@ export const ReviewCardContainer = tw.div`
   w-full
   backdrop-blur-sm
   bg-white/80
+  transition-all
+
+  hover:bg-white/100
+  not:hover:bg-white/10
 `;
 
 export const ReviewBox = tw.div`
@@ -33,17 +42,12 @@ export const Reviewer = tw.span`
   text-[#555]
 `;
 
-type reviewProps = {
-  name: string;
-  review: string;
-}
-
-function ReviewCard({ name, review }: reviewProps) {
+function ReviewCard({ name, review }: ReviewProps) {
 
   const sliceStr = name.split('').map((el, idx) => idx === 1 ? '*' : el).join('')
 
   return (
-    <ReviewCardContainer>
+    <ReviewCardContainer >
       <IcRest />
       <ReviewBox>
         <ReviewTxt>
