@@ -10,7 +10,8 @@ import ScrollArrow from '../../../components/main/ScrollArrow';
 import InfoWrap from '../../../components/main/InfoWrap';
 import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../../../utils/constant/constant';
 import TextWrap from '../../../components/main/TextWrap';
-import { MainComponent, Img, MainBg } from './Main.styled';
+import { MainComponent, Img } from './Main.styled';
+import MainBackground from '../../../components/atoms/background/MainBackground';
 
 function Main() {
   const vhRef = useRef(0);
@@ -36,22 +37,30 @@ function Main() {
     }
   }, [])
 
+  const goToTarget = () => {
+    const aboutme = document.querySelector('#aboutme');
+    aboutme?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <motion.div className={`top-0 ${isPosition}`}>
       <MainComponent ref={mainRef} isMobile={isMobile}>
-        <MainBg
-          initial={{ scale: 1.25 }}
-          animate={{ scale: 1 }}
-          transition={ANI_TRANSITION}
+        <MainBackground
+          initial={{ ...OPACITY_0, scale: 1.25 }}
+          animate={{ ...OPACITY_1, scale: 1 }}
+          transition={{ ...ANI_TRANSITION, delay: 3 }}
         />
 
         <ScrollArrow delay={3.9} />
 
-        <SocialLinkList delay={3} />
+        <SocialLinkList delay={3} width='w-full' />
 
         <TextWrap />
 
         <Img
+          onClick={goToTarget}
           initial={OPACITY_0}
           animate={OPACITY_1}
           transition={{ ...ANI_TRANSITION, delay: 3 }}
@@ -64,7 +73,6 @@ function Main() {
 
       </MainComponent>
     </motion.div>
-
   )
 }
 

@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
-import { ANI_TRANSITION, OPACITY_0, OPACITY_1, UPDATE_DATA } from '../../utils/constant/constant';
+import { ANI_TRANSITION, EMAILL, OPACITY_0, OPACITY_1, UPDATE_DATA } from '../../utils/constant/constant';
 import { DelayT } from '../../types/type';
 
 export const InfoTxtWrap = tw(motion.div)`
@@ -28,7 +28,7 @@ function InfoWrap({ delay }: DelayT) {
       animate={OPACITY_1}
       transition={{ ...ANI_TRANSITION, delay: delay }}
     >
-      <InfoTxt>crg1050@gmail.com</InfoTxt>
+      <InfoTxt>{EMAILL}</InfoTxt>
       <InfoTxt>update. {UPDATE_DATA}</InfoTxt>
     </InfoTxtWrap>
   )
