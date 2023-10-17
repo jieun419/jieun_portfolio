@@ -97,6 +97,10 @@ export const projectDetailData = [
         title: '나의 포트폴리오 만들기 회고',
         url: 'https://velog.io/@crg1050/나의-포트폴리오-만들기',
       },
+      {
+        title: '포트폴리오 개선 하기 회고',
+        url: 'https://velog.io/@crg1050/포트폴리오-개선하기',
+      },
     ],
     featinfo: [],
     tools: [
