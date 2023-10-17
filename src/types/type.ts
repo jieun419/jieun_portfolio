@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
 export type DelayT = {
-  delay: number;
+  delay?: number;
 };
 
 export type ChildernT = {

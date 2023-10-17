@@ -1,10 +1,12 @@
 import { styled } from 'styled-components';
 
-type Props = {
+type PropsT = {
   delay?: string;
+  width?: string;
 };
 
-export const ScrollAni = styled.div<Props>`
+export const ScrollAni = styled.div<PropsT>`
+  width: ${(props) => (props.width ? props.width : '')};
   transition: 0.5s;
 
   &.fadeIn {
