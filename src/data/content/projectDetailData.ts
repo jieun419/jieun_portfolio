@@ -48,7 +48,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#373737]',
     title: '지은 포트폴리오',
     subtext:
-      '노션, 템플릿 소스 등을 이용할 수 있었지만 저만의 포트폴리오 사이트를 가지고 싶어 제작했습니다.\n주요 색상인 black & white로 전체적으로 심플함을 줬습니다.',
+      '노션, 템플릿 소스 등을 이용할 수 있었지만 저만의 포트폴리오 사이트를 가지고 싶어 제작했습니다.\n주요 색상인 black & white로 전체적으로 심플함을 줬습니다.\nUX를 고려하며 진행 했습니다.',
     data: '2023.08 - 진행 중',
     team: '1인 (솔로)',
     tag: ['솔로', '반응형', '포트폴리오'],
@@ -387,7 +387,7 @@ export const projectDetailData = [
       '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다.\n짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인\nGit, Github를 학습 하는데 많은 도움이 되었습니다.',
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
-    tag: ['팀', '반응형', '클론코딩'],
+    tag: ['솔로'],
     imgurl:
       'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_cozshopping.webp',
     detailimginfo: [
@@ -480,7 +480,7 @@ export const projectDetailData = [
       'IT융합 전문 교육센터로 기존 홈페이지를 새롭게 리뉴얼된 홈페이지입니다.\n클라이언트가 제공한 기획서 및 디자인을 확인하고 요구 사항을 참고하여 작업 했습니다.',
     data: '2022 - 약 6개월',
     team: '기여도 70%',
-    tag: ['팀', '반응형', '퍼블리싱'],
+    tag: ['장기', '반응형', '퍼블리싱'],
     depoloyurl: 'https://online.hancomacademy.com/',
     tools: [
       {
@@ -526,7 +526,7 @@ export const projectDetailData = [
       '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다.\n클라이언트가 제공한 기획서를 확인하고 요구 사항을 참고하여 작업 했습니다.\n반응형이 아닌 PC/Mobile 도메인이 분리되어 있습니다.',
     data: '2021 - 약 10개월',
     team: '기여도 80%',
-    tag: ['팀', '분리형', '디자인', '퍼블리싱'],
+    tag: ['장기', '분리형', '디자인', '퍼블리싱'],
     depoloyurl: 'https://wspeechlab.com/',
     tools: [
       {

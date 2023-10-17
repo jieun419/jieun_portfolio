@@ -4,6 +4,7 @@ import { AnimationP, BgText, MainSubText, MainTitle } from '../../../components/
 import MainBackground from '../../../components/atoms/background/MainBackground';
 import ScrollAni from '../../../styles/ScrollAni';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
+import Footer from '../../../components/footer/Footer';
 
 export const FinishComponent = tw.article`
   relative
@@ -28,6 +29,12 @@ export const TextWrap = tw.div`
   gap-10
 `;
 
+export const FooterWrap = tw.div`
+  absolute
+  bottom-0
+  w-full
+`
+
 function Finish() {
   const { scrollRef, scrollEl } = useScrollAnimation();
 
@@ -46,11 +53,14 @@ function Finish() {
 
             <MainSubText>
               부족한 점도 많지만 끊임 없이 도전하고,<br />
-              항상 사용자의 관점에서 생각하며 사용자가 쓰기 편한 서비스를 만들고 싶습니다.
+              항상 사용자의 관점에서 생각하며 사용하기 좋은 서비스를 만들고 싶습니다.
             </MainSubText>
             <SocialLinkList />
           </TextWrap>
         </ScrollAni>
+        <FooterWrap>
+          <Footer />
+        </FooterWrap>
       </FinishComponent>
     </>
   );
