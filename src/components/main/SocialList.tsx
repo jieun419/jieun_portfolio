@@ -1,7 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
 import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../../utils/constant/constant';
-import Tooltip from '../atoms/tooltip/Tooltip';
 
 type PropsT = {
   width?: string;
@@ -58,13 +57,11 @@ function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
       animate={OPACITY_1}
       transition={{ ...ANI_TRANSITION, delay: delay && delay }}
     >
-
-      <SocialLink data-tooltip-target="tooltip-bottom" data-tooltip-placement="a" href='https://velog.io/@crg1050' target='_blank'>
+      <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>
         Velog
       </SocialLink>
       <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>GitHub</SocialLink>
       <SocialLink href='https://overjoyed-process-2b8.notion.site/8716c49fa7ae4667b2694850020ec331?pvs=4' title='바로가기(새창)' target='_blank'>Resume</SocialLink>
-      <Tooltip>블로그 바로가기</Tooltip>
     </SocialList>
   )
 }
