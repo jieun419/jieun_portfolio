@@ -5,7 +5,6 @@ const FooterContainer = tw.footer`
   z-1
   px-10
   py-10
-  bg-superLightGray
   flex
   flex-col
   gap-2
@@ -15,6 +14,7 @@ const FooterContainer = tw.footer`
 
 const FooterTxt = tw.p`
   text-[#A6A6A6]
+  text-sm
 `;
 
 function Footer() {
