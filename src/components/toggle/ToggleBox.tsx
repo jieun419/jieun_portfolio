@@ -5,7 +5,6 @@ import { useState } from 'react';
 export const Toggle = tw.div`
   flex
   flex-col
-  cursor-pointer
 `;
 
 export const ToggleName = tw.div`
@@ -49,15 +48,14 @@ function ToggleBox({ title, detail }: ToggleProps) {
   };
 
   return (
-    <Toggle>
-
+    <Toggle className={detail ? 'cursor-pointer' : ''}>
       <ToggleName onClick={toggleBtn}>
-        <IcArrow isToggle={isToggle} />
+        {detail && <IcArrow isToggle={isToggle} />}
         <PTit>{title}</PTit>
       </ToggleName>
 
       {
-        isToggle &&
+        isToggle && detail &&
         <ToggleInfo>
           <PText>
             {detail}
