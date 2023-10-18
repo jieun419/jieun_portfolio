@@ -17,6 +17,7 @@ function Main() {
   const vhRef = useRef(0);
   const mainRef = useRef<HTMLDivElement>(null);
   const isPosition = useSelector((state: RootState) => state.position.isPosition);
+  const ismobile = isMobile ? 'true' : 'false';
 
   // 모바일 환경에서 높이 딱 맞춰 나오도록
   useEffect(() => {
@@ -46,7 +47,7 @@ function Main() {
 
   return (
     <motion.div className={`top-0 ${isPosition}`}>
-      <MainComponent ref={mainRef} isMobile={isMobile}>
+      <MainComponent ref={mainRef} ismobile={ismobile}>
         <MainBackground
           initial={{ ...OPACITY_0, scale: 1.25 }}
           animate={{ ...OPACITY_1, scale: 1 }}
@@ -65,7 +66,7 @@ function Main() {
           animate={OPACITY_1}
           transition={{ ...ANI_TRANSITION, delay: 3 }}
           src={myImg}
-          isMobile={isMobile}
+          ismobile={ismobile}
           alt="최지은 인물 사진"
         />
 
