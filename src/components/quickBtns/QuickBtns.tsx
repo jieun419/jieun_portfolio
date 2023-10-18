@@ -2,11 +2,7 @@ import tw from 'tailwind-styled-components';
 import GoTopBtn from '../button/GotoTopBtn';
 import { useEffect, useState } from 'react';
 
-type PropsT = {
-  opacity: boolean
-}
-
-export const QuickBtns = tw.div<PropsT>`
+export const QuickBtns = tw.div`
   fixed
   bottom-5
   right-5
@@ -17,8 +13,6 @@ export const QuickBtns = tw.div<PropsT>`
   items-center
   justify-center
   transition-all
-
-  ${(props) => props.opacity ? 'opacity-1' : 'opacity-0'}
 `
 
 export default function App() {
@@ -38,7 +32,7 @@ export default function App() {
   });
 
   return (
-    <QuickBtns opacity={SCROLL_POSITON}>
+    <QuickBtns className={SCROLL_POSITON ? 'opacity-1' : 'opacity-0'}>
       <GoTopBtn />
     </QuickBtns>
   );
