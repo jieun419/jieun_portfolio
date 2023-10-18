@@ -1,6 +1,7 @@
 import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
 import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../../utils/constant/constant';
+import DataToolTip from '../toolTip/ToolTip';
 
 type PropsT = {
   width?: string;
@@ -20,7 +21,6 @@ export const SocialLink = tw.a`
   flex-col
   z-20 
   font-medium
-  relative
   py-1
   px-2
   transition-all
@@ -57,11 +57,19 @@ function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
       animate={OPACITY_1}
       transition={{ ...ANI_TRANSITION, delay: delay && delay }}
     >
-      <SocialLink href='https://velog.io/@crg1050' title='바로가기(새창)' target='_blank'>
-        Velog
-      </SocialLink>
-      <SocialLink href='https://github.com/jieun419' title='바로가기(새창)' target='_blank'>GitHub</SocialLink>
-      <SocialLink href='https://overjoyed-process-2b8.notion.site/8716c49fa7ae4667b2694850020ec331?pvs=4' title='바로가기(새창)' target='_blank'>Resume</SocialLink>
+      <DataToolTip dataTooltip='Velog' type='bottom'>
+        <SocialLink href='https://velog.io/@crg1050' aria-label='Velog' target='_blank'>
+          Velog
+        </SocialLink>
+      </DataToolTip>
+
+      <DataToolTip dataTooltip='GitHub' type='bottom'>
+        <SocialLink href='https://github.com/jieun419' aria-label='GitHub' target='_blank'>GitHub</SocialLink>
+      </DataToolTip>
+
+      <DataToolTip dataTooltip='이력서' type='bottom'>
+        <SocialLink href='https://overjoyed-process-2b8.notion.site/8716c49fa7ae4667b2694850020ec331?pvs=4' aria-label='이력서' target='_blank'>Resume</SocialLink>
+      </DataToolTip>
     </SocialList>
   )
 }

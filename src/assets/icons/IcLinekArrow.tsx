@@ -17,8 +17,8 @@ function IcLineArrow({ width, height, color, direction }: StyleProps) {
       <path
         d={direction ? direction : 'M2 15L14 3L26 15'}
         stroke={color ? color : 'black'}
-        stroke-width="3"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeLinecap="round"
       />
     </svg>
   )

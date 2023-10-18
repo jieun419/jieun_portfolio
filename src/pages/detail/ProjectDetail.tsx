@@ -230,9 +230,11 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
                 <ContBtns>
-                  {giturl && <LinkBtn name='github_bk' giturl={giturl} text='github' />}
+
+                  {giturl && <LinkBtn name='github_bk' giturl={giturl} text='GitHub' />}
                   <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
-                  {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
+                  {blogurl && (<LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
+                  )}
                 </ContBtns>
               </Btns>
 
@@ -259,7 +261,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 {
                   featinfo.length !== 0 && (
                     <PWrap>
-                      <PTitle>주요 기능</PTitle>
+                      <PTitle>주요 기능 및 특징</PTitle>
                       <PDetailList>
                         {
                           featinfo.map((list, idx) => (
@@ -272,7 +274,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 }
 
                 <PWrap>
-                  <PTitle>사용 기술 및 언어</PTitle>
+                  <PTitle>
+                    사용 기술 및 언어
+                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                  </PTitle>
                   <Toggles>
                     {
                       tools.map((item, idx) => (
@@ -287,7 +292,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 </PWrap>
 
                 <PWrap>
-                  <PTitle>작업 기여도</PTitle>
+                  <PTitle>
+                    작업 기여도
+                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                  </PTitle>
                   <Toggles>
                     {
                       parts.map((item, idx) => (
@@ -306,7 +314,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                     <PWrap>
                       <PTitle>
                         작업 화면
-                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다.<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
+                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다. (작업화면이 현재와 다를 수 있습니다.)<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
                       </PTitle>
 
                       <ImgContList>
