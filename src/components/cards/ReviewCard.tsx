@@ -6,7 +6,11 @@ type ReviewProps = {
   review: string;
 };
 
-export const ReviewCardContainer = tw.div`
+type StylePropsT = {
+  isActive?: boolean;
+};
+
+export const ReviewCardContainer = tw.div<StylePropsT>`
   flex
   flex-col
   gap-2
@@ -19,7 +23,6 @@ export const ReviewCardContainer = tw.div`
   transition-all
 
   hover:bg-white/100
-  not:hover:bg-white/10
 `;
 
 export const ReviewBox = tw.div`
@@ -43,18 +46,17 @@ export const Reviewer = tw.span`
 `;
 
 function ReviewCard({ name, review }: ReviewProps) {
-
-  const sliceStr = name.split('').map((el, idx) => idx === 1 ? '*' : el).join('')
+  const sliceName = name.split('').map((name, idx) => idx === 1 ? '*' : name).join('');
 
   return (
-    <ReviewCardContainer >
+    <ReviewCardContainer>
       <IcRest />
       <ReviewBox>
         <ReviewTxt>
           {review}
         </ReviewTxt>
         <Reviewer>
-          {sliceStr}
+          {sliceName}
         </Reviewer>
       </ReviewBox>
     </ReviewCardContainer>
