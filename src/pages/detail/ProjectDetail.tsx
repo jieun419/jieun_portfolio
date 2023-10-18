@@ -259,7 +259,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 {
                   featinfo.length !== 0 && (
                     <PWrap>
-                      <PTitle>주요 기능</PTitle>
+                      <PTitle>주요 기능 및 특징</PTitle>
                       <PDetailList>
                         {
                           featinfo.map((list, idx) => (
@@ -272,7 +272,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 }
 
                 <PWrap>
-                  <PTitle>사용 기술 및 언어</PTitle>
+                  <PTitle>
+                    사용 기술 및 언어
+                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                  </PTitle>
                   <Toggles>
                     {
                       tools.map((item, idx) => (
@@ -287,7 +290,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 </PWrap>
 
                 <PWrap>
-                  <PTitle>작업 기여도</PTitle>
+                  <PTitle>
+                    작업 기여도
+                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                  </PTitle>
                   <Toggles>
                     {
                       parts.map((item, idx) => (

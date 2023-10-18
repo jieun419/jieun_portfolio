@@ -188,7 +188,6 @@ function AboutMe() {
                 </SubTit>
                 <MyMindTxt>
                   서비스를 개발할 때, <BoldUnderLineTxt>사용자가 불편을 겪지 않도록</BoldUnderLineTxt> 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br />
-                  스스로 개발을 잘했다 생각해도, 사용자가 이용에 불편을 가지고 있다면 UX를 제대로 고려하지 않았다고 볼 수 있습니다.<br />
                   그래서 <BoldUnderLineTxt>역지사지 마음가짐</BoldUnderLineTxt>을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.
                 </MyMindTxt>
 
