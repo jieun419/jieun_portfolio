@@ -65,6 +65,6 @@ export type ProjectDetailDataT = {
   featinfo: string[];
   parts: {
     title: string;
-    detail: string;
+    detail?: string;
   }[];
 };

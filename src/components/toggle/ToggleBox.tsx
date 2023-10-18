@@ -36,7 +36,7 @@ export const PText = tw.p`
 
 type ToggleProps = {
   title: string;
-  detail: string;
+  detail?: string;
 
 };
 
