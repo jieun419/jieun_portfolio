@@ -63,7 +63,7 @@ function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
     <>
       {
         depoloyurl === '' ? null : (
-          <LinkButton href={giturl ? giturl : depoloyurl} title="바로가기(새창)">
+          <LinkButton href={giturl ? giturl : depoloyurl} aria-label={text}>
             <IconCircle>
               <Img src={`${ICON_URL}${name}.svg`} alt={name} />
             </IconCircle>

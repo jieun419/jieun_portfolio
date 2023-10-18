@@ -1,16 +1,5 @@
-import tw from 'tailwind-styled-components';
 import IcLineArrow from '../../assets/icons/IcLinekArrow';
-
-export const TopButton = tw.button`
-  w-[50px]
-  h-[50px]
-  shadow-lg
-  flex
-  items-center
-  justify-center
-  bg-white
-  rounded-full
-`;
+import { WhiteCricleBtn } from './Button.styled';
 
 function GoTopBtn() {
   const goToTop = () => {
@@ -18,12 +7,12 @@ function GoTopBtn() {
   };
 
   return (
-    <TopButton onClick={goToTop}>
+    <WhiteCricleBtn onClick={goToTop}>
       <IcLineArrow
         width={'20'}
         height={'20'}
       />
-    </TopButton>
+    </WhiteCricleBtn>
   )
 }
 
