@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { motion } from 'framer-motion';
-import { ANI_TRANSITION, OPACITY_0, OPACITY_1 } from '../../utils/constant/constant';
+import { ANI_TRANSITION, OPACITY_0, OPACITY_1, socialLink } from '../../utils/constant/constant';
 import DataToolTip from '../toolTip/ToolTip';
 
 type PropsT = {
@@ -57,19 +57,13 @@ function SocialLinkList({ delay, width }: { delay?: number, width?: string }) {
       animate={OPACITY_1}
       transition={{ ...ANI_TRANSITION, delay: delay && delay }}
     >
-      <DataToolTip dataTooltip='Velog' type='bottom'>
-        <SocialLink href='https://velog.io/@crg1050' aria-label='Velog' target='_blank'>
-          Velog
-        </SocialLink>
-      </DataToolTip>
-
-      <DataToolTip dataTooltip='GitHub' type='bottom'>
-        <SocialLink href='https://github.com/jieun419' aria-label='GitHub' target='_blank'>GitHub</SocialLink>
-      </DataToolTip>
-
-      <DataToolTip dataTooltip='이력서' type='bottom'>
-        <SocialLink href='https://overjoyed-process-2b8.notion.site/8716c49fa7ae4667b2694850020ec331?pvs=4' aria-label='이력서' target='_blank'>Resume</SocialLink>
-      </DataToolTip>
+      {socialLink.map((item) => (
+        <DataToolTip key={item.id} dataTooltip={item.datatooltip} type={item.tooltiptype}>
+          <SocialLink href={item.href} aria-label={item.arialabel} target={item.target}>
+            {item.arialabel}
+          </SocialLink>
+        </DataToolTip>
+      ))}
     </SocialList>
   )
 }
