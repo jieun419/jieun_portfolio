@@ -1,8 +1,7 @@
 import tw from 'tailwind-styled-components';
-import GoTopBtn from '../button/GotoTopBtn';
 import { useEffect, useState } from 'react';
-import MailSentBtn from '../button/MailSendBtn';
 import DataToolTip from '../toolTip/ToolTip';
+import { quickBtnsData } from '../../utils/constant/constantx';
 
 export const QuickBtns = tw.div`
   fixed
@@ -35,13 +34,11 @@ export default function App() {
 
   return (
     <QuickBtns className={SCROLL_POSITON ? 'opacity-1' : 'opacity-0'}>
-      <DataToolTip dataTooltip='피드백 주기' type='left'>
-        <MailSentBtn />
-      </DataToolTip>
-      <DataToolTip dataTooltip='위로가기' type='left'>
-        <GoTopBtn />
-      </DataToolTip>
-
+      {quickBtnsData.map((item) => (
+        <DataToolTip key={item.id} dataTooltip={item.datatooltip} type={item.tooltiptype}>
+          {item.icon}
+        </DataToolTip>
+      ))}
     </QuickBtns>
   );
 }
