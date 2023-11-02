@@ -400,7 +400,7 @@ export const projectDetailData = [
     pointcolor: 'before:bg-[#6a57e0]',
     title: 'Coz Shopping',
     subtext:
-      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다.\n짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인\nGit, Github를 학습 하는데 많은 도움이 되었습니다.',
+      '코드스테이츠 과제로 주어진 요구 명세서를 확인 하고 해당 내용을 토대로 진행했습니다.\n짧은 기간에 요구한 기능을 구현하는게 목적이며, 프로젝트를 진행하며 필수인\nGit, Github를 학습 하는데 많은 도움이 되었습니다.\n\n* 현재 서버는 닫혀있는 상태입니다.',
     data: '2023.07 - 2023.08',
     team: '1인 (솔로)',
     tag: ['솔로'],
@@ -464,11 +464,11 @@ export const projectDetailData = [
         detail:
           'React는 컴포넌트 기반으로 하며, 가상 DOM을 활용해 웹 애플리케이션의 성능을 최적화 합니다. 컴포넌트 재사용성을 높이고, 상태 관리를 용이하게 할 수 있습니다.',
       },
-      {
-        title: 'Redux Toolkit',
-        detail:
-          'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
-      },
+      // {
+      //   title: 'Redux Toolkit',
+      //   detail:
+      //     'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
+      // },
       {
         title: 'Styled Components',
         detail:
