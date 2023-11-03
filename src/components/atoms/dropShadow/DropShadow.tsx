@@ -16,11 +16,7 @@ export const DropShadowWrap = tw.div`
 
 
 function DropShadow({ toggleModal }: DropShadowProps) {
-  return (
-    <>
-      <DropShadowWrap onClick={toggleModal} />
-    </>
-  )
+  return <DropShadowWrap onClick={toggleModal} />
 }
 
 export default DropShadow;
