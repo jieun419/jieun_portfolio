@@ -33,17 +33,15 @@ export const NavLink = tw.button`
 function Nav({ navTabs }: TabsPropsT) {
   return (
     <NavContainer>
-      {
-        navTabs.map((tab, idx) => (
-          <NavLink
-            key={idx}
-            onClick={tab.scrollToTarget}
-            className={tab.isTarget ? 'text-mainGray' : 'text-lightGray hover:text-[#4a4a4a]'}
-          >
-            {tab.targetName}
-          </NavLink>
-        ))
-      }
+      {navTabs.map((tab, idx) => (
+        <NavLink
+          key={idx}
+          onClick={tab.scrollToTarget}
+          className={tab.isTarget ? 'text-mainGray' : 'text-lightGray hover:text-[#4a4a4a]'}
+        >
+          {tab.targetName}
+        </NavLink>
+      ))}
     </NavContainer>
   );
 }

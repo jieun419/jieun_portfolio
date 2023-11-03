@@ -74,19 +74,15 @@ function RecordCard({ data, title, role, infos, stacks }: RecordDataT) {
           <Role>{role}</Role>
         </Tit>
         <RecordUl>
-          {
-            infos.map((info, idx) => (
-              <RecordList key={idx}>{info}</RecordList>
-            ))
-          }
+          {infos.map((info, idx) => (
+            <RecordList key={idx}>{info}</RecordList>
+          ))}
         </RecordUl>
       </TxtWrap>
       <Tags>
-        {
-          stacks.map((stack, idx) => (
-            <StackIcon key={idx} stack={stack} width={`w-[50px]`} />
-          ))
-        }
+        {stacks.map((stack, idx) => (
+          <StackIcon key={idx} stack={stack} width={`w-[50px]`} />
+        ))}
       </Tags>
     </CardContainer>
   );

@@ -36,12 +36,10 @@ function ProjectImgCard({ imgurl, subject, toggleImgModal, id }: PropsT) {
   const strId = String(id);
 
   return (
-    <>
-      <ImgCont id={strId} ref={imgRef} onClick={(e) => toggleImgModal(e)}>
-        <Img src={imgurl} />
-        <Imgsubject>{subject}</Imgsubject>
-      </ImgCont>
-    </>
+    <ImgCont id={strId} ref={imgRef} onClick={(e) => toggleImgModal(e)}>
+      <Img src={imgurl} />
+      <Imgsubject>{subject}</Imgsubject>
+    </ImgCont>
   )
 }
 

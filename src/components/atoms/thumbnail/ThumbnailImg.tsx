@@ -10,13 +10,8 @@ export const Img = tw.img`
   h-full
 `;
 
-function ThumbnailImg({url}:ThumbnailT) {
-  // const SRC_NAME = 'src/assets/images/thumbnail_';
-  return (
-    <>
-      <Img src={url} alt='thumbnail' />
-    </>
-  );
+function ThumbnailImg({ url }: ThumbnailT) {
+  return <Img src={url} alt='thumbnail' />
 }
 
 export default ThumbnailImg;

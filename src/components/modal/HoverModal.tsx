@@ -109,7 +109,7 @@ interface BlogProps {
 function HoverModal({ blog }: BlogProps) {
   return (
     <HoverModalBox>
-      <LinkTit>회고 블로그</LinkTit>
+      <LinkTit>관련 블로그 바로가기</LinkTit>
       <LinkList>
         {
           blog?.map((item, idx) => (
