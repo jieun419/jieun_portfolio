@@ -29,6 +29,7 @@ export const CToolTip = tw.div<StylePropsT>`
   ${(props) => props.type === 'right' && 'translate-x-[110%]'}
   ${(props) => props.type === 'left' && 'translate-x-[-110%]'} 
   invisible
+  z-[10]
 
   after:absolute
   after:flex
