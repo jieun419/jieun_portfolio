@@ -1,7 +1,7 @@
 export const ICON_URL =
   'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
 
-export const UPDATE_DATA = '23. 11. 12';
+export const UPDATE_DATA = '23. 01. 05';
 export const EMAILL = 'crg1050@gmail.com';
 
 export const OPACITY_0 = { opacity: 0 };
@@ -39,7 +39,7 @@ export const socialLink = [
     id: 3,
     datatooltip: '이력서 보기',
     tooltiptype: 'bottom',
-    href: 'https://overjoyed-process-2b8.notion.site/8716c49fa7ae4667b2694850020ec331?pvs=4',
+    href: 'https://docs.google.com/document/d/1ahAvIVKQe9wBEwYYQG86Ks8-ScnuFFCQ2255TEVhSoo/edit?usp=sharing',
     arialabel: 'Resume',
     target: '_blank',
   },
