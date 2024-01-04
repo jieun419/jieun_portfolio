@@ -15,13 +15,15 @@ const FooterContainer = tw.footer`
 const FooterTxt = tw.p`
   text-[#A6A6A6]
   text-sm
+  text-center
 `;
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterTxt>
-        Copyright 2023. choijieun all rights reserved.
+        Copyright 2023. choijieun all rights reserved.<br />
+        React, Styled Components, Tailwind 기반으로 제작된 사이트입니다.
       </FooterTxt>
     </FooterContainer>
   );
