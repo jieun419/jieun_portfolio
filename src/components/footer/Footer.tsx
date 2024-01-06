@@ -23,7 +23,7 @@ function Footer() {
     <FooterContainer>
       <FooterTxt>
         Copyright 2023. choijieun all rights reserved.<br />
-        React, Styled Components, Tailwind 기반으로 제작된 사이트입니다.
+        React, Styled Components, Tailwind CSS 기반으로 제작된 사이트입니다.
       </FooterTxt>
     </FooterContainer>
   );

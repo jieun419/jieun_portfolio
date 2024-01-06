@@ -1,8 +1,8 @@
 export const recordData = [
   {
-    data: '2023.03 - 2023.08',
-    title: '코드스테이츠 과정 수료',
-    role: '@ 프론트엔드',
+    data: '2023.02 - 2023.08',
+    title: '코드스테이츠',
+    role: '@ 프론트엔드 엔지니어 과정 수료',
     infos: [
       'JavaScript, React 학습',
       '20주 동안 매일 강도 높은 과제 수행 및 페어 프로그래밍과 코드 리뷰 경험',
@@ -14,7 +14,7 @@ export const recordData = [
   {
     data: '2021.04 - 2022.09',
     title: '건국사이버 평생교육원',
-    role: '@ 웹 디자인',
+    role: '@ 웹 디자인 / 퍼블리싱',
     infos: [
       'Photoshop을 활용해 홍보 랜딩 페이지, 웹 디자인 작업',
       'HTML, CSS 활용해 자사 및 타사 웹 사이트 구축',
@@ -27,7 +27,7 @@ export const recordData = [
   {
     data: '2017.05 - 2021.04',
     title: '(주) 비전트리',
-    role: '@ 웹 디자인',
+    role: '@ 웹 디자인 / 퍼블리싱',
     infos: [
       'Photoshop을 활용해 홍보 랜딩 페이지, 웹 디자인 작업',
       'Photoshop, Illustrator을 활용해 홍보물 디자인 작업',
@@ -41,12 +41,8 @@ export const recordData = [
   {
     data: '2015.03 - 2017.02',
     title: '전주비전대학교',
-    role: '@ 컴퓨터 정보과',
-    infos: [
-      '컴퓨터 정보과 전문학사 졸업',
-      '웹 관련 언어 학습',
-      'CS 관련 전공 학습',
-    ],
+    role: '@ 컴퓨터정보과 전문학사 졸업',
+    infos: ['HTML, CSS, JavaScript 등 프로그래밍 언어 학습.', 'CS 전공 학습'],
     stacks: ['html', 'css', 'ps', 'ai'],
   },
 ];
