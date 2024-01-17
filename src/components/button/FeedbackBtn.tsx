@@ -1,4 +1,4 @@
-import IcSpeechBubble from '../../assets/icons/icSpeechBubble';
+import IcFeedback from '../../assets/icons/IcFeedback';
 import { WhiteCricleBtn } from './Button.styled';
 
 function FeedbackBtn() {
@@ -8,7 +8,7 @@ function FeedbackBtn() {
 
   return (
     <WhiteCricleBtn onClick={goToSite}>
-      <IcSpeechBubble
+      <IcFeedback
         width={'20'}
         height={'20'}
       />
