@@ -7,7 +7,7 @@ import ScrollAni from '../../../styles/ScrollAni';
 
 export const RecordComponent = tw.article`
   grid
-  grid-cols-4
+  grid-cols-2
   grid-row-3
   gap-4
   h-screen
