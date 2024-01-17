@@ -52,7 +52,7 @@ function Finish() {
             </MainTitle>
 
             <MainSubText>
-              부족한 점도 많지만 끊임 없이 도전하고,<br />
+              프론트엔드 개발자로 성장하기 위해 낯선 기술에도 적극적으로 도전하고,<br />
               항상 사용자의 관점에서 생각하며 사용하기 좋은 서비스를 만들고 싶습니다.
             </MainSubText>
             <SocialLinkList />
