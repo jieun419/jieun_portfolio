@@ -182,21 +182,23 @@ function AboutMe() {
             </LeftWrap>
             <RightWrap ref={scrollRef}>
               <MyMind>
-                <Tit>Mind</Tit>
-                <SubTit>
-                  사용자를 생각하는 역지사지 마인드.
-                </SubTit>
+                {/* <Tit>사용자를 생각하는 역지사지 마인드</Tit> */}
+                <SubTit>역지사지 마인드로 사용자 중심 개발.</SubTit>
                 <MyMindTxt>
-                  서비스를 개발할 때, <BoldUnderLineTxt>사용자가 불편을 겪지 않도록</BoldUnderLineTxt> 주의 깊게 고려하는 것이 중요하다고 생각합니다.<br />
-                  그래서 <BoldUnderLineTxt>역지사지 마음가짐</BoldUnderLineTxt>을 가지고, 항상 사용자의 관점에서 생각하며 개선하려고 노력하고 있습니다.
+                  서비스를 개발할 때 항상 <BoldUnderLineTxt>'사용자를 생각하는 역지사지 마인드'</BoldUnderLineTxt>를 가지고 작업하고 있습니다.<br />
+                  사용자가 불편을 겪지 않도록 주의 깊게 고려하며, 사용자 관점에서의 경험을 중요시합니다.<br />
+                  구체적으로 사용자 경험을 최적화하기 위해 사용자가 첫 방문에도 서비스를 쉽게 이해하고 활용할 수 있도록<br />
+                  직관적이고 친숙한 UI를 제공하며,  <BoldUnderLineTxt>불특정 다수가 사용해도 편리하게 서비스를 이용할 수 있도록</BoldUnderLineTxt> 노력하고 있습니다.
                 </MyMindTxt>
 
                 <SubTit>
-                  소통은 중요한 요소.
+                  소통과 피드백을 통한 협업.
                 </SubTit>
                 <MyMindTxt>
-                  협업은 성공적인 프로젝트를 위해 중요한 요소라고 생각합니다.<br />
-                  <BoldUnderLineTxt>팀원들과의 원활한 커뮤니케이션과 피드백</BoldUnderLineTxt>을 통해 구체화 하고 지속적으로 개선하고 싶습니다.
+                  효율적인 협업을 위해 <BoldUnderLineTxt>소통과 피드백 수용은 프로젝트의 핵심 요소</BoldUnderLineTxt>라 생각합니다.<br />
+                  팀원들과 원활한 커뮤니케이션을 위해 주기적으로 미팅을 하며 아이디어를 구체화하고, <br />
+                  피드백을 수용해 최근에는 UI 디자인 개선을 하면서 사용자 경험을 높였습니다.<br />
+                  향후에도 사용자와의 소통을 강화해 더 나은 서비스를 제공하고 싶습니다.
                 </MyMindTxt>
               </MyMind>
 
