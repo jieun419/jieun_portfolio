@@ -25,7 +25,7 @@ const Career = ({ id, navTabs }: TabsPropsT) => {
   const { scrollRef, scrollEl } = useScrollAnimation();
 
   return (
-    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} h-screen`} ref={scrollRef}>
       <RecordComponent id={id} ref={navTabs[0].targetRef}>
         {
           careerData.map((item, idx) => (

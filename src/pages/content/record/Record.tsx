@@ -16,17 +16,19 @@ export const RecordComponent = tw.article`
     
   max-md:grid-cols-1
   max-md:pt-[5rem]
+
   max-lg:grid-cols-2
   max-lg:h-auto
+
   max-xl:grid-cols-3
+
   max-2xl:grid-cols-4
-  max-2xl:h-screen
 `;
 
 function Record({ id, navTabs }: TabsPropsT) {
   const { scrollRef, scrollEl } = useScrollAnimation();
   return (
-    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} h-screen`} ref={scrollRef}>
       <RecordComponent id={id} ref={navTabs[2].targetRef}>
         {
           recordData.map((item, idx) => (
