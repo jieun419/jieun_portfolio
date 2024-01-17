@@ -1,5 +1,4 @@
 import tw from 'tailwind-styled-components';
-
 import Nav from '../../components/nav/Nav';
 import Project from '../content/project/Project';
 import Record from '../content/record/Record';
