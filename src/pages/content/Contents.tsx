@@ -33,7 +33,7 @@ function Contents() {
   const navTabs = [
     useScrollToTarget('Career'),
     useScrollToTarget('Project'),
-    useScrollToTarget('Record'),
+    useScrollToTarget('Education'),
   ]
 
   return (
@@ -42,7 +42,7 @@ function Contents() {
       <RightWrap>
         <Career id='Career' navTabs={navTabs} />
         <Project id='Project' navTabs={navTabs} />
-        <Record id='Record' navTabs={navTabs} />
+        <Record id='Education' navTabs={navTabs} />
       </RightWrap>
     </Container>
   );
