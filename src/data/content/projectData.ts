@@ -51,12 +51,3 @@ export const projectData = [
     tag: ['장기', '반응형', '퍼블리싱'],
     depoloyurl: 'https://online.hancomacademy.com/',
   },
-  {
-    name: 'woojieun',
-    title: '우지은스피치랩',
-    subject:
-      '스피치 전문 학원으로 온라인으로도 수강을 할 수 있는 홈페이지입니다.',
-    tag: ['장기', '적응형', '디자인', '퍼블리싱'],
-    depoloyurl: 'https://wspeechlab.com/',
-  },
-];
