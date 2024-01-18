@@ -1,9 +1,10 @@
 import tw from 'tailwind-styled-components';
 import RecordCard from '../../../components/cards/RecordCard';
 import { TabsPropsT } from '../../../types/type';
-import { recordData } from '../../../data/content/recordData';
+import { careerData } from '../../../data/content/careerData';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
+
 
 export const RecordComponent = tw.article`
   grid
@@ -16,22 +17,18 @@ export const RecordComponent = tw.article`
     
   max-md:grid-cols-1
   max-md:pt-[5rem]
-
-  max-lg:grid-cols-2
   max-lg:h-auto
-
-  max-xl:grid-cols-3
-
-  max-2xl:grid-cols-4
+  max-2xl:h-screen
 `;
 
-function Record({ id, navTabs }: TabsPropsT) {
+const Career = ({ id, navTabs }: TabsPropsT) => {
   const { scrollRef, scrollEl } = useScrollAnimation();
+
   return (
     <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} h-screen`} ref={scrollRef}>
-      <RecordComponent id={id} ref={navTabs[2].targetRef}>
+      <RecordComponent id={id} ref={navTabs[0].targetRef}>
         {
-          recordData.map((item, idx) => (
+          careerData.map((item, idx) => (
             <RecordCard
               key={idx}
               data={item.data}
@@ -45,6 +42,6 @@ function Record({ id, navTabs }: TabsPropsT) {
       </RecordComponent>
     </ScrollAni>
   );
-}
+};
 
-export default Record;
+export default Career;

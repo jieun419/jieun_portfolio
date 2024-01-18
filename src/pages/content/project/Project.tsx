@@ -55,7 +55,7 @@ function Project({ id, navTabs }: TabsPropsT) {
       )}
 
       <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
-        <ProjectComponent id={id} ref={navTabs[0].targetRef} >
+        <ProjectComponent id={id} ref={navTabs[1].targetRef} >
           {projectData.map((item, idx) => (
             <ProjectCard
               key={idx}

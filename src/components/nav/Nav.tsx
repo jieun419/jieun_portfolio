@@ -24,6 +24,7 @@ export const NavLink = tw.button`
   text-lightGray
   font-black
   text-6xl
+  text-left
   transition
 
   max-md:text-3xl

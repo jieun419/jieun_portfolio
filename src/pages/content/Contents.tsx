@@ -1,9 +1,9 @@
 import tw from 'tailwind-styled-components';
-
 import Nav from '../../components/nav/Nav';
 import Project from '../content/project/Project';
 import Record from '../content/record/Record';
 import useScrollToTarget from '../../hooks/useScrollToTarget';
+import Career from './career/Career';
 
 export const Container = tw.section`
   relative
@@ -31,16 +31,18 @@ export const RightWrap = tw.section`
 function Contents() {
 
   const navTabs = [
+    useScrollToTarget('Career'),
     useScrollToTarget('Project'),
-    useScrollToTarget('Record'),
+    useScrollToTarget('Education'),
   ]
 
   return (
     <Container>
       <Nav navTabs={navTabs} />
       <RightWrap>
+        <Career id='Career' navTabs={navTabs} />
         <Project id='Project' navTabs={navTabs} />
-        <Record id='Record' navTabs={navTabs} />
+        <Record id='Education' navTabs={navTabs} />
       </RightWrap>
     </Container>
   );
