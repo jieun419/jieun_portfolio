@@ -51,3 +51,4 @@ export const projectData = [
     tag: ['장기', '반응형', '퍼블리싱'],
     depoloyurl: 'https://online.hancomacademy.com/',
   },
+];
