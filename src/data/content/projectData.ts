@@ -1,8 +1,8 @@
 export const projectData = [
   {
     name: 'ssthing',
-    title: '회사 소개 사이트',
-    subject: '우주가 컨셉인 회사 소개 사이트입니다.',
+    title: '우주를 테마로 한 회사 소개 사이트',
+    subject: '우주를 테마로 한 회사 소개 사이트입니다.',
     tag: ['팀', '반응형', '퍼블리싱'],
     depoloyurl: 'https://ssting.io/',
   },
