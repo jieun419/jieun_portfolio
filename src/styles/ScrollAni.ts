@@ -7,6 +7,7 @@ type PropsT = {
 
 export const ScrollAni = styled.div<PropsT>`
   width: ${(props) => (props.width ? props.width : '')};
+  height: auto;
   transition: 0.5s;
 
   &.fadeIn {
@@ -22,6 +23,15 @@ export const ScrollAni = styled.div<PropsT>`
     animation-duration: 1s;
     animation-delay: ${(props) => props.delay && props.delay};
     transform: translateY(0);
+  }
+
+  &.mdH {
+    @media not all and (min-width: 1280px) {
+      height: 100vh;
+    }
+    @media not all and (min-width: 1024px) {
+      height: auto;
+    }
   }
 
   @keyframes scroll {

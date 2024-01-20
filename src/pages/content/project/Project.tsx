@@ -17,11 +17,10 @@ export const ProjectComponent = tw.article`
   pt-[3rem]
   h-auto
 
-  max-md:grid-cols-1
   max-md:pt-[5rem]
-  max-lg:grid-cols-2
-  max-xl:grid-cols-3  
-  max-2xl:grid-cols-4
+  max-lg:grid-cols-1
+  max-xl:grid-cols-2  
+  max-2xl:grid-cols-3
 `;
 
 function Project({ id, navTabs }: TabsPropsT) {
