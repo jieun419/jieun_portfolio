@@ -11,13 +11,13 @@ export const RecordComponent = tw.article`
   grid-cols-2
   grid-row-3
   gap-4
-  h-screen
   pt-[3rem]
   mt-[3rem]
-    
-  max-md:grid-cols-1
+  
   max-md:pt-[5rem]
   max-lg:h-auto
+  max-lg:grid-cols-1
+  max-xl:grid-cols-2  
   max-2xl:h-screen
 `;
 
@@ -25,7 +25,7 @@ const Career = ({ id, navTabs }: TabsPropsT) => {
   const { scrollRef, scrollEl } = useScrollAnimation();
 
   return (
-    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} h-screen`} ref={scrollRef}>
+    <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'} mdH`} ref={scrollRef}>
       <RecordComponent id={id} ref={navTabs[0].targetRef}>
         {
           careerData.map((item, idx) => (
