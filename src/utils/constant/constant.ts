@@ -1,7 +1,7 @@
 export const ICON_URL =
   'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
 
-export const UPDATE_DATA = '24. 01. 18';
+export const UPDATE_DATA = '24. 01. 20';
 export const EMAILL = 'crg1050@gmail.com';
 
 export const OPACITY_0 = { opacity: 0 };
@@ -33,14 +33,6 @@ export const socialLink = [
     tooltiptype: 'bottom',
     href: 'https://velog.io/@crg1050',
     arialabel: 'Velog',
-    target: '_blank',
-  },
-  {
-    id: 3,
-    datatooltip: '이력서 보기',
-    tooltiptype: 'bottom',
-    href: 'https://docs.google.com/document/d/1ahAvIVKQe9wBEwYYQG86Ks8-ScnuFFCQ2255TEVhSoo/edit?usp=sharing',
-    arialabel: 'Resume',
     target: '_blank',
   },
 ];
