@@ -48,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
         border: 0;
         font-size: 1rem;
         vertical-align: baseline;
+        word-break: keep-all;
     }
 
     h1, h2, h3, h4, h5, h6, p, div,

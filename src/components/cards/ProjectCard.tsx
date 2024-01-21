@@ -82,6 +82,7 @@ export const HoverBox = tw.div`
 `;
 
 export const BtnBox = tw.div`
+  w-2/3
   flex
   flex-col
   gap-3

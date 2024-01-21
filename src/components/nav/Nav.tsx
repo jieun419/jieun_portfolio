@@ -17,6 +17,7 @@ export const NavContainer = tw.nav`
   max-md:top-0
   max-md:w-full
   max-md:h-auto
+  max-md:overflow-y-clip
   max-md:backdrop-blur-md
 `;
 
@@ -27,7 +28,7 @@ export const NavLink = tw.button`
   text-left
   transition
 
-  max-md:text-3xl
+  max-md:text-2xl
   max-lg:text-5xl
 `;
 
