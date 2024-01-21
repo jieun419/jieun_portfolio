@@ -9,6 +9,7 @@ export const NavContainer = tw.nav`
   gap-3
   w-auto
   h-screen
+  overflow-[none]
 
   max-md:flex-row
   max-md:bg-mainBlack
@@ -17,7 +18,7 @@ export const NavContainer = tw.nav`
   max-md:top-0
   max-md:w-full
   max-md:h-auto
-  max-md:overflow-y-clip
+  max-md:overflow-y-scroll
   max-md:backdrop-blur-md
 `;
 
