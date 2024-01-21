@@ -118,11 +118,12 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
         <Tit>{title}</Tit>
         <BtnBox>
           <Button onClick={() => toggleModal(name)}>자세히 보기</Button>
-          {depoloyurl ? (
-            <Button onClick={() => window.open(depoloyurl)}>사이트 바로가기</Button>
-          ) : (
+          {giturl &&
             <Button onClick={() => window.open(giturl)}>Github 바로가기</Button>
-          )}
+          }
+          {depoloyurl &&
+            <Button onClick={() => window.open(depoloyurl)}>사이트 바로가기</Button>
+          }
         </BtnBox>
       </HoverBox>
 
