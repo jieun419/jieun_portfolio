@@ -46,6 +46,7 @@ export const TxtWrap = tw.div<ProjectDataProps>`
 export const Tit = tw.h4`
   font-bold
   text-2xl
+  group-hover:text-center
 `;
 
 export const Txt = tw.p`

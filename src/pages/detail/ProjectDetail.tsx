@@ -73,6 +73,7 @@ export const DetailTop = tw.section<ProjectDataProps>`
 export const ProjectTit = tw.h3`
   text-white
   text-4xl
+  text-center
   font-bold
   mt-2
   mb-4
