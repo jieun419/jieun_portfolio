@@ -60,7 +60,7 @@ export const SubJectTit = tw.h2`
 export const Tit = tw.h3`
   text-4xl
   font-black
-  pb-2
+  pb-[2rem]
 `;
 
 export const SubTit = tw.h5`
@@ -172,10 +172,10 @@ function AboutMe() {
               <FlexBox>
                 <Img src={isImgChange ? myImgImOn : myImgIm} alt="이모지 이미지" />
                 <div>
-                  <TagTxt># 역지사지</TagTxt>
-                  <TagTxt># 사용자중심</TagTxt>
-                  <TagTxt># 소통</TagTxt>
-                  <TagTxt># 피드백</TagTxt>
+                  <TagTxt>#역지사지</TagTxt>
+                  <TagTxt>#책임감</TagTxt>
+                  <TagTxt>#소통</TagTxt>
+                  <TagTxt>#피드백</TagTxt>
                 </div>
               </FlexBox>
               <ShowReviewBtn handelImgChange={handelImgChange}>팀원 리뷰 보기</ShowReviewBtn>

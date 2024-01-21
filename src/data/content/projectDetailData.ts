@@ -2,7 +2,7 @@ export const projectDetailData = [
   {
     name: 'ssthing',
     pointcolor: 'before:bg-[#373737]',
-    title: '우주를 테마 회사 소개 사이트',
+    title: '우주를 테마로 한 회사 소개 사이트',
     subtext:
       '우주를 테마로 한 회사 소개 홈페이지입니다.\n디자인 시안을 Figma로 확인하며 제시한 기한 내에 최대한 클라이언트가 요구한 기능을 작업하려고 했습니다.',
     data: '2023.10 - 약 3일',

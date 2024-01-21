@@ -73,6 +73,7 @@ export const DetailTop = tw.section<ProjectDataProps>`
 export const ProjectTit = tw.h3`
   text-white
   text-4xl
+  text-center
   font-bold
   mt-2
   mb-4
@@ -232,9 +233,8 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 <ContBtns>
 
                   {giturl && <LinkBtn name='github_bk' giturl={giturl} text='GitHub' />}
-                  <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />
-                  {blogurl && (<LinkBtn name='blog' blog={blogurl} text='관련 블로그' />
-                  )}
+                  {depoloyurl && <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />}
+                  {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
                 </ContBtns>
               </Btns>
 
