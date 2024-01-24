@@ -24,7 +24,7 @@ export const Img = tw.img`
 function ProjectScreen({ imgurl }: ThumbnailT) {
   return (
     <ScreenContainer>
-      <Img src={imgurl} alt='projectScreen' />
+      <Img src={imgurl} loading='lazy' alt='projectScreen' />
     </ScreenContainer>
   );
 }
