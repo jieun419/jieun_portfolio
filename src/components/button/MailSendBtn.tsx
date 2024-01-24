@@ -1,8 +1,9 @@
 import IcMail from '../../assets/icons/IcMail';
+import { ButtonNameT } from '../../types/type';
 import { EMAILL } from '../../utils/constant/constant';
 import { WhiteCricleBtn } from './Button.styled';
 
-function MailSentBtn() {
+function MailSentBtn({ name }: ButtonNameT) {
   const goToSite = () => {
     const mailUrl = EMAILL;
     navigator.clipboard.writeText(mailUrl).then(() => {
@@ -11,7 +12,7 @@ function MailSentBtn() {
   };
 
   return (
-    <WhiteCricleBtn onClick={goToSite}>
+    <WhiteCricleBtn name={name} onClick={goToSite}>
       <IcMail
         width={'20'}
         height={'20'}

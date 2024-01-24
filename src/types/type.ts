@@ -68,3 +68,7 @@ export type ProjectDetailDataT = {
     detail?: string;
   }[];
 };
+
+export type ButtonNameT = {
+  name: string;
+};
