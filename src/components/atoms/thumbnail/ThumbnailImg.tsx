@@ -11,7 +11,7 @@ export const Img = tw.img`
 `;
 
 function ThumbnailImg({ url }: ThumbnailT) {
-  return <Img src={url} alt='thumbnail' />
+  return <Img src={url} loading='lazy' alt='thumbnail' />
 }
 
 export default ThumbnailImg;
