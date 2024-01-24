@@ -67,7 +67,8 @@ function Main() {
           transition={{ ...ANI_TRANSITION, delay: 3 }}
           src={myImg}
           ismobile={ismobile}
-          alt="최지은 인물 사진"
+          alt='최지은 인물 사진'
+          loading='lazy'
         />
 
         <InfoWrap delay={3} />

@@ -170,7 +170,7 @@ function AboutMe() {
           <Content>
             <LeftWrap>
               <FlexBox>
-                <Img src={isImgChange ? myImgImOn : myImgIm} alt="이모지 이미지" />
+                <Img src={isImgChange ? myImgImOn : myImgIm} loading='lazy' alt="이모지 이미지" />
                 <div>
                   <TagTxt>#역지사지</TagTxt>
                   <TagTxt>#책임감</TagTxt>

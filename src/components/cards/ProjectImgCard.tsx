@@ -37,7 +37,7 @@ function ProjectImgCard({ imgurl, subject, toggleImgModal, id }: PropsT) {
 
   return (
     <ImgCont id={strId} ref={imgRef} onClick={(e) => toggleImgModal(e)}>
-      <Img src={imgurl} />
+      <Img src={imgurl} loading='lazy' alt='프로젝트 구현 화면' />
       <Imgsubject>{subject}</Imgsubject>
     </ImgCont>
   )
