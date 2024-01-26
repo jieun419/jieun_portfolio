@@ -4,7 +4,7 @@
 - **`Project duration` :** 2023.08.31 - 2023.09.31
 - **`Link` :** [배포 사이트](jieun-portfolio.vercel.app/)
 - **`피그마 구상도`:** [피그마 임시 구상도](https://www.figma.com/proto/yYqRCEUVsz7MqOj5LmHEkH/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?type=design&node-id=137-1569&t=wrYIENswdY00Shik-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=126%3A386&show-proto-sidebar=1&mode=design)
-- **`Stack` :** Vite, React, TypeScript, Redux Toolkit, TailwindCSS, Styled Components
+- **`Stack` :** Vite, React, TypeScript, Redux Toolkit, Tailwind CSS, Styled Components
 
 ## 설명
 노션, 템플릿 소스 등을 이용할 수 있었지만 `저만의 포트폴리오` 사이트를 가지고 싶어 제작했습니다.<br>
@@ -16,12 +16,19 @@
 ## 관련 링크
 [회고][[나의 포트폴리오 만들기]](https://velog.io/@crg1050/나의-포트폴리오-만들기)<br>
 [회고][[포트폴리오 개선하기]](https://velog.io/@crg1050/포트폴리오-개선하기)<br>
-[개선][[Tooltip추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
+[개선][[Tooltip 추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
 
 ## 작업 화면
 
 ![ezgif com-video-to-gif](https://github.com/jieun419/jieun_portfolio/assets/109754988/16a67eaa-115a-4f1a-bc7f-2a5d7bdcb0ca)  
 
+## 작업사항
+- `Redux Toolkit`을 활용해 조건에 따라 모달창 내용 다르게 표시
+- `framer-motion` 라이브러리를 활용해 초기 화면에 시선 집중하도록 작업
+- 사용자 경험을 개선하기 위해 tooltip 추가
+- Tailwind CSS를 활용해 일관된 스타일의 반응형 작업
+- 데이터를 객체 형식의 데이터로 분리해 진행
+- useRef등을 활용해 custom Hook으로 만들어 스크롤 시 특정 컨포넌트 애니메이셔 효과 작업
 
 |Main|About me|
 |------|---|
