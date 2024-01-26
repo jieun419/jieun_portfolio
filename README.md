@@ -11,24 +11,23 @@
 주요 색상인 `black & white`로 심플하고 차분한 느낌을 줬고,<br>
 간단한 자기 소개와 프로젝트, 이력 등 중요도 순으로 배치해 내용을 구성했습니다.<br>
 이를 통해 포트폴리오를 보는 사람들에게 원하는 정보를 쉽게 전달할 수 있도록 했습니다.<br><br>
-지금에서 마무리하지 않고 개선할 점을 찾으며 업데이트하고 있습니다.
-
-## 관련 링크
-[회고][[나의 포트폴리오 만들기]](https://velog.io/@crg1050/나의-포트폴리오-만들기)<br>
-[회고][[포트폴리오 개선하기]](https://velog.io/@crg1050/포트폴리오-개선하기)<br>
-[개선][[Tooltip 추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
-
-## 작업 화면
-
-![ezgif com-video-to-gif](https://github.com/jieun419/jieun_portfolio/assets/109754988/16a67eaa-115a-4f1a-bc7f-2a5d7bdcb0ca)  
+**지금에서 마무리하지 않고 개선할 점을 찾으며 업데이트하고 있습니다.**
 
 ## 작업사항
 - `Redux Toolkit`을 활용해 조건에 따라 모달창 내용 다르게 표시
 - `framer-motion` 라이브러리를 활용해 초기 화면에 시선 집중하도록 작업
 - 사용자 경험을 개선하기 위해 tooltip 추가
-- Tailwind CSS를 활용해 일관된 스타일의 반응형 작업
+- `Tailwind CSS`를 활용해 일관된 스타일의 반응형 작업
 - 데이터를 객체 형식의 데이터로 분리해 진행
-- useRef등을 활용해 custom Hook으로 만들어 스크롤 시 특정 컨포넌트 애니메이셔 효과 작업
+- `useRef`등을 활용해 스크롤 시 특정 컨포넌트 애니메이셔 효과 작업, 다른 컴포넌트에서도 사용할 수 있도록 Custom Hook으로 만들어 재사용
+  
+## 관련 링크
+[회고][[나의 포트폴리오 만들기]](https://velog.io/@crg1050/나의-포트폴리오-만들기)<br>
+[회고][[포트폴리오 개선하기]](https://velog.io/@crg1050/포트폴리오-개선하기)<br>
+[개선][[Tooltip 추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
+
+## 작업 화면 (현재 사이트와 스타일이 다소 다를 수 있습니다.)
+![ezgif com-video-to-gif](https://github.com/jieun419/jieun_portfolio/assets/109754988/16a67eaa-115a-4f1a-bc7f-2a5d7bdcb0ca)  
 
 |Main|About me|
 |------|---|
