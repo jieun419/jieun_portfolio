@@ -4,7 +4,7 @@
 - **`Project duration` :** 2023.08.31 - 2023.09.31
 - **`Link` :** [배포 사이트](jieun-portfolio.vercel.app/)
 - **`피그마 구상도`:** [피그마 임시 구상도](https://www.figma.com/proto/yYqRCEUVsz7MqOj5LmHEkH/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?type=design&node-id=137-1569&t=wrYIENswdY00Shik-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=126%3A386&show-proto-sidebar=1&mode=design)
-- **`Stack` :** Vite, React, TypeScript, Redux Toolkit, Tailwind, Styled Components
+- **`Stack` :** Vite, React, TypeScript, Redux Toolkit, TailwindCSS, Styled Components
 
 ## 설명
 노션, 템플릿 소스 등을 이용할 수 있었지만 `저만의 포트폴리오` 사이트를 가지고 싶어 제작했습니다.<br>
@@ -12,6 +12,11 @@
 간단한 자기 소개와 프로젝트, 이력 등 중요도 순으로 배치해 내용을 구성했습니다.<br>
 이를 통해 포트폴리오를 보는 사람들에게 원하는 정보를 쉽게 전달할 수 있도록 했습니다.<br><br>
 지금에서 마무리하지 않고 개선할 점을 찾으며 업데이트하고 있습니다.
+
+## 관련 링크
+[회고][[나의 포트폴리오 만들기]](https://velog.io/@crg1050/나의-포트폴리오-만들기)<br>
+[회고][[포트폴리오 개선하기]](https://velog.io/@crg1050/포트폴리오-개선하기)<br>
+[개선][[Tooltip추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
 
 ## 작업 화면
 
