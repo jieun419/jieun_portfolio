@@ -50,6 +50,128 @@ export const projectDetailData = [
     ],
   },
   {
+    name: 'poke',
+    pointcolor: 'before:bg-[#ED1B24]',
+    title: '포켓몬 도감',
+    subtext:
+      '포켓몬 API를 알게되어 작업을 진행하게 되었습니다.\nReact Query는 물론 무한 스크롤링, 다크모드, axios를 공부하기 위해 제작하게 되었습니다.\n\n현재는 완성도 높은 프로젝트를 구현하기 위해 꾸준히 개선하고 있습니다.',
+    data: '2023.09 - 진행 중',
+    team: '1인 (솔로)',
+    tag: ['솔로', '토이'],
+    imgurl:
+      'https://private-user-images.githubusercontent.com/109754988/294662024-d2fe1651-8b5d-4fe6-bac6-07425c1bd1bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI0LWQyZmUxNjUxLThiNWQtNGZlNi1iYWM2LTA3NDI1YzFiZDFiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODRiOGJhNGU0NWY0ZmRjYWY3YzBjYTExYzdjMjQ1Mjc2ZjcxZjA0MWU2ZGIxMTljN2Q3MTk4YjU2MTQxODg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FSMveiq1_keHCXVpnSRc69HyBDlSQqYVkpMGWYEgBME',
+    detailimginfo: [
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/294662024-d2fe1651-8b5d-4fe6-bac6-07425c1bd1bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI0LWQyZmUxNjUxLThiNWQtNGZlNi1iYWM2LTA3NDI1YzFiZDFiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODRiOGJhNGU0NWY0ZmRjYWY3YzBjYTExYzdjMjQ1Mjc2ZjcxZjA0MWU2ZGIxMTljN2Q3MTk4YjU2MTQxODg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FSMveiq1_keHCXVpnSRc69HyBDlSQqYVkpMGWYEgBME',
+        subject: '메인 화면',
+      },
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/294662021-7b58dee0-aadf-40fe-83c8-c5b9a1b47f4d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDIxLTdiNThkZWUwLWFhZGYtNDBmZS04M2M4LWM1YjlhMWI0N2Y0ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMWRiMmQ1Y2E1NWI1ZTNkYWJhNzFkNGMxZjA5MTNhZGU3ZmE4NWEzNWVmMzkxYjEzZmY5MWY2NWQxYzI1ZjhhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.xezLZynqPK6Wga7QsNZ0Izo8Ufxu_wW7tGrL2gjzsvA',
+        subject: '포켓몬 상세 정보',
+      },
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/294662028-4b719a4f-e2c7-4df9-bdf7-2946c8c4e429.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI4LTRiNzE5YTRmLWUyYzctNGRmOS1iZGY3LTI5NDZjOGM0ZTQyOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iNjk3YjRhMmNkZTRiZTAxNjQ0ZmY0MmQ2NmUwZWJjNTE3NjQ2Y2FhNDJhMDkzOTkzNzUyY2YyZGJlMTQzNjNjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.gqOlIZLeH-y2dqQwWSqum3yu5CnKMKiq0abiIXQt6UM',
+        subject: '메인 화면 - 다크모드',
+      },
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/294662284-0f1e2b91-aa1e-4489-b47e-cbe24f6baa94.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMjg0LTBmMWUyYjkxLWFhMWUtNDQ4OS1iNDdlLWNiZTI0ZjZiYWE5NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNzg4NGZhZDJlN2ZkNTU1M2NkN2E3ZWJhMTg3ZjBhM2EyYTE5YTM4NTI2Yzc0MTlmNzEwMzFkYmY3ZTc3ZDU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.6aWDjEHjsFQ5f1OoUleWnd-1fugATr62_20gE8J81ms',
+        subject: '포켓몬 상세 정보 - 다크모드',
+      },
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/300871809-5dad9ec0-d94c-4bcd-8d6c-6031c75eac51.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAwODcxODA5LTVkYWQ5ZWMwLWQ5NGMtNGJjZC04ZDZjLTYwMzFjNzVlYWM1MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZjY0NTc4NjZmYWY4NmZjZGFlMmY3NzliNTBkZmFkZDYzMzkwMDNmNTJkYzQ3MTdkNjcyYzBhOGUxZjljNmRmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.E87Xcxx0iS9gQJPCV8LNVh89HOeGeBf4PicpCqSJi1c',
+        subject: '검색 페이지',
+      },
+      {
+        imgurl:
+          'https://private-user-images.githubusercontent.com/109754988/300871692-83f2a068-d15c-40bb-8a4c-7dc8f294926d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAwODcxNjkyLTgzZjJhMDY4LWQxNWMtNDBiYi04YTRjLTdkYzhmMjk0OTI2ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mYWEwMjYxNzEwMGU3YmI2Mzk3NmFjZTkxYjdmYTc5NzhmN2M1Njg0YjMwNjFlOTY0YTYyMWU2MWZiYzUxMGE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FRj7zQrhvW1CfABJyQYF0WluOoVjrYewxu0Vrwls604',
+        subject: '검색 페이지 - 검색 키워드 없을 경우',
+      },
+    ],
+    giturl: 'https://github.com/jieun419/poke-dex',
+    depoloyurl: 'https://je-poke-dex.vercel.app/',
+    blogurl: [
+      {
+        title: '다크모드 구현 하기 (react, reduxToolkit, styled components)',
+        url: 'https://velog.io/@crg1050/다크모드-구현-하기-react-reduxToolkit-styled-components',
+      },
+      {
+        title: '컴포넌트 분리하기',
+        url: 'https://velog.io/@crg1050/포켓몬-도감-컴포넌트-분리하기',
+      },
+      {
+        title: 'useEffect에서 불필요한 호출이 발생되는 이슈',
+        url: 'https://velog.io/@crg1050/포켓몬-도감-불필요한-데이터-불러오는-이슈',
+      },
+      {
+        title: 'URLSearchParams를 활용해 검색 페이지 구현',
+        url: 'https://velog.io/@crg1050/포켓몬-도감-URLSearchParams메서드를-활용해-검색-페이지-구현',
+      },
+    ],
+    featinfo: [
+      '포켓몬API를 활용해 포켓몬 데이터 불러오기',
+      '스크롤할 경우 20개씩 포켓몬 데이터 무한 스크롤링',
+      '특정 포켓몬 클릭 시 포켓몬 정보 확인',
+      '다크모드 지원',
+      '찾고 싶은 포켓몬을 검색',
+    ],
+    tools: [
+      {
+        title: 'Vite',
+        detail:
+          'Vite는 최신 브라우저의 기본 ES 모듈 기능을 사용하여 더 빠른 개발 서버 시작 및 주문형 컴파일을 가능하게 합니다. 이로 인해 CRA의 Webpack 기반 서버에 비해 응답성이 뛰어난 개발 경험을 얻을 수 있었습니다.',
+      },
+      {
+        title: 'React',
+        detail:
+          'React는 컴포넌트 기반으로 하며, 가상 DOM을 활용해 웹 애플리케이션의 성능을 최적화 합니다. 컴포넌트 재사용성을 높이고, 상태 관리를 용이하게 할 수 있습니다.',
+      },
+      {
+        title: 'TypeScript',
+        detail:
+          'TypeScript는 정적 타입을 지원하는 JavaScript 슈퍼셋 언어로, 코드를 실행하기 전 오류를 잡아 줄 수 있습니다.',
+      },
+      {
+        title: 'Redux Toolkit',
+        detail:
+          'Redux Toolkit은 Redux 상태 관리 라이브러리를 사용하기 위한 보조 도구입니다. Redux보다 코드를 간결하게 작성할 수 있게 도와주며, 전역으로 상태를 관리할 수 있습니다.',
+      },
+      {
+        title: 'React Query',
+        detail:
+          'React Query는 React 애플리케이션에서 데이터 가져오기, 관리 및 캐싱을 단순하게 만들어주는 JavaScript 라이브러리입니다. 서버로부터 데이터를 비동기적으로 가져오고 관리하기 위한 다양한 도구와 패턴을 제공하며, API 요청을 처리하고 캐싱하여 성능을 최적화할 수 있습니다.',
+      },
+      {
+        title: 'Styled Components',
+        detail:
+          'Styled Components는 JavaScript 코드 내에서 CSS를 작성할 수 있게 해주는 라이브러리입니다. 컴포넌트와 스타일을 함께 정의해 컴포넌트 별로 스타일을 관리하고 재사용할 수 있습니다.',
+      },
+    ],
+    parts: [
+      {
+        title:
+          'Lazy, Suspense 통해 코드 스플리팅 작업 및 뷰포트에 보이지 않는 이미지 로딩 지연',
+        detail: '',
+      },
+      {
+        title: '다크모드 구현',
+        detail: '',
+      },
+      {
+        title: '무한 스크롤 구현',
+        detail: '',
+      },
+      {
+        title: '검색 페이지 및 검색 기능 구현',
+        detail: '',
+      },
+    ],
+  },
+  {
     name: 'portfolio',
     pointcolor: 'before:bg-[#373737]',
     title: '포트폴리오 사이트',

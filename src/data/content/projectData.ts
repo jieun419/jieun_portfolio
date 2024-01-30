@@ -7,6 +7,15 @@ export const projectData = [
     depoloyurl: 'https://ssting.io/',
   },
   {
+    name: 'poke',
+    title: '포켓몬 도감',
+    subject: '포켓몬 API를 활용해 만들어진 포켓몬 도감입니다.',
+    tag: ['솔로', '토이'],
+    imgurl:
+      'https://private-user-images.githubusercontent.com/109754988/294662024-d2fe1651-8b5d-4fe6-bac6-07425c1bd1bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI0LWQyZmUxNjUxLThiNWQtNGZlNi1iYWM2LTA3NDI1YzFiZDFiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODRiOGJhNGU0NWY0ZmRjYWY3YzBjYTExYzdjMjQ1Mjc2ZjcxZjA0MWU2ZGIxMTljN2Q3MTk4YjU2MTQxODg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FSMveiq1_keHCXVpnSRc69HyBDlSQqYVkpMGWYEgBME',
+    giturl: 'https://github.com/jieun419/poke-dex',
+  },
+  {
     name: 'portfolio',
     title: '포트폴리오 사이트',
     subject: '저만의 포트폴리오를 만들기 위해 제작했습니다.',
