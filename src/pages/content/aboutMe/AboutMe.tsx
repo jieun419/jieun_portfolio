@@ -36,6 +36,7 @@ export const IntroComponent = tw.main`
 
 export const Content = tw.section`
   flex
+  flex-wrap
   gap-20
   items-center
   text-mainGray
@@ -75,13 +76,13 @@ export const LeftWrap = tw.div`
   gap-10
   justify-center
   items-center
-  flex-1
+  flex-2
 `;
 
 export const RightWrap = tw.div`
   flex
   flex-col
-  flex-2
+  flex-1
   gap-20
 `;
 
@@ -114,6 +115,7 @@ export const StackSpacing = tw.div`
 `
 
 export const Stacks = tw(StackSpacing)`
+  w-full
   flex-col
 `;
 
@@ -173,51 +175,62 @@ function AboutMe() {
                 <Img src={isImgChange ? myImgImOn : myImgIm} loading='lazy' alt="이모지 이미지" />
                 <div>
                   <TagTxt>#역지사지</TagTxt>
-                  <TagTxt>#책임감</TagTxt>
-                  <TagTxt>#소통</TagTxt>
-                  <TagTxt>#피드백</TagTxt>
+                  <TagTxt>#메타인지</TagTxt>
+                  <TagTxt>#피드백_수용</TagTxt>
+                  <TagTxt>#끊임없는_배움</TagTxt>
                 </div>
               </FlexBox>
               <ShowReviewBtn handelImgChange={handelImgChange}>팀원 리뷰 보기</ShowReviewBtn>
             </LeftWrap>
             <RightWrap ref={scrollRef}>
               <MyMind>
-                <Tit>사용자를 생각하는 역지사지 마인드</Tit>
+
+                <SubTit># 프론트엔드 개발자로서 새로운 도전.</SubTit>
+                <MyMindTxt>
+                  사용자에게 동적이고 편리한 화면을 제공하고자 프론트엔드 개발자로 전향을 결심하게 되었습니다.<br />
+                  디자인 역량을 바탕으로 <BoldText>사용자와 더 밀착된 상호작용</BoldText> 가능한 프로젝트를 개발하고자 하는 목표와 함께<br /> React, Styled Components, Redux 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고 있습니다.
+                </MyMindTxt>
+
                 <SubTit># 사용자 중심 개발.</SubTit>
                 <MyMindTxt>
-                  서비스를 개발할 때 항상 <BoldText>'사용자를 생각하는 역지사지 마인드'</BoldText>를 가지고 작업하고 있습니다.<br />
-                  구체적으로 사용자 경험을 최적화하기 위해 사용자가 첫 방문에도 서비스를 쉽게 이해하고 활용할 수 있도록<br />
-                  직관적이고 친숙한 UI를 제공하며,  <BoldText>다양한 사용자가 사용해도 편리하게 서비스를 이용할 수 있도록</BoldText> 노력하고 있습니다.
+                  항상 <BoldText>역지사지 마인드로 사용자 중심 개발을 추구합니다.</BoldText> 직관적이고 친숙한 UI 제공과 Lighthouse를 활용해 성능 최적화에 신경쓰면서,<br />
+                  다양한 사용자들이 편리하게 서비스를 이용 할 수 있도록 기여하고자 합니다.
                 </MyMindTxt>
 
-                <SubTit># 소통과 피드백을 통한 협업.</SubTit>
+                <SubTit># 포기하지 않고 배우려는 의지.</SubTit>
                 <MyMindTxt>
-                  효율적인 협업을 위해 <BoldText>소통과 피드백 수용은 프로젝트의 핵심 요소</BoldText>라 생각합니다.<br />
-                  팀원들과 원활한 커뮤니케이션을 위해 주기적으로 미팅을 하며 아이디어를 구체화하고, 피드백을 수용해 최근에는<br />
-                  UI 디자인 개선을 하면서 사용자 경험을 높였습니다. 향후에도 사용자와의 소통을 강화해 <BoldText>더 나은 서비스를 제공하고 싶습니다.</BoldText>
+                  지속적인 학습을 위해 스터디에 적극 참여하고, 다양한 강의를 수강하여 실무에 적용할 수 있는 지식을 쌓고 있습니다.<br />
+                  더불어 <BoldText>낯선 기술에도 포기 하지 않고 메타인지 방식을 활용</BoldText>해 문제에 직면하여 팀원들과의 협업을 통해 더 나은 해결책을 찾고 배우려는 의지가 강합니다.
+                </MyMindTxt>
+
+                <MyMindTxt>
+                  <BoldText>열린 마음으로 피드백을 수용</BoldText>해 더 나은 서비스를 개발하기 위해 노력하며,
+                  높은 의지와 열정으로 새로운 도전에  임할 준비가 되어 있습니다.
                 </MyMindTxt>
               </MyMind>
-
-              <Stacks>
-                <Tit>Skill & Tools</Tit>
-                <StackWrap>
-                  {
-                    //* key = 제목, stacks = 기술 스택
-                    Object.entries(StackData.stack).map(([key, stacks], idx) => (
-                      <StackBox key={idx}>
-                        <SubTit>{key}</SubTit>
-                        <StackIcons>
-                          {stacks.map((stack) => (
-                            <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
-                          ))}
-                        </StackIcons>
-                      </StackBox>
-                    ))
-                  }
-                </StackWrap>
-              </Stacks>
             </RightWrap>
+
+
+            <Stacks>
+              <Tit>Skill & Tools</Tit>
+              <StackWrap>
+                {
+                  //* key = 제목, stacks = 기술 스택
+                  Object.entries(StackData.stack).map(([key, stacks], idx) => (
+                    <StackBox key={idx}>
+                      <SubTit>{key}</SubTit>
+                      <StackIcons>
+                        {stacks.map((stack) => (
+                          <StackIcon key={stack} stack={stack} width={`w-[calc(100%-5%)]`} />
+                        ))}
+                      </StackIcons>
+                    </StackBox>
+                  ))
+                }
+              </StackWrap>
+            </Stacks>
           </Content>
+
         </ScrollAni>
       </IntroComponent >
     </motion.div>
