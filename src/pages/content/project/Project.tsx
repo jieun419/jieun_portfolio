@@ -49,6 +49,7 @@ function Project({ id, navTabs }: TabsPropsT) {
             tools={item.tools}
             featinfo={item.featinfo}
             parts={item.parts}
+            trouble={item.trouble}
           />
         ))
       )}
