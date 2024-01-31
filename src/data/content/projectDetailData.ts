@@ -28,8 +28,8 @@ export const projectDetailData = [
     ],
     featinfo: [
       '우주를 컨셉으로한 홈페이지로 이미지 요소가 많음',
-      '네비게이션 메뉴 클릭 시 메인 화면에서 특정 위치로 이동',
-      '서브 페이지에서도 네비게이션 메뉴 클릭 시 메인 화면의 특정 위치로 이동',
+      '네비게이션 메뉴 클릭 시 메인 화면에서 특정 위치로 부드럽게 이동',
+      'locaStorage를 활용해 서브 페이지에서도 네비게이션 메뉴 클릭 시 메인 화면의 특정 위치로 이동',
     ],
     parts: [
       {
@@ -48,6 +48,19 @@ export const projectDetailData = [
           '디자인된 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하여 프로젝트를 진행했습니다.\n\n각 섹션을 팀원과 협업해 PC 부터 Mobile까지 고려한 반응형 웹으로 개발했습니다.\n\n또한 디자이너가 요구한 디자인 시안을 정확히 이해하고, 섬세한 배경 위치 조절을 통해 완성도 높은 디자인을 구현했습니다.',
       },
     ],
+    trouble: [
+      {
+        title:
+          '서브 페이지에서 nav메뉴 클릭 시 메인 화면 특정 영역으로 이동 해야하는 점',
+        detail:
+          'nav메뉴는 메인, 서브 페이지 공통으로 사용하고 있었습니다.\n서브 페이지에서 메인 화면의 특정 영역으로 이동하기 위해서는 데이터를 저장 후 전달해야 했으나, 전역으로 관리하는 상태 라이브러리를 사용하고 있지 않았습니다.\n\nlocalStrage를 활용해 특정 영역의 id값을 저장하고 이동 하도록 했습니다. 이후 localStrage에 저장된 값을 setTimeout메서드를 활용해 특정 영역 도착 후 삭제되도록 작업해 불필요한 저장 공간 사용을 막았습니다.',
+      },
+      {
+        title: '이미지 요소가 많아 초기 로딩 속도가 느렸던 이슈',
+        detail:
+          '이미지 요소가 많아 초기 로딩 속도가 느렸습니다.\n이를 개선하기 위해 이미지 확장자를 webp를 변환함과 동시에 용량 감소를 통해 초기 로딩 속도를 개선했습니다.',
+      },
+    ],
   },
   {
     name: 'poke',
@@ -59,36 +72,36 @@ export const projectDetailData = [
     team: '1인 (솔로)',
     tag: ['솔로', '토이'],
     imgurl:
-      'https://private-user-images.githubusercontent.com/109754988/294662024-d2fe1651-8b5d-4fe6-bac6-07425c1bd1bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI0LWQyZmUxNjUxLThiNWQtNGZlNi1iYWM2LTA3NDI1YzFiZDFiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODRiOGJhNGU0NWY0ZmRjYWY3YzBjYTExYzdjMjQ1Mjc2ZjcxZjA0MWU2ZGIxMTljN2Q3MTk4YjU2MTQxODg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FSMveiq1_keHCXVpnSRc69HyBDlSQqYVkpMGWYEgBME',
+      'https://private-user-images.githubusercontent.com/109754988/301223283-505a473e-1480-4658-a6b4-aa3983f3eafd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzMjgzLTUwNWE0NzNlLTE0ODAtNDY1OC1hNmI0LWFhMzk4M2YzZWFmZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYWZiZjdmZGUxNTFkOGYwNWE3MjhhNGE0YTgzM2E0MmM0NmVkNTVmNmZjNTQyYzgxOTliZjA3OTJjODgzZjkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.1C0TaEj7JrmDImxnhi7cTmWJW396Ygv3OzT8gtioX3c',
     detailimginfo: [
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/294662024-d2fe1651-8b5d-4fe6-bac6-07425c1bd1bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI0LWQyZmUxNjUxLThiNWQtNGZlNi1iYWM2LTA3NDI1YzFiZDFiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ODRiOGJhNGU0NWY0ZmRjYWY3YzBjYTExYzdjMjQ1Mjc2ZjcxZjA0MWU2ZGIxMTljN2Q3MTk4YjU2MTQxODg4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FSMveiq1_keHCXVpnSRc69HyBDlSQqYVkpMGWYEgBME',
+          'https://private-user-images.githubusercontent.com/109754988/301223283-505a473e-1480-4658-a6b4-aa3983f3eafd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzMjgzLTUwNWE0NzNlLTE0ODAtNDY1OC1hNmI0LWFhMzk4M2YzZWFmZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYWZiZjdmZGUxNTFkOGYwNWE3MjhhNGE0YTgzM2E0MmM0NmVkNTVmNmZjNTQyYzgxOTliZjA3OTJjODgzZjkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.1C0TaEj7JrmDImxnhi7cTmWJW396Ygv3OzT8gtioX3c',
         subject: '메인 화면',
       },
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/294662021-7b58dee0-aadf-40fe-83c8-c5b9a1b47f4d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDIxLTdiNThkZWUwLWFhZGYtNDBmZS04M2M4LWM1YjlhMWI0N2Y0ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMWRiMmQ1Y2E1NWI1ZTNkYWJhNzFkNGMxZjA5MTNhZGU3ZmE4NWEzNWVmMzkxYjEzZmY5MWY2NWQxYzI1ZjhhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.xezLZynqPK6Wga7QsNZ0Izo8Ufxu_wW7tGrL2gjzsvA',
+          'https://private-user-images.githubusercontent.com/109754988/301223331-6d198a72-278d-4c68-8132-649c1268ccca.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzMzMxLTZkMTk4YTcyLTI3OGQtNGM2OC04MTMyLTY0OWMxMjY4Y2NjYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kNGQ3YjRiNjI0YTBlZTNjODVlYmRmNzEwNmY1NzNmNmNkMzI5NzNiM2Y3OWMxMDZlY2EzZGQ3NzY2YmI4ODMxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.AeDa6IHnWm6xNTYlyCwYzmV6_4p9NhczyGa3kkyvkGE',
         subject: '포켓몬 상세 정보',
       },
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/294662028-4b719a4f-e2c7-4df9-bdf7-2946c8c4e429.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMDI4LTRiNzE5YTRmLWUyYzctNGRmOS1iZGY3LTI5NDZjOGM0ZTQyOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iNjk3YjRhMmNkZTRiZTAxNjQ0ZmY0MmQ2NmUwZWJjNTE3NjQ2Y2FhNDJhMDkzOTkzNzUyY2YyZGJlMTQzNjNjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.gqOlIZLeH-y2dqQwWSqum3yu5CnKMKiq0abiIXQt6UM',
+          'https://private-user-images.githubusercontent.com/109754988/301223436-af888682-82e1-4896-beaa-963eba53f516.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNDM2LWFmODg4NjgyLTgyZTEtNDg5Ni1iZWFhLTk2M2ViYTUzZjUxNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00OWEwMzNjODk2NzhhZWNlODk4Mzg4ZTEzZDM0NjVmZWY4Y2YxYmNjMjQxNjY1OWFmMWYyZmM5YWE0NTJkZDU5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.WOgtDDESL_j31ygNyhkQdNDc3n0kXMk4T6n6zuprFyk',
         subject: '메인 화면 - 다크모드',
       },
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/294662284-0f1e2b91-aa1e-4489-b47e-cbe24f6baa94.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMjk0NjYyMjg0LTBmMWUyYjkxLWFhMWUtNDQ4OS1iNDdlLWNiZTI0ZjZiYWE5NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNzg4NGZhZDJlN2ZkNTU1M2NkN2E3ZWJhMTg3ZjBhM2EyYTE5YTM4NTI2Yzc0MTlmNzEwMzFkYmY3ZTc3ZDU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.6aWDjEHjsFQ5f1OoUleWnd-1fugATr62_20gE8J81ms',
+          'https://private-user-images.githubusercontent.com/109754988/301223493-dc3be58e-6dbe-4022-8385-d44ecc036eff.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNDkzLWRjM2JlNThlLTZkYmUtNDAyMi04Mzg1LWQ0NGVjYzAzNmVmZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zOWIyMmIyMzYxMWE4OTZkN2NiN2ZjNjg1MDA4YWY0OWM0MDM1MzFmMDM3MzdmOTU0ZDNmMmNiZDk0OWRmOWI2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.my0oqPpyj9U54Bf8eE8-kZj5jF_Ts3LVTTzW5hqidb8',
         subject: '포켓몬 상세 정보 - 다크모드',
       },
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/300871809-5dad9ec0-d94c-4bcd-8d6c-6031c75eac51.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAwODcxODA5LTVkYWQ5ZWMwLWQ5NGMtNGJjZC04ZDZjLTYwMzFjNzVlYWM1MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZjY0NTc4NjZmYWY4NmZjZGFlMmY3NzliNTBkZmFkZDYzMzkwMDNmNTJkYzQ3MTdkNjcyYzBhOGUxZjljNmRmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.E87Xcxx0iS9gQJPCV8LNVh89HOeGeBf4PicpCqSJi1c',
+          'https://private-user-images.githubusercontent.com/109754988/301223641-03b2b008-3a1d-4c9f-b547-dfd02a93e566.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNjQxLTAzYjJiMDA4LTNhMWQtNGM5Zi1iNTQ3LWRmZDAyYTkzZTU2Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MDJkNzVlMTlmNDI3OWI0MmYyMjA4MGVjNmRkMTE4MzdmMmI3ZmU5NDkzYjU3MjFjNTRiNGI2NGM5ZTJmMzE0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.r1V0Jh-Teic-I3Wu2QqK_BpOB0Mh8MIFPyhZcPs2aQk',
         subject: '검색 페이지',
       },
       {
         imgurl:
-          'https://private-user-images.githubusercontent.com/109754988/300871692-83f2a068-d15c-40bb-8a4c-7dc8f294926d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY2NDIzNDIsIm5iZiI6MTcwNjY0MjA0MiwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAwODcxNjkyLTgzZjJhMDY4LWQxNWMtNDBiYi04YTRjLTdkYzhmMjk0OTI2ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMFQxOTE0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mYWEwMjYxNzEwMGU3YmI2Mzk3NmFjZTkxYjdmYTc5NzhmN2M1Njg0YjMwNjFlOTY0YTYyMWU2MWZiYzUxMGE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.FRj7zQrhvW1CfABJyQYF0WluOoVjrYewxu0Vrwls604',
+          'https://private-user-images.githubusercontent.com/109754988/301223720-e0016f0a-75f2-4db9-88aa-af837b6c95cf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3MTY4MjAsIm5iZiI6MTcwNjcxNjUyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNzIwLWUwMDE2ZjBhLTc1ZjItNGRiOS04OGFhLWFmODM3YjZjOTVjZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxNTU1MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNDA1MDRkMDRiMGRiODU2Zjg4ODM0ZmIyODU4YzA2Nzk5MzU5YTBkZjE1MTMyZGRhNGZjMjU4YjJjOTZiM2NjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.csoV9uElouQr_XrsgAoYKAb_Q6_DoFdFpEcDylmderM',
         subject: '검색 페이지 - 검색 키워드 없을 경우',
       },
     ],
@@ -115,9 +128,9 @@ export const projectDetailData = [
     featinfo: [
       '포켓몬API를 활용해 포켓몬 데이터 불러오기',
       '스크롤할 경우 20개씩 포켓몬 데이터 무한 스크롤링',
-      '특정 포켓몬 클릭 시 포켓몬 정보 확인',
-      '다크모드 지원',
-      '찾고 싶은 포켓몬을 검색',
+      '특정 포켓몬 클릭 시 포켓몬 정보 모달창 표시',
+      'Redux Toolkit, locaStorage를 활용해 다크모드 지원',
+      'URLSearchParams메서드를 활용해 포켓몬 검색',
     ],
     tools: [
       {
@@ -155,19 +168,36 @@ export const projectDetailData = [
       {
         title:
           'Lazy, Suspense 통해 코드 스플리팅 작업 및 뷰포트에 보이지 않는 이미지 로딩 지연',
-        detail: '',
+        detail:
+          '초기 로딩 최적화를 위해 페이지 이동 구간에 Lazy, Suspese를 통해 코드 스플리팅 작업을 진행했습니다.\n\n또한, 이미지 태그에 "loading="lazy" 속성을 추가해 뷰포트에 보이지 않는 이미지 로딩을 지연시켜 초기 로딩 속도를 향상시켰습니다.',
       },
       {
         title: '다크모드 구현',
-        detail: '',
+        detail:
+          'Redux Toolkit, localStorage를 활용해 다크모드를 구현했습니다.\n\nRedux Toolkit로 테마에 대한 상태를 저장 후 localStorage를 활용해 상태를 저장했습니다.\n새로고침해도 테마가 유지되므로써 사용자 경험을 향상시켰습니다.',
       },
       {
         title: '무한 스크롤 구현',
-        detail: '',
+        detail:
+          'React Query를 활용해 구현할 수 있었지만, 직접 구현하고 싶었기에 scrollHeight, scrollTop, clientHeight를 활용해 무한 스크롤를 구현했습니다.',
       },
       {
         title: '검색 페이지 및 검색 기능 구현',
-        detail: '',
+        detail:
+          'input의 action 속성을 통해 페이지 이동하면서 파라미터에 검색 키워드가 저장됩니다.\n\nURLSearchParams메서드를 활용해 검색 키워드를 추출하고 React Query의 useQuery와 Redux Toolkit을 활용해 filtering된 검색 결과를 표시했습니다.',
+      },
+    ],
+    trouble: [
+      {
+        title:
+          '포켓몬 데이터 리스트를 업데이트 하는 useEffect가 초기 렌더링시 1번만 호출되어야 하는데 3번 호출 되는 이슈',
+        detail:
+          '초기 렌더링 시 포켓몬 데이터 리스트가 빈 배열로 들어오게 됩니다. 이 때 useEffect가 2번 호출되는 이슈를 확인하게 되었습니다.\n\nconsole.log를 활용해 어떤 경우에 useEffect가 2번 발생하는지 확인하였고, 첫 렌더링시 포켓몬 데이터 리스트가 빈 배열일 경우 useEffect가 2번 실행된 다는 점을 알게 되었습니다.\n\nuseEffect에 포켓몬 데이터 리스트가 있을 경우에만 실행하도록 조건문을 추가해 불필요한 렌더링을 막을 수 있었습니다.',
+      },
+      {
+        title: '성능 최적화 이슈',
+        detail:
+          '포켓몬 데이터가 방대하기 때문에 이점에서 많은 고민을 했습니다.\n\n먼저, 무한스크롤링을 통해 초기 데이터를 가져오는 메모리 소모를 절약했습니다. \n두번째로, React.lazy와 Suspense를 통해 코드 스플리팅 작업을 했습니다. \n마지막으로, img태그에 loading="lazy" 속성을 추가함으로써 뷰포트에 벗어나는 이미지 로딩 속도를 늦추는 방식으로 성능 최적화를 진행했습니다.',
       },
     ],
   },
@@ -284,6 +314,13 @@ export const projectDetailData = [
           '직접 디자인한 웹 페이지를 마크업하여 웹 표준을 준수하고 웹 접근성을 고려하며 진행했습니다.\n\n특히, 메인 화면에서는 수용한 피드백을 반영해 framer-motion라이브러리를 활용했습니다. 첫 접속 시 애니메이션 효과를 적용해 사용자의 시선을 효과적으로 이끌어냈습니다.',
       },
     ],
+    trouble: [
+      {
+        title: '초기 화면이 시선 집중되지 않았던 문제',
+        detail:
+          '초반 피드백을 받았을 때 심플하고 눈에 잘 들어오지 않는다는 피드백을 받았습니다.\n소개팅에서도 첫인상이 중요하듯 첫 화면이 눈에 띄도록 전달하는게 중요하다고 생각했습니다.\n\n피드백을 수용하고 framer-motion라이브러리를 활용해 매끄러운 애니메이션 효과를 구현하고 배경 이미지를 추가함으로써 사용자의 시선을 효과적으로 이끌어냈습니다.',
+      },
+    ],
   },
   {
     name: 'haru',
@@ -395,12 +432,12 @@ export const projectDetailData = [
       {
         title: '메인 페이지 작업 및 커서 커스터마이징 구현',
         detail:
-          '메인 페이지는 독특한 커서 커스터마이징이 돋보이는데, 이미지를 사용하기보다는 마우스 이벤트에 따라 사용자 경험을 개선하기 위해 여러 코드를 참고하여 구현했습니다.',
+          '메인 페이지는 독특한 커서 커스터마이징이 돋보이는데, 이미지를 사용하기보다는 마우스 이벤트에 따라 사용자 경험을 개선하기 위해 여러 코드를 참고하여 useRef를 활용해 구현했습니다.',
       },
       {
         title: '마이 페이지 작업 및 유저 닉네임 수정하기',
         detail:
-          '마이 페이지 반응형을 적용하고 유저 닉네임 수정할 수 있도록 작업했습니다. \n\n또한 "탈퇴한 회원" 또는 "탈퇴한 사용자" 닉네임은 사용할 수 없도록 작업해 사용자의 악용사례를 방지했습니다.',
+          '마이 페이지 반응형을 적용하고 React Query를 통해 유저 정보를 가져와 닉네임을 수정할 수 있도록 작업했습니다. \n\n또한 "탈퇴한 회원" 또는 "탈퇴한 사용자" 닉네임은 사용할 수 없도록 작업해 사용자의 악용사례를 방지했습니다.',
       },
       {
         title: '설정 페이지 작업',
@@ -411,6 +448,13 @@ export const projectDetailData = [
         title: '전반적인 디자인 총괄 및 로고 디자인',
         detail:
           '전체적인 UI 디자인을 담당하고, UX는 팀원들과 협업하여 수정했습니다. \n뿐만 아니라 로고 디자인도 직접 수행하여 프로젝트의 브랜딩을 기여했습니다.',
+      },
+    ],
+    trouble: [
+      {
+        title: '메인 화면의 커서 커스터마징',
+        detail:
+          '메인 화면의 커서의 경우 초반에는 이미지 요소를 대처하려고 했습니다. 그러나, 마우스 호버시 뚝뚝 끊긴다는 느낌을 받았고 사용자 경험에 좋지 않다 생각하게 되었습니다.\n\n여러 구글링을 통해 useRef와 window x,y축을 알아내는 메서드를 활용해 커서 커스터마징을 완성할 수 있었습니다. 이를 통해 사용자 경험을 개선하고 많은 호평을 받을 수 있었습니다.',
       },
     ],
   },
@@ -524,6 +568,13 @@ export const projectDetailData = [
         title: '질문 작성 / 수정하기 태그 추가, 수정 구현',
         detail:
           '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n\n태그는 최대 3개 까지만 추가 가능하며, 3개 초과 시 다른 태그를 선택할 수 없도록 select box의 disabled속성을 활용하여 구현했습니다.',
+      },
+    ],
+    trouble: [
+      {
+        title: '배포시 https로 인한 이슈',
+        detail:
+          '비용 문제로 http로 서버와 통신하고 있었습니다. Github, vercel로 배포 시도하던 중 https로 배포해야한다는 이슈로 배포를 할 수 없던 상황이였습니다.\n\nnetlify로 배포시 proxy세팅을 통해 해결할 수 있었습니다. netlify.toml를 최상단 경로에 생성해 경로를 설정해 주고, vite.config에 서버 경로에 대해 작성해 줘 해결할 수 있었습니다.',
       },
     ],
   },
