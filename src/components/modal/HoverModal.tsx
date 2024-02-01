@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 import { ICON_URL } from '../../utils/constant/constant';
 
-export const HoverModalBox = tw.div`
+const HoverModalBox = tw.div`
   hidden
   absolute
   right-[4.6875rem]
@@ -24,7 +24,7 @@ export const HoverModalBox = tw.div`
   max-sm:w-[calc(100vw-38vw)]
 `;
 
-export const LinkTit = tw.span`
+const LinkTit = tw.span`
   block
   text-left
   text-xs
@@ -32,14 +32,14 @@ export const LinkTit = tw.span`
   font-medium
 `;
 
-export const LinkList = tw.div`
+const LinkList = tw.div`
   relative
   flex
   flex-col
   gap-1
 `;
 
-export const GotoLink = tw.a`
+const GotoLink = tw.a`
   flex
   items-center
   gap-2
@@ -55,7 +55,7 @@ export const GotoLink = tw.a`
   hover:bg-[#e1e1e1]
 `;
 
-export const Traiangle = tw.div`
+const Traiangle = tw.div`
   absolute
   top-[50%]
   right-[-18px]
@@ -75,7 +75,7 @@ export const Traiangle = tw.div`
   
 `;
 
-export const Arrow = tw.i`
+const Arrow = tw.i`
   block
   absolute
   w-[8px]
