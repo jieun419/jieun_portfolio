@@ -1,5 +1,4 @@
-export const ICON_URL =
-  'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
+export const ICON_URL = 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/icons/icon_';
 
 export const UPDATE_DATA = '24. 02. 01';
 export const EMAILL = 'crg1050@gmail.com';
@@ -40,17 +39,17 @@ export const socialLink = [
 export const tabMenuList = [
   {
     id: 1,
-    name: '전체',
+    name: 'All',
     type: 'all',
   },
   {
     id: 2,
-    name: '팀',
+    name: 'Team',
     type: 'team',
   },
   {
     id: 2,
-    name: '솔로',
+    name: 'Single',
     type: 'single',
   },
 ];
