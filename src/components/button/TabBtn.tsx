@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { filteringAcitions } from "../../store/filtering-slice";
 
-
 const TabButton = tw.button`
   text-white
   rounded-full
@@ -12,6 +11,9 @@ const TabButton = tw.button`
   bg-transparent
   transition
   hover:bg-[#4e4e4e]
+
+  max-sm:w-full
+  max-sm:text-xs
 `
 
 const TabBtn = ({ children, type }: { children: React.ReactNode, type: string }) => {
@@ -19,7 +21,7 @@ const TabBtn = ({ children, type }: { children: React.ReactNode, type: string })
   const keyword = useSelector((state: RootState) => state.filteringKeyword.keyword);
 
   const getKeyword = (type: string) => {
-    dispatch(filteringAcitions.getKeyword(type))
+    dispatch(filteringAcitions.getKeyword(type));
   }
 
   const handlerFiltering = (type: string) => {
@@ -28,15 +30,13 @@ const TabBtn = ({ children, type }: { children: React.ReactNode, type: string })
   }
 
   return (
-    <>
-      <TabButton
-        className={keyword === type ? 'bg-[#fff] text-[#222] font-bold hover:text-[#fff]' : ''}
-        onClick={() => handlerFiltering(type)}
-      >
-        {children}
-      </TabButton>
-    </>
-
+    <TabButton
+      className={keyword === type ? 'bg-superLightGray text-mainColorBlack font-bold hover:bg-superLightGray hover:text-mainColorBlack' : ''}
+      name={type}
+      onClick={() => handlerFiltering(type)}
+    >
+      {children}
+    </TabButton>
   );
 };
 
