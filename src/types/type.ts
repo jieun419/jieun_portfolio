@@ -41,6 +41,7 @@ export type RecordDataT = {
 
 export type ProjectDetailDataT = {
   name: string;
+  type: string;
   pointcolor: string;
   title: string;
   subtext: string;
