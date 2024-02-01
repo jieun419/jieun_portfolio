@@ -1,9 +1,9 @@
 import tw from 'tailwind-styled-components';
-import TagIcon from '../atoms/tag/TagTxt';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
 import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDataT } from '../../types/type';
+import TagText from '../atoms/tag/TagTxt';
 
 type ProjectDataProps = {
   imgurl?: string;
@@ -140,8 +140,8 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
         <Txt>{subject}</Txt>
       </TxtWrap>
       <Tags>
-        {tag.map((tags, idx) => (
-          <TagIcon key={idx} tag={tags} />
+        {tag.map((tag, idx) => (
+          <TagText key={idx} tag={tag} />
         ))}
       </Tags>
     </CardContainer>
