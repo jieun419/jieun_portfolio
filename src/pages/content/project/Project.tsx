@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
@@ -8,6 +8,9 @@ import { projectDetailData } from '../../../data/content/projectDetailData';
 import ProjectCard from '../../../components/cards/ProjectCard';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
+import TabBtn from '../../../components/button/TabBtn';
+import { tabMenuList } from '../../../utils/constant/constant';
+import { filteringAcitions } from '../../../store/filtering-slice';
 
 export const ProjectComponent = tw.article`
   grid
@@ -23,10 +26,25 @@ export const ProjectComponent = tw.article`
   max-2xl:grid-cols-3
 `;
 
-function Project({ id, navTabs }: TabsPropsT) {
+const TabMenuList = tw.div`  
+  w-fit
+  flex
+  gap-2
+  items-center
+  justify-center
+  rounded-full
+  px-4
+  py-3
+  bg-lightGray
+`
 
+
+function Project({ id, navTabs }: TabsPropsT) {
   const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const filterDataList = useSelector((state: RootState) => state.filteringKeyword.filterDataArr);
   const { scrollRef, scrollEl } = useScrollAnimation();
+
+  console.log(filterDataList)
 
   return (
     <>
@@ -50,13 +68,35 @@ function Project({ id, navTabs }: TabsPropsT) {
             featinfo={item.featinfo}
             parts={item.parts}
             trouble={item.trouble}
+            type={''}
           />
         ))
       )}
 
       <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
+
+        <TabMenuList>
+          {
+            tabMenuList.map((item) => (
+              <TabBtn key={item.id} type={item.type}>{item.name}</TabBtn>
+            ))
+          }
+        </TabMenuList>
         <ProjectComponent id={id} ref={navTabs[1].targetRef} >
-          {projectData.map((item, idx) => (
+
+          {filterDataList.length <= 0 && projectData.map((item, idx) => (
+            <ProjectCard
+              key={idx}
+              name={item.name}
+              title={item.title}
+              subject={item.subject}
+              tag={item.tag}
+              imgurl={item.imgurl}
+              giturl={item.giturl}
+              depoloyurl={item.depoloyurl}
+            />
+          ))}
+          {filterDataList.map((item, idx) => (
             <ProjectCard
               key={idx}
               name={item.name}
