@@ -29,6 +29,20 @@ export const LinkButton = tw.a`
   max-md:px-0
 `;
 
+export const HoverButton = tw.button`
+  relative
+  flex
+  flex-col
+  items-center
+  justify-center
+  gap-1
+  px-3
+  w-full
+  group
+
+  max-md:px-0
+`;
+
 export const IconCircle = tw.i`
   w-[47px]
   h-[47px]
@@ -62,15 +76,23 @@ function LinkBtn({ name, text, giturl, depoloyurl, blog }: LinkProps) {
   return (
     <>
       {
-        depoloyurl === '' ? null : (
-          <LinkButton href={giturl ? giturl : depoloyurl} aria-label={text}>
-            <IconCircle>
-              <Img src={`${ICON_URL}${name}.svg`} alt={name} />
-            </IconCircle>
-            <Text>{text}</Text>
-            {blog && <HoverModal blog={blog} />}
-          </LinkButton>
-        )
+        depoloyurl === '' ? null :
+          blog ? (
+            <HoverButton aria-label={text}>
+              <IconCircle>
+                <Img src={`${ICON_URL}${name}.svg`} alt={name} />
+              </IconCircle>
+              <Text>{text}</Text>
+              {blog && <HoverModal blog={blog} />}
+            </HoverButton>
+          ) : (
+            <LinkButton href={giturl ? giturl : depoloyurl} aria-label={text} title='바로가기(새창)'>
+              <IconCircle>
+                <Img src={`${ICON_URL}${name}.svg`} alt={name} />
+              </IconCircle>
+              <Text>{text}</Text>
+            </LinkButton>
+          )
       }
     </>
   );
