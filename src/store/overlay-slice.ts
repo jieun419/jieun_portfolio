@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   isOpen: false,
   isImgOpen: false,
+  isReviewOpen: false,
   targetName: '',
   targetId: 0,
 };
@@ -16,6 +17,9 @@ const overlaySlice = createSlice({
     },
     toggleImgOverlay(state) {
       state.isImgOpen = !state.isImgOpen;
+    },
+    toggleReviewOverlay(state) {
+      state.isReviewOpen = !state.isReviewOpen;
     },
     targetName(state, actions) {
       state.targetName = actions.payload;

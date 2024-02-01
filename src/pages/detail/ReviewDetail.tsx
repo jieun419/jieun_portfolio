@@ -63,7 +63,7 @@ function ReviewDetail({ name }: { name: string }) {
   };
 
   const toggleModal = () => {
-    dispatch(overlayActions.toggleOverlay());
+    dispatch(overlayActions.toggleReviewOverlay());
     openScroll();
   };
 
@@ -81,7 +81,7 @@ function ReviewDetail({ name }: { name: string }) {
               <DetailBody>
                 {
                   reviewData.map((team, idx) => (
-                    <ReviewCard 
+                    <ReviewCard
                       key={idx}
                       name={team.name}
                       review={team.review}
