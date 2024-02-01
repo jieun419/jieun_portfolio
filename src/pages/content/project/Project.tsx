@@ -44,8 +44,6 @@ function Project({ id, navTabs }: TabsPropsT) {
   const filterDataList = useSelector((state: RootState) => state.filteringKeyword.filterDataArr);
   const { scrollRef, scrollEl } = useScrollAnimation();
 
-  console.log(filterDataList)
-
   return (
     <>
       {isModal && (
@@ -78,7 +76,7 @@ function Project({ id, navTabs }: TabsPropsT) {
         <TabMenuList>
           {
             tabMenuList.map((item) => (
-              <TabBtn key={item.id} type={item.type}>{item.name}</TabBtn>
+              <TabBtn key={item.type} type={item.type}>{item.name}</TabBtn>
             ))
           }
         </TabMenuList>

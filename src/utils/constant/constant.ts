@@ -36,3 +36,21 @@ export const socialLink = [
     target: '_blank',
   },
 ];
+
+export const tabMenuList = [
+  {
+    id: 1,
+    name: '전체',
+    type: 'all',
+  },
+  {
+    id: 2,
+    name: '팀',
+    type: 'team',
+  },
+  {
+    id: 2,
+    name: '솔로',
+    type: 'single',
+  },
+];

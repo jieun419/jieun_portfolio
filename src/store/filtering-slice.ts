@@ -8,7 +8,7 @@ type TypeT = {
 };
 
 const initialState: TypeT = {
-  keyword: '',
+  keyword: 'all',
   filterDataArr: [],
 };
 
@@ -21,9 +21,7 @@ const filteringSlice = createSlice({
     },
     getFilteringData(state) {
       const filterDataList = projectData.filter((el) =>
-        state.keyword === 'all'
-          ? el.type !== state.keyword
-          : el.type === state.keyword,
+        state.keyword === 'all' ? el.type !== state.keyword : el.type === state.keyword,
       );
       state.filterDataArr = [...filterDataList];
     },
