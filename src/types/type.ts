@@ -24,6 +24,7 @@ export interface TabsPropsT {
 export type ProjectDataT = {
   title: string;
   name: string;
+  type?: string;
   subject: string;
   tag: string[];
   imgurl?: string;
@@ -41,7 +42,6 @@ export type RecordDataT = {
 
 export type ProjectDetailDataT = {
   name: string;
-  type: string;
   pointcolor: string;
   title: string;
   subtext: string;

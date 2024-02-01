@@ -4,7 +4,7 @@ import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
 import { projectData } from '../../../data/content/projectData';
-import { projectDetailData } from '../../../data/content/projectDetailData';
+import { projectDetailData } from '../../../data/content/projecsDetailDatas/projectDetailData';
 import ProjectCard from '../../../components/cards/ProjectCard';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
@@ -71,7 +71,6 @@ function Project({ id, navTabs }: TabsPropsT) {
             featinfo={item.featinfo}
             parts={item.parts}
             trouble={item.trouble}
-            type={''}
           />
         ))
       )}
