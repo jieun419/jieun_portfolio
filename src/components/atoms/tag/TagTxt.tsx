@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 type TagT = {
-  tag: string;
+  children: React.ReactNode;
 };
 
 export const TagTxt = tw.span`
@@ -16,8 +16,8 @@ export const TagTxt = tw.span`
   rounded
 `;
 
-function TagIcon({ tag }: TagT) {
-  return <TagTxt>{tag}</TagTxt>
+function TagIcon({ children }: TagT) {
+  return <TagTxt>{children}</TagTxt>
 }
 
 export default TagIcon;
