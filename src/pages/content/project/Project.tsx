@@ -1,5 +1,5 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
@@ -10,7 +10,6 @@ import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
 import TabBtn from '../../../components/button/TabBtn';
 import { tabMenuList } from '../../../utils/constant/constant';
-import { filteringAcitions } from '../../../store/filtering-slice';
 
 export const ProjectComponent = tw.article`
   grid
