@@ -3,7 +3,8 @@ import { useState } from "react";
 import myImgIm from '../../assets/images/jieun_im1.webp';
 import myImgImOn from '../../assets/images/jieun_im2.webp';
 import ShowReviewBtn from "../button/ShowReviewBtn";
-import TagTxt from "../atoms/tag/TagTxt";
+import TagText from "../atoms/tag/TagTxt";
+import { aboutMetags } from "../../data/content/aboutmeData";
 
 const LeftContainer = tw.div`
   flex
@@ -45,10 +46,9 @@ const LeftWrap = () => {
       <FlexBox>
         <Img src={isImgChange ? myImgImOn : myImgIm} loading='lazy' alt="이모지 이미지" />
         <TagTxtWrap>
-          <TagTxt>#역지사지</TagTxt>
-          <TagTxt>#메타인지</TagTxt>
-          <TagTxt>#피드백_수용</TagTxt>
-          <TagTxt>#끊임없는_배움</TagTxt>
+          {aboutMetags.map((tag, idx) => (
+            <TagText key={idx} tag={tag.name} />
+          ))}
         </TagTxtWrap>
       </FlexBox>
       <ShowReviewBtn handelImgChange={handelImgChange}>팀원 리뷰 보기</ShowReviewBtn>
