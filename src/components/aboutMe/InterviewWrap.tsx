@@ -39,7 +39,7 @@ const MyMindTxt = tw.div`
   rounded-bl-2xl
 `;
 
-const RightWrap = () => {
+const InterviewWrap = () => {
   return (
     <RightContainer>
       <MyMind>
@@ -69,4 +69,4 @@ const RightWrap = () => {
   );
 };
 
-export default RightWrap;
+export default InterviewWrap;

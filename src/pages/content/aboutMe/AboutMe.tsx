@@ -12,7 +12,7 @@ import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import LeftWrap from '../../../components/aboutMe/LeftWrap';
-import RightWrap from '../../../components/aboutMe/RIghtWrap';
+import InterviewWrap from '../../../components/aboutMe/InterviewWrap';
 
 const IntroComponent = tw.main`
   relative
@@ -124,7 +124,7 @@ function AboutMe() {
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
           <Content>
             <LeftWrap />
-            <RightWrap />
+            <InterviewWrap />
             <Stacks>
               <Tit>Skill & Tools</Tit>
               <StackWrap>
