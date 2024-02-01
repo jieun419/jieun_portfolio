@@ -231,7 +231,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
                 <ContBtns>
-
                   {giturl && <LinkBtn name='github_bk' giturl={giturl} text='GitHub' />}
                   {depoloyurl && <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />}
                   {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
