@@ -37,7 +37,7 @@
 |Project|Record|
 |------|---|
 |![스크린샷 2023-10-10 오후 11 07 24](https://github.com/jieun419/jieun_portfolio/assets/109754988/5ed32e92-bdb3-4114-a3eb-51a14eee0621)|![스크린샷 2023-10-10 오후 11 07 32](https://github.com/jieun419/jieun_portfolio/assets/109754988/5c170752-19e6-439f-a11a-20833c296756)|
-|- 프로젝트 명<br>- 간략한 소개<br>- 관련 태그|- 기간, 기관명<br>- 활동 내역<br> - 사용했던 스택|
+|- 탭메뉴로 카테고리별 확인 가능<br>- 프로젝트 명<br>- 간략한 소개<br>- 관련 태그|- 기간, 기관명<br>- 활동 내역<br> - 사용했던 스택|
 
 |Project Detail|Review Detail|
 |------|---|
