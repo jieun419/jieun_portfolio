@@ -45,35 +45,32 @@ const TabMenuList = tw.div`
 
 
 function Project({ id, navTabs }: TabsPropsT) {
-  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
   const filterDataList = useSelector((state: RootState) => state.filteringKeyword.filterDataArr);
   const { scrollRef, scrollEl } = useScrollAnimation();
 
   return (
     <>
-      {isModal && (
-        projectDetailData.map((item, idx) => (
-          <ProjectDetail
-            key={idx}
-            name={item.name}
-            pointcolor={item.pointcolor}
-            title={item.title}
-            subtext={item.subtext}
-            data={item.data}
-            team={item.team}
-            tag={item.tag}
-            imgurl={item.imgurl}
-            detailimginfo={item.detailimginfo}
-            giturl={item.giturl}
-            depoloyurl={item.depoloyurl}
-            blogurl={item.blogurl}
-            tools={item.tools}
-            featinfo={item.featinfo}
-            parts={item.parts}
-            trouble={item.trouble}
-          />
-        ))
-      )}
+      {projectDetailData.map((item, idx) => (
+        <ProjectDetail
+          key={idx}
+          name={item.name}
+          pointcolor={item.pointcolor}
+          title={item.title}
+          subtext={item.subtext}
+          data={item.data}
+          team={item.team}
+          tag={item.tag}
+          imgurl={item.imgurl}
+          detailimginfo={item.detailimginfo}
+          giturl={item.giturl}
+          depoloyurl={item.depoloyurl}
+          blogurl={item.blogurl}
+          tools={item.tools}
+          featinfo={item.featinfo}
+          parts={item.parts}
+          trouble={item.trouble}
+        />
+      ))}
 
       <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
         <Container id={id} ref={navTabs[1].targetRef} >

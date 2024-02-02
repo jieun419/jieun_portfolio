@@ -202,9 +202,10 @@ export const ImgContList = tw.div`
 
 function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts, trouble, featinfo, detailimginfo }: ProjectDetailDataT) {
   const dispatch = useDispatch();
+  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
   const targetId = useSelector((state: RootState) => state.overlay.targetId);
-  const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
 
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
@@ -223,7 +224,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
   return (
     <>
       {
-        targetName === name ? (
+        isModal && targetName === name ? (
           <DetailContainer>
             <DropShadow toggleModal={toggleModal} />
             <DetailWrap imgurl={imgurl}>
