@@ -99,14 +99,14 @@ export const project4 = {
     {
       title: '질문 작성 / 수정하기 태그 추가, 수정 구현',
       detail:
-        '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n\n태그는 최대 3개 까지만 추가 가능하며, 3개 초과 시 다른 태그를 선택할 수 없도록 select box의 disabled속성을 활용하여 구현했습니다.',
+        '질문 작성 / 수정하기 페이지에서 태그 영역을 맡았습니다.\n\n태그는 최대 3개 까지만 추가 가능하며, 3개 초과 시 다른 태그를 선택할 수 없도록 select box의 disabled 속성과 some 메서드 활용하여 구현했습니다.',
     },
   ],
   trouble: [
     {
-      title: '배포시 https로 인한 이슈',
+      title: '배포시 HTTP로 인한 배포 이슈',
       detail:
-        '비용 문제로 http로 서버와 통신하고 있었습니다. Github, vercel로 배포 시도하던 중 https로 배포해야한다는 이슈로 배포를 할 수 없던 상황이였습니다.\n\nnetlify로 배포시 proxy세팅을 통해 해결할 수 있었습니다. netlify.toml를 최상단 경로에 생성해 경로를 설정해 주고, vite.config에 서버 경로에 대해 작성해 줘 해결할 수 있었습니다.',
+        '비용 문제로 HTTP로 서버와 통신하고 있었습니다.\nGithub, Vercel로 배포 시도하던 중 HTTPS로 배포해야 한다는 이슈로 배포를 할 수 없던 상황이였습니다.\n\nNetlify로 배포시 proxy를 활용해 문제를 해결할 수 있었습니다.\n최상단 경로에 netlify.toml를 생성해 경로를 설정한 후, vite.config에 서버 경로에 대한 작성을 통해 문제를 성공적으로 해결할 수 있었습니다.',
     },
   ],
 };
