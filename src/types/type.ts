@@ -24,6 +24,7 @@ export interface TabsPropsT {
 export type ProjectDataT = {
   title: string;
   name: string;
+  type?: string;
   subject: string;
   tag: string[];
   imgurl?: string;
@@ -66,6 +67,10 @@ export type ProjectDetailDataT = {
   parts: {
     title: string;
     detail?: string;
+  }[];
+  trouble?: {
+    title: string;
+    detail: string;
   }[];
 };
 

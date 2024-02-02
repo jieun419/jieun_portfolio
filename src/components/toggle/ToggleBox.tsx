@@ -27,6 +27,7 @@ export const ToggleInfo = tw.div`
 
 export const PTit = tw.p`
   text-base
+  flex-1
 `;
 
 export const PText = tw.p`
@@ -37,10 +38,11 @@ export const PText = tw.p`
 type ToggleProps = {
   title: string;
   detail?: string;
-
+  isToggled?: boolean;
+  type?: string;
 };
 
-function ToggleBox({ title, detail }: ToggleProps) {
+function ToggleBox({ title, detail, isToggled, type }: ToggleProps) {
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
   const toggleBtn = () => {
@@ -50,12 +52,22 @@ function ToggleBox({ title, detail }: ToggleProps) {
   return (
     <Toggle className={detail ? 'cursor-pointer' : ''}>
       <ToggleName onClick={toggleBtn}>
-        {detail && <IcArrow isToggle={isToggle} />}
+        {detail && <IcArrow isToggle={isToggle} isToggled={isToggled} />}
         <PTit>{title}</PTit>
       </ToggleName>
 
       {
-        isToggle && detail &&
+        isToggle && type === 'tools' && detail && (
+          <ToggleInfo>
+            <PText>
+              {detail}
+            </PText>
+          </ToggleInfo>
+        )
+      }
+
+      {
+        isToggle || isToggled && detail &&
         <ToggleInfo>
           <PText>
             {detail}

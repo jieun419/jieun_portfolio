@@ -200,11 +200,12 @@ export const ImgContList = tw.div`
   max-xl:grid-cols-2
 `;
 
-function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts, featinfo, detailimginfo }: ProjectDetailDataT) {
+function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts, trouble, featinfo, detailimginfo }: ProjectDetailDataT) {
   const dispatch = useDispatch();
+  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
   const targetId = useSelector((state: RootState) => state.overlay.targetId);
-  const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
 
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
@@ -223,7 +224,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
   return (
     <>
       {
-        targetName === name ? (
+        isModal && targetName === name ? (
           <DetailContainer>
             <DropShadow toggleModal={toggleModal} />
             <DetailWrap imgurl={imgurl}>
@@ -231,7 +232,6 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               <Btns>
                 <CloseBtn toggleModal={toggleModal} />
                 <ContBtns>
-
                   {giturl && <LinkBtn name='github_bk' giturl={giturl} text='GitHub' />}
                   {depoloyurl && <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />}
                   {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
@@ -261,7 +261,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 {
                   featinfo.length !== 0 && (
                     <PWrap>
-                      <PTitle>주요 기능 및 특징</PTitle>
+                      <PTitle>📍 주요 기능 및 특징</PTitle>
                       <PDetailList>
                         {
                           featinfo.map((list, idx) => (
@@ -275,7 +275,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
                 <PWrap>
                   <PTitle>
-                    사용 기술 및 언어
+                    🛠️ 사용 기술 및 언어
                     <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
                   </PTitle>
                   <Toggles>
@@ -285,6 +285,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                           key={idx}
                           title={item.title}
                           detail={item.detail}
+                          type='tools'
                         />
                       ))
                     }
@@ -293,8 +294,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
                 <PWrap>
                   <PTitle>
-                    작업 기여도
-                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                    ✨ 작업 기여도
                   </PTitle>
                   <Toggles>
                     {
@@ -303,17 +303,39 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                           key={idx}
                           title={item.title}
                           detail={item.detail}
+                          isToggled
                         />
                       ))
                     }
                   </Toggles>
                 </PWrap>
+                {
+                  trouble && trouble.length !== 0 && (
+                    <PWrap>
+                      <PTitle>
+                        💫 Trouble Shooting
+                      </PTitle>
+                      <Toggles>
+                        {
+                          trouble.map((item, idx) => (
+                            <ToggleBox
+                              key={idx}
+                              title={item.title}
+                              detail={item.detail}
+                              isToggled
+                            />
+                          ))
+                        }
+                      </Toggles>
+                    </PWrap>
+                  )
+                }
 
                 {
                   detailimginfo && (
                     <PWrap>
                       <PTitle>
-                        작업 화면
+                        💻 작업 화면
                         <PSubText>이미지 클릭 시 크게 볼 수 있습니다. (작업화면이 현재와 다를 수 있습니다.)<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
                       </PTitle>
 

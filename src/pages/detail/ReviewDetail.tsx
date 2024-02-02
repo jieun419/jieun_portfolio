@@ -57,20 +57,21 @@ export const Btns = tw.div`
 
 function ReviewDetail({ name }: { name: string }) {
   const dispatch = useDispatch();
+  const isReviewOpen = useSelector((state: RootState) => state.overlay.isReviewOpen);
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
   };
 
   const toggleModal = () => {
-    dispatch(overlayActions.toggleOverlay());
+    dispatch(overlayActions.toggleReviewOverlay());
     openScroll();
   };
 
   return (
     <>
       {
-        targetName === name ? (
+        isReviewOpen && targetName === name ? (
           <DetailContainer>
             <DropShadow toggleModal={toggleModal} />
             <DetailWrap>
@@ -81,7 +82,7 @@ function ReviewDetail({ name }: { name: string }) {
               <DetailBody>
                 {
                   reviewData.map((team, idx) => (
-                    <ReviewCard 
+                    <ReviewCard
                       key={idx}
                       name={team.name}
                       review={team.review}

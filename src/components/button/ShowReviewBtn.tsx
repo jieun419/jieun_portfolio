@@ -60,7 +60,7 @@ function ShowReviewBtn({ children, handelImgChange }: {
   };
 
   const toggleModal = (name: string) => {
-    dispatch(overlayActions.toggleOverlay());
+    dispatch(overlayActions.toggleReviewOverlay());
     dispatch(overlayActions.targetName(name));
     lockScroll();
   };
