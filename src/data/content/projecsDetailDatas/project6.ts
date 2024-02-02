@@ -10,19 +10,23 @@ export const project6 = {
   imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_protfolio.webp',
   detailimginfo: [
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273940311-0a5e824d-ba90-488f-be48-f6fef893890b.png',
+      imgurl:
+        'https://private-user-images.githubusercontent.com/109754988/301938109-82ccfef0-67dd-4fac-96e8-82bccd772f37.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY5MDAwMTQsIm5iZiI6MTcwNjg5OTcxNCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxOTM4MTA5LTgyY2NmZWYwLTY3ZGQtNGZhYy05NmU4LTgyYmNjZDc3MmYzNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxODQ4MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMTZkNDg5MjdmZmFiNTRkM2RkMWM0ZDFiMDc4MGM3MzZhMzY0OWFhZjQ3NWE5YzFjN2Y4YWFiYThlYWEyYTVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.RskNRsYmim07iOd1f51w6SusU6GBZE4FFN9HWeC3tLY',
       subject: '메인 화면',
     },
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273941704-d5959682-0490-41f7-baab-fbfcfa05f04d.png',
+      imgurl:
+        'https://private-user-images.githubusercontent.com/109754988/301938186-9027ea56-8c26-47fa-ac17-97edd3831c45.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY5MDAwMTQsIm5iZiI6MTcwNjg5OTcxNCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxOTM4MTg2LTkwMjdlYTU2LThjMjYtNDdmYS1hYzE3LTk3ZWRkMzgzMWM0NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxODQ4MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzdlY2I2Nzk2ZDY0NWU2ZWQ1ZWVkZWM3MmRhMzBkMDIxYzY2ZDNmZmY0MDNlY2UzNDcyNzFkNGIzOGIzOTRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.e5QbZ65r7lHt25TnJUyN_ryx5H2klsjguv23TvDdAfQ',
       subject: '나에 대한 소개 화면',
     },
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273941863-5ed32e92-bdb3-4114-a3eb-51a14eee0621.png',
+      imgurl:
+        'https://private-user-images.githubusercontent.com/109754988/301939107-79d15ca3-e536-4d9f-a0ba-4a317118728c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY5MDAwMTQsIm5iZiI6MTcwNjg5OTcxNCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxOTM5MTA3LTc5ZDE1Y2EzLWU1MzYtNGQ5Zi1hMGJhLTRhMzE3MTE4NzI4Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxODQ4MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jNmY4N2FkYTE3YTg0Y2ZmNDg1ZDI1ZjUwNDUwY2Q0MzEzM2Q1NThlNjNiODViMGNiNDNmYmRmMzUyNTM2MGIzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.6UshiWxgAYflyWZhpuClkkvo1pPsXESsap5aO20enlo',
       subject: '프로젝트 리스트 화면',
     },
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273941995-5c170752-19e6-439f-a11a-20833c296756.png',
+      imgurl:
+        'https://private-user-images.githubusercontent.com/109754988/301938987-55c8f402-ed34-451e-af89-42b996a56b2e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY5MDAwMTQsIm5iZiI6MTcwNjg5OTcxNCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxOTM4OTg3LTU1YzhmNDAyLWVkMzQtNDUxZS1hZjg5LTQyYjk5NmE1NmIyZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxODQ4MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZGU0ODIxNzllYWU4OWQ4Mjk5YWNmZWUzMjRmYmUwMjk3M2JkYzk4NGY0OWU2Njc4NjRhNTI5NmNhZDQyZDhiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.fOVrcgV6hM9LPstHVirogsvTtFUlnR-lplNHzrgjEIQ',
       subject: '이력 및 학력 화면',
     },
     {
