@@ -61,12 +61,13 @@
 
 |Project Detail|
 |------|
-|![스크린샷 2023-10-10 오후 11 12 17](https://github.com/jieun419/jieun_portfolio/assets/109754988/bfd4bdd6-4b84-446f-b9bd-844f7a4ea60f)|
+|![스크린샷 2024-02-03 오전 4 07 50](https://github.com/jieun419/jieun_portfolio/assets/109754988/c30f948f-0529-4c46-b35e-b22bdaf9717c)|
 |- 프로젝트 상세 정보(기간, 인원 등)<br>- 프로젝트 상세 내용(프로젝트 설명, 사용한 기술, 작업 기여도, 문제 해결)<br>- 바로가기 링크(GitHub, 배포 링크, 관련 블로그 링크)|
+
 
 |Review Detail|
 |------|
-|![스크린샷 2024-02-03 오전 3 41 20](https://github.com/jieun419/jieun_portfolio/assets/109754988/af2e2920-7b42-4596-8781-7b747dc80c62)|
+|![스크린샷 2024-02-03 오전 4 08 12](https://github.com/jieun419/jieun_portfolio/assets/109754988/2a955cbb-fe59-44b0-8cb4-90db908ec414)|
 |- 팀원 및 멘토 리뷰 최신순으로 확인 (이름, 프로젝트 명 표시)|
 
 |Mop|
