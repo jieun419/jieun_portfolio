@@ -58,7 +58,7 @@ export const project7 = {
     '포켓몬API를 활용해 포켓몬 데이터 불러오기',
     '스크롤할 경우 20개씩 포켓몬 데이터 무한 스크롤링',
     '특정 포켓몬 클릭 시 포켓몬 정보 모달창 표시',
-    'Redux Toolkit, locaStorage를 활용해 다크모드 지원',
+    'Redux Toolkit, localStorage를 활용해 다크모드 지원',
     'URLSearchParams메서드를 활용해 포켓몬 검색',
   ],
   tools: [

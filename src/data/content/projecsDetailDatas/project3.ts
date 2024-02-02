@@ -53,7 +53,7 @@ export const project3 = {
   ],
   featinfo: [
     'API를 활용한 리스트 확인',
-    'LocalStorage를 활용한 북마크 기능',
+    'localStorage를 활용한 북마크 기능',
     '해당 컨텐츠 클릭 시 모달로 이미지 크게 보기',
     '상품 리스트 타입에 따라 필터링 (탭 메뉴)',
   ],
