@@ -1,12 +1,11 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
 import { StackData } from '../../../data/introData';
 import ReviewDetail from '../../detail/ReviewDetail';
-import { RootState } from '../../../store';
 import { positionActions } from '../../../store/position-slice';
 import { isMobile } from '../../../utils/isMobile';
 import ScrollAni from '../../../styles/ScrollAni';
