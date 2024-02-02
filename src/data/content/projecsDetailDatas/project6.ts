@@ -7,34 +7,36 @@ export const project6 = {
   data: '2023.08 - 진행 중',
   team: '1인 (솔로)',
   tag: ['솔로', '반응형', '포트폴리오', '사이드'],
-  imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_protfolio.webp',
+  imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_portfolio.webp',
   detailimginfo: [
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_protfolio1.webp',
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio1.webp',
       subject: '메인 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_protfolio2.webp',
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio2.webp',
       subject: '나에 대한 소개 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_protfolio3.webp',
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio3.webp',
       subject: '프로젝트 리스트 화면',
     },
     {
       imgurl:
-        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_protfolio4.webp',
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio4.webp',
       subject: '이력 및 학력 화면',
     },
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273945396-bfd4bdd6-4b84-446f-b9bd-844f7a4ea60f.png',
+      imgurl:
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio5.webp',
       subject: '프로젝트 상세 내용 모달 창',
     },
     {
-      imgurl: 'https://user-images.githubusercontent.com/109754988/273946285-1825ce2d-1c45-4809-b194-e4fd8a442172.png',
+      imgurl:
+        'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio6.webp',
       subject: '팀원 리뷰 상세 내용 모달 창',
     },
   ],
