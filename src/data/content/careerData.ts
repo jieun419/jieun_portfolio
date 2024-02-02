@@ -2,7 +2,7 @@ export const careerData = [
   {
     data: '2021.04 - 2022.09',
     title: '건국사이버 평생교육원',
-    role: '@ 개발본부 디자인팀 웹 - 디자인 총괄',
+    role: '@ 개발본부 디자인팀 - 웹 디자인 총괄',
     infos: [
       'Photoshop을 활용해 홍보 랜딩 페이지, 웹 디자인 작업',
       'HTML, CSS 활용해 웹 표준, 접근성에 신경쓰며 자사 및 타사 웹 사이트 퍼블리싱',
@@ -15,7 +15,7 @@ export const careerData = [
   {
     data: '2017.05 - 2021.04',
     title: '(주)비전트리',
-    role: '@ 개발본부 디자인팀 웹 - 디자인 총괄',
+    role: '@ 개발본부 디자인팀 - 웹 디자인 총괄',
     infos: [
       'Photoshop을 활용해 홍보 랜딩 페이지, 웹 디자인 작업',
       'Photoshop, Illustrator을 활용해 홍보물 디자인 작업',
