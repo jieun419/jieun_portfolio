@@ -7,7 +7,7 @@ export const project6 = {
   data: '2023.08 - 진행 중',
   team: '1인 (솔로)',
   tag: ['솔로', '반응형', '포트폴리오', '사이드'],
-  imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_portfolio1.webp',
+  imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_portfolio.webp',
   detailimginfo: [
     {
       imgurl:
