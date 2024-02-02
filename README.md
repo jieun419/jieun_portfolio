@@ -34,20 +34,44 @@
 [개선][[Tooltip 추가하기]](https://velog.io/@crg1050/포트폴리오-Tooltip-추가하기)<br>
 
 ## 작업 화면 (현재 사이트와 스타일이 다소 다를 수 있습니다.)
-![ezgif com-video-to-gif](https://github.com/jieun419/jieun_portfolio/assets/109754988/16a67eaa-115a-4f1a-bc7f-2a5d7bdcb0ca)  
+|Main|
+|------|
+|![스크린샷 2024-02-03 오전 3 36 35](https://github.com/jieun419/jieun_portfolio/assets/109754988/82ccfef0-67dd-4fac-96e8-82bccd772f37)|
+|- 소셜 링크(GitHub, Velog)<br>- 업데이트 날짜<br>- 간략한 소개 표시|
 
-|Main|About me|
-|------|---|
-|![스크린샷 2023-10-10 오후 11 05 12](https://github.com/jieun419/jieun_portfolio/assets/109754988/0a5e824d-ba90-488f-be48-f6fef893890b)|![스크린샷 2023-10-10 오후 11 07 11](https://github.com/jieun419/jieun_portfolio/assets/109754988/d5959682-0490-41f7-baab-fbfcfa05f04d)|
-|- 소셜 링크(GitHub, Velog, Resume)<br>- 업데이트 날짜<br>- 간략한 소개 표시|- 간략한 소개<br>- 간략한 사용 툴 및 스택<br>- 팀원 리뷰 바로보기|
+|About me|
+|------|
+|![스크린샷 2024-02-03 오전 3 37 09](https://github.com/jieun419/jieun_portfolio/assets/109754988/af20b63e-2984-49a9-ab1c-ddd41d619428)![스크린샷 2024-02-03 오전 3 36 58](https://github.com/jieun419/jieun_portfolio/assets/109754988/9027ea56-8c26-47fa-ac17-97edd3831c45)|
+|- 인터뷰 형식의 간략한 소개<br>- 간략한 사용 툴 및 스택<br>- 팀원 리뷰 바로보기|
 
-|Project|Record|
-|------|---|
-|![스크린샷 2023-10-10 오후 11 07 24](https://github.com/jieun419/jieun_portfolio/assets/109754988/5ed32e92-bdb3-4114-a3eb-51a14eee0621)|![스크린샷 2023-10-10 오후 11 07 32](https://github.com/jieun419/jieun_portfolio/assets/109754988/5c170752-19e6-439f-a11a-20833c296756)|
-|- 탭메뉴로 카테고리별 확인 가능<br>- 프로젝트 명<br>- 간략한 소개<br>- 관련 태그|- 기간, 기관명<br>- 활동 내역<br> - 사용했던 스택|
+|Career|
+|------|
+|![스크린샷 2024-02-03 오전 3 40 28](https://github.com/jieun419/jieun_portfolio/assets/109754988/55c8f402-ed34-451e-af89-42b996a56b2e)|
+|- 기간, 기관명<br>- 활동 내역<br> - 사용했던 스택|
 
-|Project Detail|Review Detail|
-|------|---|
-|![스크린샷 2023-10-10 오후 11 12 17](https://github.com/jieun419/jieun_portfolio/assets/109754988/bfd4bdd6-4b84-446f-b9bd-844f7a4ea60f)|![스크린샷 2023-10-10 오후 11 13 53](https://github.com/jieun419/jieun_portfolio/assets/109754988/1825ce2d-1c45-4809-b194-e4fd8a442172)|
-|- 프로젝트 상세 정보(기간, 인원 등)<br>- 프로젝트 상세 내용(프로젝트 설명, 사용한 기술, 작업 기여도)<br>- 바로가기 링크(GitHub, 배포 링크, 관련 블로그 링크)|- 팀원 및 멘토 리뷰 최신순으로 확인 (이름, 프로젝트 명 표시)|
+|Project|
+|------|
+|![스크린샷 2024-02-03 오전 3 41 00](https://github.com/jieun419/jieun_portfolio/assets/109754988/79d15ca3-e536-4d9f-a0ba-4a317118728c)|
+|- 탭 메뉴로 카테고리별 확인 가능<br>- 프로젝트 명<br>- 간략한 소개<br>- 관련 태그|
+
+|Education|
+|------|
+|![스크린샷 2024-02-03 오전 3 41 20](https://github.com/jieun419/jieun_portfolio/assets/109754988/af2e2920-7b42-4596-8781-7b747dc80c62)|
+|- 기간, 기관명<br>- 활동 내역<br> - 사용했던 스택|
+
+|Project Detail|
+|------|
+|![스크린샷 2023-10-10 오후 11 12 17](https://github.com/jieun419/jieun_portfolio/assets/109754988/bfd4bdd6-4b84-446f-b9bd-844f7a4ea60f)|
+|- 프로젝트 상세 정보(기간, 인원 등)<br>- 프로젝트 상세 내용(프로젝트 설명, 사용한 기술, 작업 기여도, 문제 해결)<br>- 바로가기 링크(GitHub, 배포 링크, 관련 블로그 링크)|
+
+|Review Detail|
+|------|
+|![스크린샷 2024-02-03 오전 3 41 20](https://github.com/jieun419/jieun_portfolio/assets/109754988/af2e2920-7b42-4596-8781-7b747dc80c62)|
+|- 팀원 및 멘토 리뷰 최신순으로 확인 (이름, 프로젝트 명 표시)|
+
+|Mop|
+|------|
+|![스크린샷 2024-02-03 오전 3 47 56](https://github.com/jieun419/jieun_portfolio/assets/109754988/13704555-310d-4809-95dc-53fea18056d3)|
+|- 끝 맺음 표시<br>- 소셜 링크 제공|
+
 
