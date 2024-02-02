@@ -10,33 +10,27 @@ export const project7 = {
   imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_pokedex.webp',
   detailimginfo: [
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223283-505a473e-1480-4658-a6b4-aa3983f3eafd.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzMjgzLTUwNWE0NzNlLTE0ODAtNDY1OC1hNmI0LWFhMzk4M2YzZWFmZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iOTFlNGJiZjE5MDIzOGEwOThlOWJiYzkwZmU1MjlhZjU1N2YzOTAyZWJhMWFlMWM4MTg3NjBkZjFmYWQ3NTI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.7Ua7wCgSdicZmJAYjOk0BJMFiYwl1XxFjG79RyeIykM',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke1.webp',
       subject: '메인 화면',
     },
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223331-6d198a72-278d-4c68-8132-649c1268ccca.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzMzMxLTZkMTk4YTcyLTI3OGQtNGM2OC04MTMyLTY0OWMxMjY4Y2NjYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00Zjk3OWEzYjEyMTNhOWVjN2FkOTZjZGMzMmQ3MDJiYTM3YjA1NzNhOTZjZDQ5YTg2YTI2Njk2NTFlYzlhMjdkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.7a3WsoS5Cfhtx-DtZBFTRJKl54_2n0DAP6-gvassc3A',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke2.webp',
       subject: '포켓몬 상세 정보',
     },
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223436-af888682-82e1-4896-beaa-963eba53f516.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNDM2LWFmODg4NjgyLTgyZTEtNDg5Ni1iZWFhLTk2M2ViYTUzZjUxNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jNjg2NjQyZGExZWQxMzBmZTAyNGE0MjY0MmVlNDQyNDc0YmYxMzllZGM1NTVhMzQxMzVmMTc2YzIzNjM1ODA4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.kq8dbL9rTG4i0OQsjih-mkp1Ap7s02TELRynRr1WuiU',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke3.webp',
       subject: '메인 화면 - 다크모드',
     },
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223493-dc3be58e-6dbe-4022-8385-d44ecc036eff.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNDkzLWRjM2JlNThlLTZkYmUtNDAyMi04Mzg1LWQ0NGVjYzAzNmVmZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03MTAwYjM0YzJlNTM0NjhlOTdkMTkxMzMxNjZiYjY2ZGVlOGZlNWY3Yjc1YjUxMmNlNDUyN2QxYzUzYzlkYTU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.apyMmO7pPj4-fb7QkpGxVy-ZYs4KNdC6NDtiJqhz0ac',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke4.webp',
       subject: '포켓몬 상세 정보 - 다크모드',
     },
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223641-03b2b008-3a1d-4c9f-b547-dfd02a93e566.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNjQxLTAzYjJiMDA4LTNhMWQtNGM5Zi1iNTQ3LWRmZDAyYTkzZTU2Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNDAxOTQ3NTFkMmJmZWM0MWY4YzE3YjQ5ZGZlMWY4MjU2ZDUyMGJhZTdjYTMwOGI4Y2ExNTBjNjRhYjI3ZDZkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ffiQRnqDxxABfPAsylIWFLDIVZ9GSeFPrVhKOyw8is8',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke5.webp',
       subject: '검색 페이지',
     },
     {
-      imgurl:
-        'https://private-user-images.githubusercontent.com/109754988/301223720-e0016f0a-75f2-4db9-88aa-af837b6c95cf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4OTcwMjAsIm5iZiI6MTcwNjg5NjcyMCwicGF0aCI6Ii8xMDk3NTQ5ODgvMzAxMjIzNzIwLWUwMDE2ZjBhLTc1ZjItNGRiOS04OGFhLWFmODM3YjZjOTVjZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwMlQxNzU4NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wZmVmNjA0ODZhNjI3MjBkZGVkMjJkYmM5MWVmMTgxNWZhZjc2ZWI3YzZmMjQ4NTdiYTQ2MjhhYWMxNjY0MTg5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.jfapCtXCiz93b1pcLchWwDR_wh5kjlqc8xoVkpG94GI',
+      imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_poke6.webp',
       subject: '검색 페이지 - 검색 키워드 없을 경우',
     },
   ],
