@@ -27,6 +27,7 @@ export const ToggleInfo = tw.div`
 
 export const PTit = tw.p`
   text-base
+  flex-1
 `;
 
 export const PText = tw.p`
