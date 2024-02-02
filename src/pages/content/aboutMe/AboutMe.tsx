@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import StackIcon from '../../../components/atoms/tools/ToolIcon';
@@ -96,10 +96,7 @@ const StackIcons = tw.div`
 
 function AboutMe() {
   const dispatch = useDispatch()
-  const targetName = useSelector((state: RootState) => state.overlay.targetName);
-  const isReviewOpen = useSelector((state: RootState) => state.overlay.isReviewOpen);
   const moScrollRef = useRef<HTMLDivElement>(null);
-
 
   const { scrollRef, scrollEl } = useScrollAnimation();
 
@@ -108,17 +105,15 @@ function AboutMe() {
     offset: ['0 1', `${isMobile ? '0.8 1' : '1 1'}`]
   });
 
-
   useTransform(scrollYProgress, (pos) => {
-    return pos === 1 ?
-      dispatch(positionActions.PositionStyle('relative')) :
-      dispatch(positionActions.PositionStyle('sticky'))
+    if (pos) {
+      return dispatch(positionActions.PositionStyle(pos === 1 ? 'relative' : 'sticky'));
+    }
   });
-
 
   return (
     <motion.div ref={moScrollRef}>
-      {isReviewOpen && targetName === 'review' && <ReviewDetail name='review' />}
+      <ReviewDetail name='review' />
       <IntroComponent id='aboutme'>
         <SubJectTit>About me</SubJectTit>
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>

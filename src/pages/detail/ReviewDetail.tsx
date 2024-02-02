@@ -57,6 +57,7 @@ export const Btns = tw.div`
 
 function ReviewDetail({ name }: { name: string }) {
   const dispatch = useDispatch();
+  const isReviewOpen = useSelector((state: RootState) => state.overlay.isReviewOpen);
   const targetName = useSelector((state: RootState) => state.overlay.targetName);
   const openScroll = () => {
     document.body.style.removeProperty('overflow');
@@ -70,7 +71,7 @@ function ReviewDetail({ name }: { name: string }) {
   return (
     <>
       {
-        targetName === name ? (
+        isReviewOpen && targetName === name ? (
           <DetailContainer>
             <DropShadow toggleModal={toggleModal} />
             <DetailWrap>
