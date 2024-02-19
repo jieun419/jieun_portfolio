@@ -22,12 +22,12 @@ export const project6 = {
     {
       imgurl:
         'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio3.webp',
-      subject: '프로젝트 리스트 화면',
+      subject: '이력 및 학력 화면',
     },
     {
       imgurl:
         'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/project_portfolio4.webp',
-      subject: '이력 및 학력 화면',
+      subject: '프로젝트 리스트 화면',
     },
     {
       imgurl:
