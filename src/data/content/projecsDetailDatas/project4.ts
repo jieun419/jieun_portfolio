@@ -5,7 +5,7 @@ export const project4 = {
   subtext:
     '랜덤의 팀원들과 정해진 주제인 스택오버플로우 사이트를 클론 코딩 하며 프로젝트 경험을 쌓았습니다.\n짧은 기간이였지만 기존 사이트의 UI/UX 측면도 고려하고, 기간 내에 구현 할 수 있는지와 없는지 확인하며 진행했습니다.\n\n* 현재 배포 사이트 확인은 가능하나 서버는 닫혀있는 상태입니다.',
   data: '2023.06 - 2023.07',
-  team: '6인 (프론트엔드 3명, 백엔드 3명)',
+  team: '7인 (프론트엔드 4명, 백엔드 3명)',
   tag: ['팀', '반응형', '클론코딩', '사이드'],
   imgurl: 'https://raw.githubusercontent.com/jieun419/jieun_portfolio/main/src/assets/images/thumbnail_stack.webp',
   detailimginfo: [
