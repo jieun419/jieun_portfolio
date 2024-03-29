@@ -1,4 +1,5 @@
 import tw from 'tailwind-styled-components';
+import { useNavigate } from 'react-router-dom';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
 import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
@@ -102,6 +103,7 @@ export const Button = tw.button`
 `;
 
 function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const lockScroll = () => {
@@ -109,8 +111,8 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
   };
 
   const toggleModal = (name: string) => {
-    dispatch(overlayActions.toggleOverlay());
     dispatch(overlayActions.targetName(name));
+    navigate(`/project/${name}`);
     lockScroll();
   };
 
@@ -129,11 +131,13 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
         </BtnBox>
       </HoverBox>
 
-      {imgurl && (
-        <CardThumbnail>
-          <ThumbnailImg url={imgurl} />
-        </CardThumbnail>
-      )}
+      {
+        imgurl && (
+          <CardThumbnail>
+            <ThumbnailImg url={imgurl} />
+          </CardThumbnail>
+        )
+      }
 
       <TxtWrap imgurl={imgurl}>
         <Tit>{title}</Tit>
@@ -144,7 +148,7 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
           <TagText key={idx} tag={tag} />
         ))}
       </Tags>
-    </CardContainer>
+    </CardContainer >
   );
 }
 
