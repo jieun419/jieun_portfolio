@@ -65,6 +65,34 @@ const GlobalStyles = createGlobalStyle`
         background: transparent;
         cursor: pointer;
     }
+
+    .markdownWrap {
+
+        code {
+        padding: 2px 6px;
+        margin: 0 2px;
+        border: none;
+        border-radius: 3px;
+        background-color: #e9ecef;
+        font-size: 0.8rem;
+        }
+
+        strong {
+        font-weight: 600;
+        }
+
+        h3 {
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        a {
+            text-decoration: underline;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
 `;
 
 export default GlobalStyles;
