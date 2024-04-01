@@ -333,7 +333,6 @@ const ProjectDetail = () => {
                     </PWrap>
                   )
                 }
-
                 {
                   projectDetail.detailimginfo && (
                     <PWrap>
