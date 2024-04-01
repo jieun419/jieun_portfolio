@@ -15,10 +15,7 @@ export const recordData = [
     data: '2015.03 - 2017.02',
     title: '전주비전대학교',
     role: '@ 컴퓨터정보과 전문학사 졸업',
-    infos: [
-      '자료구조, 운영체제 등 CS 학습',
-      'HTML, CSS, JavaScript 등 프로그래밍 언어 학습',
-    ],
+    infos: ['자료구조, 운영체제 등 CS 학습', 'HTML, CSS, JavaScript 등 프로그래밍 언어 학습'],
     stacks: ['html', 'css', 'ps', 'ai'],
   },
 ];
