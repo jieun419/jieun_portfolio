@@ -1,6 +1,7 @@
 import tw from 'tailwind-styled-components';
 import IcArrow from '../../assets/icons/IcArrow';
 import { useState } from 'react';
+import MarkdownBox from '../markdown/MarkdownBox';
 
 export const Toggle = tw.div`
   flex
@@ -50,8 +51,8 @@ function ToggleBox({ title, detail, isToggled, type }: ToggleProps) {
   };
 
   return (
-    <Toggle className={detail ? 'cursor-pointer' : ''}>
-      <ToggleName onClick={toggleBtn}>
+    <Toggle>
+      <ToggleName className={detail ? 'cursor-pointer' : ''} onClick={toggleBtn}>
         {detail && <IcArrow isToggle={isToggle} isToggled={isToggled} />}
         <PTit>{title}</PTit>
       </ToggleName>
@@ -69,9 +70,9 @@ function ToggleBox({ title, detail, isToggled, type }: ToggleProps) {
       {
         isToggle || isToggled && detail &&
         <ToggleInfo>
-          <PText>
+          <MarkdownBox>
             {detail}
-          </PText>
+          </MarkdownBox>
         </ToggleInfo>
       }
     </Toggle>
