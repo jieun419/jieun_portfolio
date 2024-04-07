@@ -21,11 +21,6 @@ type ProjectDataProps = {
 }
 
 export const DetailContainer = tw.section`
-  my-10
-  mx-40
-
-  max-md:mx-0
-  max-md:my-0
 `;
 
 export const DetailWrap = tw.section<ProjectDataProps>`
@@ -213,146 +208,148 @@ function ProjectDetail() {
   };
 
   return (
-    <Modal>
+    <>
       {projectDetail ? (
-        <DetailContainer>
-          <DetailWrap imgurl={projectDetail.imgurl}>
+        <Modal>
+          <DetailContainer>
+            <DetailWrap imgurl={projectDetail.imgurl}>
 
-            <Btns>
-              <CloseBtn closeModal={closeModal} />
-              <ContBtns>
-                {projectDetail.giturl && <LinkBtn name='github_bk' giturl={projectDetail.giturl} text='GitHub' />}
-                {projectDetail.depoloyurl && <LinkBtn name='link' depoloyurl={projectDetail.depoloyurl} text='배포 링크' />}
-                {projectDetail.blogurl && <LinkBtn name='blog' blog={projectDetail.blogurl} text='관련 블로그' />}
-              </ContBtns>
-            </Btns>
+              <Btns>
+                <CloseBtn closeModal={closeModal} />
+                <ContBtns>
+                  {projectDetail.giturl && <LinkBtn name='github_bk' giturl={projectDetail.giturl} text='GitHub' />}
+                  {projectDetail.depoloyurl && <LinkBtn name='link' depoloyurl={projectDetail.depoloyurl} text='배포 링크' />}
+                  {projectDetail.blogurl && <LinkBtn name='blog' blog={projectDetail.blogurl} text='관련 블로그' />}
+                </ContBtns>
+              </Btns>
 
-            <DetailTop pointcolor={projectDetail.pointcolor} imgurl={projectDetail.imgurl}>
-              <Tags>
+              <DetailTop pointcolor={projectDetail.pointcolor} imgurl={projectDetail.imgurl}>
+                <Tags>
+                  {
+                    projectDetail.tag.map((tag, idx) => (
+                      <TagIcon key={idx} tag={tag} />
+                    ))
+                  }
+                </Tags>
+                <ProjectTit>{projectDetail.title}</ProjectTit>
+                <ProjectDate>
+                  <DateTxt>{projectDetail.data}</DateTxt>
+                  <DateTxt>{projectDetail.team}</DateTxt>
+                </ProjectDate>
+                {projectDetail.imgurl && <ProjectScreen imgurl={projectDetail.imgurl} />}
+              </DetailTop>
+
+              <DetailBody>
+                <ProjectInfoTxt>
+                  {projectDetail.subtext}
+                </ProjectInfoTxt>
                 {
-                  projectDetail.tag.map((tag, idx) => (
-                    <TagIcon key={idx} tag={tag} />
-                  ))
+                  projectDetail.featinfo.length !== 0 && (
+                    <PWrap>
+                      <PTitle>📍 주요 기능 및 특징</PTitle>
+                      <PDetailList>
+                        {
+                          projectDetail.featinfo.map((list, idx) => (
+                            <Li key={idx}>{list}</Li>
+                          ))
+                        }
+                      </PDetailList>
+                    </PWrap>
+                  )
                 }
-              </Tags>
-              <ProjectTit>{projectDetail.title}</ProjectTit>
-              <ProjectDate>
-                <DateTxt>{projectDetail.data}</DateTxt>
-                <DateTxt>{projectDetail.team}</DateTxt>
-              </ProjectDate>
-              {projectDetail.imgurl && <ProjectScreen imgurl={projectDetail.imgurl} />}
-            </DetailTop>
 
-            <DetailBody>
-              <ProjectInfoTxt>
-                {projectDetail.subtext}
-              </ProjectInfoTxt>
-              {
-                projectDetail.featinfo.length !== 0 && (
-                  <PWrap>
-                    <PTitle>📍 주요 기능 및 특징</PTitle>
-                    <PDetailList>
-                      {
-                        projectDetail.featinfo.map((list, idx) => (
-                          <Li key={idx}>{list}</Li>
-                        ))
-                      }
-                    </PDetailList>
-                  </PWrap>
-                )
-              }
+                <PWrap>
+                  <PTitle>
+                    🛠️ 사용 기술 및 언어
+                    <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
+                  </PTitle>
+                  <Toggles>
+                    {
+                      projectDetail.tools.map((item, idx) => (
+                        <ToggleBox
+                          key={idx}
+                          title={item.title}
+                          detail={item.detail}
+                          type='tools'
+                        />
+                      ))
+                    }
+                  </Toggles>
+                </PWrap>
 
-              <PWrap>
-                <PTitle>
-                  🛠️ 사용 기술 및 언어
-                  <PSubText>클릭 시 세부 내용을 확인 할  수 있습니다.</PSubText>
-                </PTitle>
-                <Toggles>
-                  {
-                    projectDetail.tools.map((item, idx) => (
-                      <ToggleBox
-                        key={idx}
-                        title={item.title}
-                        detail={item.detail}
-                        type='tools'
-                      />
-                    ))
-                  }
-                </Toggles>
-              </PWrap>
+                <PWrap>
+                  <PTitle>
+                    ✨ 작업 기여도
+                  </PTitle>
+                  <Toggles>
+                    {
+                      projectDetail.parts.map((item, idx) => (
+                        <ToggleBox
+                          key={idx}
+                          title={item.title}
+                          detail={item.detail}
+                          isToggled
+                        />
+                      ))
+                    }
+                  </Toggles>
+                </PWrap>
+                {
+                  projectDetail.trouble && projectDetail.trouble.length !== 0 && (
+                    <PWrap>
+                      <PTitle>
+                        💫 Trouble Shooting
+                      </PTitle>
+                      <Toggles>
+                        {
+                          projectDetail.trouble.map((item, idx) => (
+                            <ToggleBox
+                              key={idx}
+                              title={item.title}
+                              detail={item.detail}
+                              isToggled
+                            />
+                          ))
+                        }
+                      </Toggles>
+                    </PWrap>
+                  )
+                }
 
-              <PWrap>
-                <PTitle>
-                  ✨ 작업 기여도
-                </PTitle>
-                <Toggles>
-                  {
-                    projectDetail.parts.map((item, idx) => (
-                      <ToggleBox
-                        key={idx}
-                        title={item.title}
-                        detail={item.detail}
-                        isToggled
-                      />
-                    ))
-                  }
-                </Toggles>
-              </PWrap>
-              {
-                projectDetail.trouble && projectDetail.trouble.length !== 0 && (
-                  <PWrap>
-                    <PTitle>
-                      💫 Trouble Shooting
-                    </PTitle>
-                    <Toggles>
-                      {
-                        projectDetail.trouble.map((item, idx) => (
-                          <ToggleBox
-                            key={idx}
-                            title={item.title}
-                            detail={item.detail}
-                            isToggled
-                          />
-                        ))
-                      }
-                    </Toggles>
-                  </PWrap>
-                )
-              }
+                {
+                  projectDetail.detailimginfo && (
+                    <PWrap>
+                      <PTitle>
+                        💻 작업 화면
+                        <PSubText>이미지 클릭 시 크게 볼 수 있습니다. (작업화면이 현재와 다를 수 있습니다.)<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
+                      </PTitle>
 
-              {
-                projectDetail.detailimginfo && (
-                  <PWrap>
-                    <PTitle>
-                      💻 작업 화면
-                      <PSubText>이미지 클릭 시 크게 볼 수 있습니다. (작업화면이 현재와 다를 수 있습니다.)<br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.</PSubText>
-                    </PTitle>
+                      <ImgContList>
 
-                    <ImgContList>
+                        {imgModal && (<ImgDetailModal imgUrl={projectDetail.detailimginfo && projectDetail.detailimginfo[targetId].imgurl} />)}
 
-                      {imgModal && (<ImgDetailModal imgUrl={projectDetail.detailimginfo && projectDetail.detailimginfo[targetId].imgurl} />)}
-
-                      {
-                        projectDetail.detailimginfo?.map((el, idx) => (
-                          <ProjectImgCard
-                            key={idx}
-                            id={idx}
-                            imgurl={el.imgurl}
-                            subject={el.subject}
-                            toggleImgModal={toggleImgModal}
-                          />
-                        ))
-                      }
-                    </ImgContList>
-                  </PWrap>
-                )
-              }
-            </DetailBody>
-          </DetailWrap>
-        </DetailContainer>
+                        {
+                          projectDetail.detailimginfo?.map((el, idx) => (
+                            <ProjectImgCard
+                              key={idx}
+                              id={idx}
+                              imgurl={el.imgurl}
+                              subject={el.subject}
+                              toggleImgModal={toggleImgModal}
+                            />
+                          ))
+                        }
+                      </ImgContList>
+                    </PWrap>
+                  )
+                }
+              </DetailBody>
+            </DetailWrap>
+          </DetailContainer>
+        </Modal>
       ) : null
       }
-    </Modal>
+    </>
   )
 }
 

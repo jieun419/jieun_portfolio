@@ -9,6 +9,10 @@ const ModalContainer = tw.article`
   inset-y-0
   z-[20]
   overflow-y-auto
+  py-10
+  px-40
+  max-md:px-0
+  max-md:py-0
  `
 
 const Modal = ({ children }: { children: ReactNode }) => {
