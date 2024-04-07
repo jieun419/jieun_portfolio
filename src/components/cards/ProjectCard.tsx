@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDataT } from '../../types/type';
 import TagText from '../atoms/tag/TagTxt';
+import { useNavigate } from 'react-router-dom';
 
 type ProjectDataProps = {
   imgurl?: string;
@@ -103,14 +104,16 @@ export const Button = tw.button`
 
 function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const lockScroll = () => {
     document.body.style.overflow = 'hidden';
   };
 
   const toggleModal = (name: string) => {
-    dispatch(overlayActions.toggleOverlay());
+    // dispatch(overlayActions.toggleOverlay());
     dispatch(overlayActions.targetName(name));
+    navigate(`/project/${name}`);
     lockScroll();
   };
 
