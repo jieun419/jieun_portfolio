@@ -1,10 +1,8 @@
 import tw from 'tailwind-styled-components';
 import { useSelector } from 'react-redux';
-import ProjectDetail from '../../detail/ProjectDetail';
 import { RootState } from '../../../store';
 import { TabsPropsT } from '../../../types/type';
 import { projectData } from '../../../data/content/projectData';
-import { projectDetailData } from '../../../data/content/projecsDetailDatas/projectDetailData';
 import ProjectCard from '../../../components/cards/ProjectCard';
 import useScrollAnimation from '../../../hooks/useScrollAnimation';
 import ScrollAni from '../../../styles/ScrollAni';
