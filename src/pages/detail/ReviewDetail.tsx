@@ -1,22 +1,13 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 
 import CloseBtn from '../../components/button/CloseBtn';
-import { overlayActions } from '../../store/overlay-slice';
-import { RootState } from '../../store';
-import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 import ReviewCard from '../../components/cards/ReviewCard';
 import { reviewData } from '../../data/content/reviewData';
+import Modal from '../../components/modal/Modal';
+import useModal from '../../hooks/useModal';
 
 export const DetailContainer = tw.article`
-  fixed
-  inset-x-0
-  inset-y-0
-  z-10
-  py-10
-  px-40
-  overflow-y-auto
-
   max-md:px-10
 `;
 
@@ -55,43 +46,35 @@ export const Btns = tw.div`
 `;
 
 
-function ReviewDetail({ name }: { name: string }) {
-  const dispatch = useDispatch();
-  const isReviewOpen = useSelector((state: RootState) => state.overlay.isReviewOpen);
-  const targetName = useSelector((state: RootState) => state.overlay.targetName);
-  const openScroll = () => {
-    document.body.style.removeProperty('overflow');
-  };
-
-  const toggleModal = () => {
-    dispatch(overlayActions.toggleReviewOverlay());
-    openScroll();
-  };
+function ReviewDetail() {
+  const { pathname } = useLocation();
+  const { closeModal } = useModal();
 
   return (
     <>
       {
-        isReviewOpen && targetName === name ? (
-          <DetailContainer>
-            <DropShadow closeModal={toggleModal} />
-            <DetailWrap>
+        pathname === '/review' ? (
+          <Modal>
+            <DetailContainer>
+              <DetailWrap>
 
-              <Btns>
-                <CloseBtn closeModal={toggleModal} />
-              </Btns>
-              <DetailBody>
-                {
-                  reviewData.map((team, idx) => (
-                    <ReviewCard
-                      key={idx}
-                      name={team.name}
-                      review={team.review}
-                    />
-                  ))
-                }
-              </DetailBody>
-            </DetailWrap>
-          </DetailContainer>
+                <Btns>
+                  <CloseBtn closeModal={closeModal} />
+                </Btns>
+                <DetailBody>
+                  {
+                    reviewData.map((team, idx) => (
+                      <ReviewCard
+                        key={idx}
+                        name={team.name}
+                        review={team.review}
+                      />
+                    ))
+                  }
+                </DetailBody>
+              </DetailWrap>
+            </DetailContainer>
+          </Modal>
         ) : null
       }
     </>

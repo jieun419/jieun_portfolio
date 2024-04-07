@@ -112,7 +112,7 @@ function AboutMe() {
 
   return (
     <motion.div ref={moScrollRef}>
-      <ReviewDetail name='review' />
+      <ReviewDetail />
       <IntroComponent id='aboutme'>
         <SubJectTit>About me</SubJectTit>
         <ScrollAni className={`${scrollEl ? 'fadeAn fadeIn' : 'fadeOut'}`} ref={scrollRef}>
