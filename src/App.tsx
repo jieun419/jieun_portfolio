@@ -9,10 +9,11 @@ import ProjectDetail from './pages/detail/ProjectDetail';
 export default function App() {
   return (
     <>
+      <QuickBtns />
       <Routes>
         <Route path='/project/:name' element={<ProjectDetail />} />
       </Routes>
-      <QuickBtns />
+
       <Main />
       <AboutMe />
       <Contents />
