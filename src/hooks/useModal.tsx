@@ -21,7 +21,7 @@ const useModal = () => {
 
   const openModal = (name: string) => {
     dispatch(overlayActions.targetName(name));
-    navigate(`/project/${name}`);
+    navigate(`/${name}`);
     lockScroll();
   };
 
