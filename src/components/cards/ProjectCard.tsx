@@ -1,10 +1,8 @@
 import tw from 'tailwind-styled-components';
 import ThumbnailImg from '../atoms/thumbnail/ThumbnailImg';
-import { useDispatch } from 'react-redux';
-import { overlayActions } from '../../store/overlay-slice';
 import { ProjectDataT } from '../../types/type';
 import TagText from '../atoms/tag/TagTxt';
-import { useNavigate } from 'react-router-dom';
+import useModal from '../../hooks/useModal';
 
 type ProjectDataProps = {
   imgurl?: string;
@@ -103,25 +101,14 @@ export const Button = tw.button`
 `;
 
 function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: ProjectDataT) {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const lockScroll = () => {
-    document.body.style.overflow = 'hidden';
-  };
-
-  const toggleModal = (name: string) => {
-    dispatch(overlayActions.targetName(name));
-    navigate(`/project/${name}`);
-    lockScroll();
-  };
+  const { openModal } = useModal();
 
   return (
     <CardContainer>
       <HoverBox>
         <Tit>{title}</Tit>
         <BtnBox>
-          <Button onClick={() => toggleModal(name)}>자세히 보기</Button>
+          <Button onClick={() => openModal(name)}>자세히 보기</Button>
           {giturl &&
             <Button onClick={() => window.open(giturl)}>Github 바로가기</Button>
           }

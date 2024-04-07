@@ -8,11 +8,12 @@ import CloseBtn from '../../components/button/CloseBtn';
 import LinkBtn from '../../components/button/LinkBtn';
 import { overlayActions } from '../../store/overlay-slice';
 import { RootState } from '../../store';
-import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 import ProjectImgCard from '../../components/cards/ProjectImgCard';
 import ImgDetailModal from '../../components/modal/ImgDetailModal';
 import { projectDetailData } from '../../data/content/projecsDetailDatas/projectDetailData';
 import { useNavigate, useParams } from 'react-router-dom';
+import Modal from '../../components/modal/Modal';
+import useModal from '../../hooks/useModal';
 
 type ProjectDataProps = {
   pointcolor?: string;
@@ -20,16 +21,11 @@ type ProjectDataProps = {
 }
 
 export const DetailContainer = tw.section`
-  fixed
-  inset-x-0
-  inset-y-0
-  z-[20]
-  py-10
-  px-40
-  overflow-y-auto
+  my-10
+  mx-40
 
-  max-md:px-0
-  max-md:py-0
+  max-md:mx-0
+  max-md:my-0
 `;
 
 export const DetailWrap = tw.section<ProjectDataProps>`
@@ -202,22 +198,14 @@ export const ImgContList = tw.div`
 `;
 
 function ProjectDetail() {
+  const { closeModal } = useModal();
+
   const dispatch = useDispatch();
   const { name } = useParams();
-  const navigate = useNavigate();
   const projectDetail = projectDetailData.find((project) => project.name === name);
 
   const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
   const targetId = useSelector((state: RootState) => state.overlay.targetId);
-
-  const openScroll = () => {
-    document.body.style.removeProperty('overflow');
-  };
-
-  const toggleModal = () => {
-    navigate('/');
-    openScroll();
-  };
 
   const toggleImgModal = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     dispatch(overlayActions.toggleImgOverlay());
@@ -225,14 +213,13 @@ function ProjectDetail() {
   };
 
   return (
-    <>
+    <Modal>
       {projectDetail ? (
         <DetailContainer>
-          <DropShadow toggleModal={toggleModal} />
           <DetailWrap imgurl={projectDetail.imgurl}>
 
             <Btns>
-              <CloseBtn toggleModal={toggleModal} />
+              <CloseBtn closeModal={closeModal} />
               <ContBtns>
                 {projectDetail.giturl && <LinkBtn name='github_bk' giturl={projectDetail.giturl} text='GitHub' />}
                 {projectDetail.depoloyurl && <LinkBtn name='link' depoloyurl={projectDetail.depoloyurl} text='배포 링크' />}
@@ -365,7 +352,7 @@ function ProjectDetail() {
         </DetailContainer>
       ) : null
       }
-    </>
+    </Modal>
   )
 }
 

@@ -13,9 +13,9 @@ export const CloseButton = tw.button`
   hover:bg-[#525252]
 `;
 
-function CloseBtn({ toggleModal }: { toggleModal?: () => void }) {
+function CloseBtn({ closeModal }: { closeModal?: () => void }) {
   return (
-    <CloseButton onClick={toggleModal}>
+    <CloseButton onClick={closeModal}>
       <img src={IconClose} alt="Close" />
     </CloseButton>
   )

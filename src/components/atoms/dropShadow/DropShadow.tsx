@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 type DropShadowProps = {
-  toggleModal?: () => void;
+  closeModal?: () => void;
 }
 
 export const DropShadowWrap = tw.div`
@@ -15,8 +15,8 @@ export const DropShadowWrap = tw.div`
 `;
 
 
-function DropShadow({ toggleModal }: DropShadowProps) {
-  return <DropShadowWrap onClick={toggleModal} />
+function DropShadow({ closeModal }: DropShadowProps) {
+  return <DropShadowWrap onClick={closeModal} />
 }
 
 export default DropShadow;
