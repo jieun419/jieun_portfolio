@@ -111,7 +111,6 @@ function ProjectCard({ title, subject, tag, imgurl, name, giturl, depoloyurl }: 
   };
 
   const toggleModal = (name: string) => {
-    // dispatch(overlayActions.toggleOverlay());
     dispatch(overlayActions.targetName(name));
     navigate(`/project/${name}`);
     lockScroll();

@@ -215,7 +215,6 @@ function ProjectDetail() {
   };
 
   const toggleModal = () => {
-    // dispatch(overlayActions.toggleOverlay());
     navigate('/');
     openScroll();
   };
