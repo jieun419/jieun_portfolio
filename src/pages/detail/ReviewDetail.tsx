@@ -73,11 +73,11 @@ function ReviewDetail({ name }: { name: string }) {
       {
         isReviewOpen && targetName === name ? (
           <DetailContainer>
-            <DropShadow toggleModal={toggleModal} />
+            <DropShadow closeModal={toggleModal} />
             <DetailWrap>
 
               <Btns>
-                <CloseBtn toggleModal={toggleModal} />
+                <CloseBtn closeModal={toggleModal} />
               </Btns>
               <DetailBody>
                 {
