@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
@@ -11,7 +12,6 @@ import { RootState } from '../../store';
 import ProjectImgCard from '../../components/cards/ProjectImgCard';
 import ImgDetailModal from '../../components/modal/ImgDetailModal';
 import { projectDetailData } from '../../data/content/projecsDetailDatas/projectDetailData';
-import { useNavigate, useParams } from 'react-router-dom';
 import Modal from '../../components/modal/Modal';
 import useModal from '../../hooks/useModal';
 
