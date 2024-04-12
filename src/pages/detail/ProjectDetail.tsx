@@ -288,6 +288,7 @@ function ProjectDetail() {
                           key={idx}
                           title={item.title}
                           detail={item.detail}
+                          detail1={item.detail1}
                           isToggled
                         />
                       ))
@@ -307,6 +308,7 @@ function ProjectDetail() {
                               key={idx}
                               title={item.title}
                               detail={item.detail}
+                              detail1={item.detail1}
                               isToggled
                             />
                           ))
