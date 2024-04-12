@@ -1,6 +1,7 @@
 import tw from 'tailwind-styled-components';
 import IcArrow from '../../assets/icons/IcArrow';
 import { useState } from 'react';
+import Markdown from '../markdown/Markdown';
 
 export const Toggle = tw.div`
   flex
@@ -58,7 +59,7 @@ const DetailLi = tw.li`
 `;
 
 type ToggleProps = {
-  title: string;
+  title?: string;
   detail?: string;
   detail1?: string[];
   isToggled?: boolean;
@@ -95,7 +96,11 @@ function ToggleBox({ title, detail, detail1, isToggled, type }: ToggleProps) {
           <DetailUl>
             {
               detail1.map((el) => (
-                <DetailLi key={el}>{el}</DetailLi>
+                <DetailLi key={el}>
+                  <Markdown>
+                    {el}
+                  </Markdown>
+                </DetailLi>
               ))
             }
           </DetailUl>
