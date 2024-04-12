@@ -35,14 +35,37 @@ export const PText = tw.p`
   cursor-default
 `;
 
+const DetailUl = tw.ul`
+  flex
+  flex-col
+  gap-3
+`;
+
+const DetailLi = tw.li`
+  relative
+  flex
+  gap-1
+  pl-3
+
+  before:absolute 
+  before:w-1 
+  before:h-1 
+  before:bg-[#000] 
+  before:block 
+  before:rounded-full 
+  before:left-0 
+  before:top-[0.625rem]
+`;
+
 type ToggleProps = {
   title: string;
   detail?: string;
+  detail1?: string[];
   isToggled?: boolean;
   type?: string;
 };
 
-function ToggleBox({ title, detail, isToggled, type }: ToggleProps) {
+function ToggleBox({ title, detail, detail1, isToggled, type }: ToggleProps) {
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
   const toggleBtn = () => {
@@ -67,11 +90,15 @@ function ToggleBox({ title, detail, isToggled, type }: ToggleProps) {
       }
 
       {
-        isToggle || isToggled && detail &&
+        isToggle || isToggled && detail1 &&
         <ToggleInfo>
-          <PText>
-            {detail}
-          </PText>
+          <DetailUl>
+            {
+              detail1.map((el) => (
+                <DetailLi key={el}>{el}</DetailLi>
+              ))
+            }
+          </DetailUl>
         </ToggleInfo>
       }
     </Toggle>
