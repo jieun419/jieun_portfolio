@@ -74,6 +74,11 @@ export type ProjectDetailDataT = {
     title: string;
     detail: string;
   }[];
+  Insight?: {
+    detail1: string[] | undefined;
+    title: string;
+    detail: string;
+  }[];
 };
 
 export type ButtonNameT = {
