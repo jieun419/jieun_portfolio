@@ -97,28 +97,28 @@ export const project7 = {
   parts: [
     {
       title: '프로젝트 기획 및 디자인 구성',
-      detail1: [
+      detailList: [
         `\`Figma\`를 활용해 직관적으로 원하는 정보만 보일 수 있도록 구조 작업`,
         `현재에도 지속적으로 프로젝트를 구체화 진행 중`,
       ],
     },
     {
       title: 'Lazy, Suspense 통해 코드 스플리팅 작업 및 뷰포트에 보이지 않는 이미지 로딩 지연',
-      detail1: [
+      detailList: [
         `초기 로딩 최적화를 위해 페이지 이동 구간에 \`Lazy\`, \`Suspese\`를 통해 코드 스플리팅 작업 진행`,
         `이미지 태그에 \`loading="lazy\` 속성을 추가해 뷰포트에 보이지 않는 **이미지 로딩을 지연**시켜 초기 로딩 속도 향상`,
       ],
     },
     {
       title: 'Redux Toolkit, localStorage를 통해 다크모드 테마 제공',
-      detail1: [
+      detailList: [
         `\`Redux Toolkit\`로 테마에 대한 상태를 저장하여 **전역으로 테마 상태 관리**`,
         `\`localStorage\`를 활용해 유저 **브라우저에 테마 타입 저장**하여 새로고침해도 테마가 유지되므로써 사용자 경험을 향상`,
       ],
     },
     {
       title: '라이브러리 사용 없이 scrollHeight, scrollTop, clientHeight 요소 활용해 무한 스크롤 구현',
-      detail1: [
+      detailList: [
         `\`scrollHeight\`, \`scrollTop\`, \`clientHeight\` 요소를 활용해 뷰포트 바닥에 닿을 경우 요청한 데이터만큼만 불러오도록 무한 스크롤 구현`,
         `초기 로딩 시 모든 데이터를 불러오지 않고 사용자가 스크롤 할 때 필요한 만큼의 데이터를 불러와 성능을 향상시켜 사용자 경험 개선`,
         `이후 React Query에서 제공하는 \`useInfiniteQuery\` 쿼리를 사용해 구현 예정`,
@@ -126,7 +126,7 @@ export const project7 = {
     },
     {
       title: '원하는 포켓몬을 쉽게 찾기 위해 URLSearchParams 활용해 검색 페이지 및 검색 기능 구현',
-      detail1: [
+      detailList: [
         `\`input action\` 속성을 통해 페이지가 이동하면서 URL 파라미터에 검색 키워드 저장`,
         `\`URLSearchParams\` 메서드를 활용해 검색 키워드를 추출 후 React Query의 useQuery와 Redux Toolkit을 활용해 \`filtering\`된 검색 결과를 표시`,
         `원하는 검색 결과가 없을 경우의 조건문을 통하여 \`Nothing\` 컴포넌트 보이도록해 사용자 경험을 향상`,
@@ -136,7 +136,7 @@ export const project7 = {
   trouble: [
     {
       title: '포켓몬 데이터 리스트를 업데이트 하는 useEffect에서 초기 렌더링시 불필요한 호출이 발생하는 이슈',
-      detail1: [
+      detailList: [
         `**[문제점]** \`useEffect\`를 활용해 초기 로딩 시 포켓몬 데이터 리스트를 업로드하는 과정에서 3번의 호출이 감지 되었습니다. 무한 스크롤로 인해 뷰포트가 바닥을 감지하여 이루어지는 이슈로 생각해 스켈레톤을 추가했으나, 동일한 문제가 발생했습니다.`,
         `**[해결]** \`console.log\`를 활용해 초기 렌더링 시 포켓몬 데이터 리스트가 빈 배열로 들어오는 시점에서 **useEffect가 2번 호출되는 이슈**를 확인하게 되었습니다. useEffect에 포켓몬 데이터 리스트가 있을 경우에만 실행하도록 조건문을 추가해 불필요한 렌더링을 막을 수 있었습니다.`,
         `**[회고]** useEffect를 사용할 경우 **초기 로딩에 대한 처리를 신중하게 고려**하는 것이 중요하다 생각하게 되었습니다.`,
@@ -144,7 +144,7 @@ export const project7 = {
     },
     {
       title: '방대한 포켓몬 데이터로 인한 성능 최적화 이슈',
-      detail1: [
+      detailList: [
         `**[문제점]** 포켓몬 데이터가 방대함으로 인해 최적화에 대한 고민이 많았습니다.`,
         `**[해결]** 무한스크롤링을 도입해 메모리 소모를 최소화, \`React.lazy\`,\`Suspense\`를 활용해 초기 로딩 시의 성능을 향상, img태그에 \`loading="lazy"\` 속성을 추가해 이미지의 로딩 최적화했습니다.`,
       ],

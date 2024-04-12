@@ -287,8 +287,7 @@ function ProjectDetail() {
                         <ToggleBox
                           key={idx}
                           title={item.title}
-                          detail={item.detail}
-                          detail1={item.detail1}
+                          detailList={item.detailList}
                           isToggled
                         />
                       ))
@@ -307,8 +306,7 @@ function ProjectDetail() {
                             <ToggleBox
                               key={idx}
                               title={item.title}
-                              detail={item.detail}
-                              detail1={item.detail1}
+                              detailList={item.detailList}
                               isToggled
                             />
                           ))
@@ -330,7 +328,7 @@ function ProjectDetail() {
                             <ToggleBox
                               key={idx}
                               title={item.title}
-                              detail1={item.detail1}
+                              detailList={item.detailList}
                               isToggled
                             />
                           ))

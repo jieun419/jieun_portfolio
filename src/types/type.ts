@@ -65,19 +65,16 @@ export type ProjectDetailDataT = {
   }[];
   featinfo: string[];
   parts: {
-    detail1: string[] | undefined;
+    detailList?: string[];
     title: string;
-    detail?: string;
   }[];
   trouble?: {
-    detail1: string[] | undefined;
+    detailList?: string[];
     title: string;
-    detail: string;
   }[];
   Insight?: {
-    detail1: string[] | undefined;
+    detailList?: string[];
     title: string;
-    detail: string;
   }[];
 };
 

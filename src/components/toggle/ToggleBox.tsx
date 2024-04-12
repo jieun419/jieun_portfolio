@@ -61,12 +61,12 @@ const DetailLi = tw.li`
 type ToggleProps = {
   title?: string;
   detail?: string;
-  detail1?: string[];
+  detailList?: string[];
   isToggled?: boolean;
   type?: string;
 };
 
-function ToggleBox({ title, detail, detail1, isToggled, type }: ToggleProps) {
+function ToggleBox({ title, detail, detailList, isToggled, type }: ToggleProps) {
   const [isToggle, setIsToggle] = useState<boolean>(false);
 
   const toggleBtn = () => {
@@ -91,11 +91,11 @@ function ToggleBox({ title, detail, detail1, isToggled, type }: ToggleProps) {
       }
 
       {
-        isToggle || isToggled && detail1 &&
+        isToggle || isToggled && detailList &&
         <ToggleInfo>
           <DetailUl>
             {
-              detail1.map((el) => (
+              detailList.map((el) => (
                 <DetailLi key={el}>
                   <Markdown>
                     {el}
