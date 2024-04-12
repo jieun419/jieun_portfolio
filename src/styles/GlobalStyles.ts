@@ -65,6 +65,28 @@ const GlobalStyles = createGlobalStyle`
         background: transparent;
         cursor: pointer;
     }
+
+    .markdowContainer {
+        code {
+            font-size: 85%;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            background-color: #e9ecef;
+            font-size: 0.9rem;
+            font-family: "Pretendard", "Malgun Gothic", sans-serif;
+        }
+        strong {
+            font-weight: bold;
+        }
+        a {
+            text-decoration: underline;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            color: #0027e3;
+        }
+    }
 `;
 
 export default GlobalStyles;
