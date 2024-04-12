@@ -319,6 +319,28 @@ function ProjectDetail() {
                 }
 
                 {
+                  projectDetail.Insight && projectDetail.Insight.length !== 0 && (
+                    <PWrap>
+                      <PTitle>
+                        ☕️ 회고
+                      </PTitle>
+                      <Toggles>
+                        {
+                          projectDetail.Insight.map((item, idx) => (
+                            <ToggleBox
+                              key={idx}
+                              title={item.title}
+                              detail1={item.detail1}
+                              isToggled
+                            />
+                          ))
+                        }
+                      </Toggles>
+                    </PWrap>
+                  )
+                }
+
+                {
                   projectDetail.detailimginfo && (
                     <PWrap>
                       <PTitle>
