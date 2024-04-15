@@ -72,7 +72,7 @@ export type ProjectDetailDataT = {
     detailList?: string[];
     title: string;
   }[];
-  Insight?: {
+  insight?: {
     detailList?: string[];
     title: string;
   }[];

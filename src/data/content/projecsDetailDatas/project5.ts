@@ -136,7 +136,7 @@ export const project5 = {
       ],
     },
   ],
-  Insight: [
+  insight: [
     {
       title: '팀원들과의 스팩 차이를 극복하기 위한 노력',
       detailList: [

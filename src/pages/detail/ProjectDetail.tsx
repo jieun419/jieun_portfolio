@@ -317,14 +317,14 @@ function ProjectDetail() {
                 }
 
                 {
-                  projectDetail.Insight && projectDetail.Insight.length !== 0 && (
+                  projectDetail.insight && projectDetail.insight.length !== 0 && (
                     <PWrap>
                       <PTitle>
                         ☕️ 회고
                       </PTitle>
                       <Toggles>
                         {
-                          projectDetail.Insight.map((item, idx) => (
+                          projectDetail.insight.map((item, idx) => (
                             <ToggleBox
                               key={idx}
                               title={item.title}
