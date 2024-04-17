@@ -46,9 +46,9 @@ const InterviewWrap = () => {
         <Tit>Interview</Tit>
         <MyMindTxt>
           <SubTit>Q. 프론트엔드로 전향한 이유?</SubTit>
-          5년간 웹 디자이너로 활동하면서 사용자에게 동적이고 편리한 화면을 제공하고자 프론트엔드 개발자로 전향을 결심하게 되었습니다.<br />
-          디자인 역량을 바탕으로 <PointText>사용자와 더 밀착된 상호작용</PointText> 가능한 프로젝트를 개발하고자 하는 목표와 함께<br />
-          React, Styled Components, Tailwind, Redux, Recoil 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고 있습니다.
+          웹 디자이너로 활동하며 사용자 중심 디자인, 협업, 프론트엔드 기초 지식을 쌓았습니다.<br />
+          <PointText>사용자와의 소통</PointText>에 대해 중요성을 인지하고, 더 밀접하게 <PointText>상호작용 가능한 프로젝트</PointText>를 개발하고자 프론트엔드 개발자로 전향을 결심하게 되었습니다.<br />
+          React, Styled Components, Redux Toolkit 등 다양한 프레임워크와 라이브러리를 도입해 발전할 수 있는 새로운 도전에 나서고 있습니다.
         </MyMindTxt>
 
         <MyMindTxt>
@@ -59,7 +59,7 @@ const InterviewWrap = () => {
 
         <MyMindTxt>
           <SubTit>Q. 자기계발을 위해 어떤 것들을 해왔는지?</SubTit>
-          지속적인 학습을 위해 스터디, 강의에 적극 참여하고, <PointText>낯선 기술에도 포기 하지 않고 메타인지 방식을 활용</PointText>해 문제에 직면하여 팀원들과의 협업을 통해 더 나은 해결책을 찾고 배우려는 의지가 강합니다.<br />
+          지속적인 학습을 위해 스터디와 온라인 강의에 적극 참여하고, <PointText>낯선 기술에도 포기 하지 않고 메타인지 방식을 활용</PointText>해 문제 해결 능력을 쌓고 있습니다.<br />
           <BoldText>열린 마음으로 피드백을 소중히 여기고,</BoldText>개발 과정에서 항상 개선할 점을 찾기 위해 노력하고 있습니다.
         </MyMindTxt>
       </MyMind>
