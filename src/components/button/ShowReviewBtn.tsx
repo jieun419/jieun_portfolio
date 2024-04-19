@@ -1,8 +1,7 @@
 import tw from 'tailwind-styled-components';
-import { useDispatch } from 'react-redux';
 
 import IcLineArrow from '../../assets/icons/IcLinekArrow';
-import { overlayActions } from '../../store/overlay-slice';
+import useModal from '../../hooks/useModal';
 
 export const ShowReviewButton = tw.button`
   relative
@@ -53,20 +52,10 @@ function ShowReviewBtn({ children, handelImgChange }: {
   children: React.ReactNode;
   handelImgChange?: () => void;
 }) {
-  const dispatch = useDispatch();
-
-  const lockScroll = () => {
-    document.body.style.overflow = 'hidden';
-  };
-
-  const toggleModal = (name: string) => {
-    dispatch(overlayActions.toggleReviewOverlay());
-    dispatch(overlayActions.targetName(name));
-    lockScroll();
-  };
+  const { openModal } = useModal();
 
   return (
-    <ShowReviewButton onMouseEnter={handelImgChange} onMouseLeave={handelImgChange} onClick={() => toggleModal('review')}>
+    <ShowReviewButton onMouseEnter={handelImgChange} onMouseLeave={handelImgChange} onClick={() => openModal('review')}>
       <BtnTxt>{children}</BtnTxt>
       <ArrowWrap>
         <IcLineArrow

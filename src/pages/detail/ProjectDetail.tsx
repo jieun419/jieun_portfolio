@@ -1,5 +1,6 @@
 import tw from 'tailwind-styled-components';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import TagIcon from '../../components/atoms/tag/TagTxt';
 import ProjectScreen from '../../components/atoms/projectScreen/ProjectScreen';
@@ -7,11 +8,12 @@ import ToggleBox from '../../components/toggle/ToggleBox';
 import CloseBtn from '../../components/button/CloseBtn';
 import LinkBtn from '../../components/button/LinkBtn';
 import { overlayActions } from '../../store/overlay-slice';
-import { ProjectDetailDataT } from '../../types/type';
 import { RootState } from '../../store';
-import DropShadow from '../../components/atoms/dropShadow/DropShadow';
 import ProjectImgCard from '../../components/cards/ProjectImgCard';
 import ImgDetailModal from '../../components/modal/ImgDetailModal';
+import { projectDetailData } from '../../data/content/projecsDetailDatas/projectDetailData';
+import Modal from '../../components/modal/Modal';
+import useModal from '../../hooks/useModal';
 
 type ProjectDataProps = {
   pointcolor?: string;
@@ -19,16 +21,6 @@ type ProjectDataProps = {
 }
 
 export const DetailContainer = tw.section`
-  fixed
-  inset-x-0
-  inset-y-0
-  z-[20]
-  py-10
-  px-40
-  overflow-y-auto
-
-  max-md:px-0
-  max-md:py-0
 `;
 
 export const DetailWrap = tw.section<ProjectDataProps>`
@@ -200,21 +192,15 @@ export const ImgContList = tw.div`
   max-xl:grid-cols-2
 `;
 
-function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgurl, giturl, depoloyurl, blogurl, tools, parts, trouble, featinfo, detailimginfo }: ProjectDetailDataT) {
+function ProjectDetail() {
+  const { closeModal } = useModal();
+
   const dispatch = useDispatch();
-  const isModal = useSelector((state: RootState) => state.overlay.isOpen);
+  const { name } = useParams();
+  const projectDetail = projectDetailData.find((project) => project.name === name);
+
   const imgModal = useSelector((state: RootState) => state.overlay.isImgOpen);
-  const targetName = useSelector((state: RootState) => state.overlay.targetName);
   const targetId = useSelector((state: RootState) => state.overlay.targetId);
-
-  const openScroll = () => {
-    document.body.style.removeProperty('overflow');
-  };
-
-  const toggleModal = () => {
-    dispatch(overlayActions.toggleOverlay());
-    openScroll();
-  };
 
   const toggleImgModal = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     dispatch(overlayActions.toggleImgOverlay());
@@ -223,48 +209,47 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
   return (
     <>
-      {
-        isModal && targetName === name ? (
+      {projectDetail ? (
+        <Modal>
           <DetailContainer>
-            <DropShadow toggleModal={toggleModal} />
-            <DetailWrap imgurl={imgurl}>
+            <DetailWrap imgurl={projectDetail.imgurl}>
 
               <Btns>
-                <CloseBtn toggleModal={toggleModal} />
+                <CloseBtn closeModal={closeModal} />
                 <ContBtns>
-                  {giturl && <LinkBtn name='github_bk' giturl={giturl} text='GitHub' />}
-                  {depoloyurl && <LinkBtn name='link' depoloyurl={depoloyurl} text='배포 링크' />}
-                  {blogurl && <LinkBtn name='blog' blog={blogurl} text='관련 블로그' />}
+                  {projectDetail.giturl && <LinkBtn name='github_bk' giturl={projectDetail.giturl} text='GitHub' />}
+                  {projectDetail.depoloyurl && <LinkBtn name='link' depoloyurl={projectDetail.depoloyurl} text='배포 링크' />}
+                  {projectDetail.blogurl && <LinkBtn name='blog' blog={projectDetail.blogurl} text='관련 블로그' />}
                 </ContBtns>
               </Btns>
 
-              <DetailTop pointcolor={pointcolor} imgurl={imgurl}>
+              <DetailTop pointcolor={projectDetail.pointcolor} imgurl={projectDetail.imgurl}>
                 <Tags>
                   {
-                    tag.map((tag, idx) => (
+                    projectDetail.tag.map((tag, idx) => (
                       <TagIcon key={idx} tag={tag} />
                     ))
                   }
                 </Tags>
-                <ProjectTit>{title}</ProjectTit>
+                <ProjectTit>{projectDetail.title}</ProjectTit>
                 <ProjectDate>
-                  <DateTxt>{data}</DateTxt>
-                  <DateTxt>{team}</DateTxt>
+                  <DateTxt>{projectDetail.data}</DateTxt>
+                  <DateTxt>{projectDetail.team}</DateTxt>
                 </ProjectDate>
-                {imgurl && <ProjectScreen imgurl={imgurl} />}
+                {projectDetail.imgurl && <ProjectScreen imgurl={projectDetail.imgurl} />}
               </DetailTop>
 
               <DetailBody>
                 <ProjectInfoTxt>
-                  {subtext}
+                  {projectDetail.subtext}
                 </ProjectInfoTxt>
                 {
-                  featinfo.length !== 0 && (
+                  projectDetail.featinfo.length !== 0 && (
                     <PWrap>
                       <PTitle>📍 주요 기능 및 특징</PTitle>
                       <PDetailList>
                         {
-                          featinfo.map((list, idx) => (
+                          projectDetail.featinfo.map((list, idx) => (
                             <Li key={idx}>{list}</Li>
                           ))
                         }
@@ -280,7 +265,7 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   </PTitle>
                   <Toggles>
                     {
-                      tools.map((item, idx) => (
+                      projectDetail.tools.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}
@@ -298,11 +283,11 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   </PTitle>
                   <Toggles>
                     {
-                      parts.map((item, idx) => (
+                      projectDetail.parts.map((item, idx) => (
                         <ToggleBox
                           key={idx}
                           title={item.title}
-                          detail={item.detail}
+                          detailList={item.detailList}
                           isToggled
                         />
                       ))
@@ -310,18 +295,18 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                   </Toggles>
                 </PWrap>
                 {
-                  trouble && trouble.length !== 0 && (
+                  projectDetail.trouble && projectDetail.trouble.length !== 0 && (
                     <PWrap>
                       <PTitle>
                         💫 Trouble Shooting
                       </PTitle>
                       <Toggles>
                         {
-                          trouble.map((item, idx) => (
+                          projectDetail.trouble.map((item, idx) => (
                             <ToggleBox
                               key={idx}
                               title={item.title}
-                              detail={item.detail}
+                              detailList={item.detailList}
                               isToggled
                             />
                           ))
@@ -332,7 +317,29 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
                 }
 
                 {
-                  detailimginfo && (
+                  projectDetail.insight && projectDetail.insight.length !== 0 && (
+                    <PWrap>
+                      <PTitle>
+                        ☕️ 회고
+                      </PTitle>
+                      <Toggles>
+                        {
+                          projectDetail.insight.map((item, idx) => (
+                            <ToggleBox
+                              key={idx}
+                              title={item.title}
+                              detailList={item.detailList}
+                              isToggled
+                            />
+                          ))
+                        }
+                      </Toggles>
+                    </PWrap>
+                  )
+                }
+
+                {
+                  projectDetail.detailimginfo && (
                     <PWrap>
                       <PTitle>
                         💻 작업 화면
@@ -341,10 +348,10 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
 
                       <ImgContList>
 
-                        {imgModal && (<ImgDetailModal imgUrl={detailimginfo && detailimginfo[targetId].imgurl} />)}
+                        {imgModal && (<ImgDetailModal imgUrl={projectDetail.detailimginfo && projectDetail.detailimginfo[targetId].imgurl} />)}
 
                         {
-                          detailimginfo?.map((el, idx) => (
+                          projectDetail.detailimginfo?.map((el, idx) => (
                             <ProjectImgCard
                               key={idx}
                               id={idx}
@@ -361,7 +368,8 @@ function ProjectDetail({ name, pointcolor, title, subtext, data, team, tag, imgu
               </DetailBody>
             </DetailWrap>
           </DetailContainer>
-        ) : null
+        </Modal>
+      ) : null
       }
     </>
   )

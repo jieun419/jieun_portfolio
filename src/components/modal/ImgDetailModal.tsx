@@ -58,10 +58,10 @@ function ImgDetailModal({ imgUrl }: propsT) {
 
   return (
     <ImgModalBox>
-      <DropShadow toggleModal={toggleModal} />
+      <DropShadow closeModal={toggleModal} />
       <ImgBox>
         <BtnBox>
-          <CloseBtn toggleModal={toggleModal} />
+          <CloseBtn closeModal={toggleModal} />
         </BtnBox>
         <Img src={imgUrl} alt='project img' />
       </ImgBox>

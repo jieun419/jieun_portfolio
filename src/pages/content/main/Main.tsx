@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { isMobile } from '../../../utils/isMobile';
@@ -14,6 +15,7 @@ import { MainComponent, Img } from './Main.styled';
 import MainBackground from '../../../components/atoms/background/MainBackground';
 
 function Main() {
+  const { pathname } = useLocation();
   const vhRef = useRef(0);
   const mainRef = useRef<HTMLDivElement>(null);
   const isPosition = useSelector((state: RootState) => state.position.isPosition);
@@ -33,7 +35,9 @@ function Main() {
     if (mainSection?.top === 0) {
       document.body.style.overflow = 'hidden'
       setTimeout(() => {
-        document.body.style.overflow = ''
+        if (pathname === '/') {
+          document.body.style.overflow = ''
+        }
       }, 3000)
     }
   }, [])

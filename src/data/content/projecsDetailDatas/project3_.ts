@@ -1,4 +1,4 @@
-export const project3 = {
+export const project3_ = {
   name: 'coz',
   pointcolor: 'before:bg-[#6a57e0]',
   title: 'Coz Shopping',

@@ -1,6 +1,5 @@
 import { project1 } from './projecsDetailDatas/project1';
 import { project2 } from './projecsDetailDatas/project2';
-import { project3 } from './projecsDetailDatas/project3';
 import { project4 } from './projecsDetailDatas/project4';
 import { project5 } from './projecsDetailDatas/project5';
 import { project6 } from './projecsDetailDatas/project6';
@@ -51,15 +50,6 @@ export const projectData = [
     tag: project4.tag,
     imgurl: project4.imgurl,
     giturl: project4.giturl,
-  },
-  {
-    name: project3.name,
-    type: 'single',
-    title: project3.title,
-    subject: '주어진 요구 명세서를 확인하며 작업했습니다.',
-    tag: project3.tag,
-    imgurl: project3.imgurl,
-    giturl: project3.giturl,
   },
   {
     name: project2.name,
