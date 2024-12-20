@@ -1,19 +1,25 @@
 import { project1 } from './projecsDetailDatas/project1';
+import { project10 } from './projecsDetailDatas/project10';
 import { project2 } from './projecsDetailDatas/project2';
-import { project4 } from './projecsDetailDatas/project4';
 import { project5 } from './projecsDetailDatas/project5';
 import { project6 } from './projecsDetailDatas/project6';
 import { project7 } from './projecsDetailDatas/project7';
-import { project8 } from './projecsDetailDatas/project8';
+import { project9 } from './projecsDetailDatas/project9';
 
 export const projectData = [
   {
-    name: project8.name,
+    name: project9.name,
     type: 'team',
-    title: project8.title,
-    subject: '우주를 테마로 한 회사 소개 사이트입니다.',
-    tag: project8.tag,
-    depoloyurl: project8.depoloyurl,
+    title: project9.title,
+    subject: '강아지 유치원 모바일 서비스입니다.',
+    tag: project9.tag,
+  },
+  {
+    name: project10.name,
+    type: 'team',
+    title: project10.title,
+    subject: '데스크 테리어 공유 커뮤니티 서비스입니다.',
+    tag: project10.tag,
   },
   {
     name: project7.name,
@@ -41,15 +47,6 @@ export const projectData = [
     tag: project5.tag,
     imgurl: project5.imgurl,
     giturl: project5.giturl,
-  },
-  {
-    name: project4.name,
-    type: 'team',
-    title: project4.title,
-    subject: '스택오버플로우 사이트를 클론 코딩하며 UI/UX 측면도 고려하며 진행했습니다.',
-    tag: project4.tag,
-    imgurl: project4.imgurl,
-    giturl: project4.giturl,
   },
   {
     name: project2.name,
