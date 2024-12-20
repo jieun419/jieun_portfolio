@@ -8,7 +8,6 @@ export const StackData = {
   title: 'Skill & Tools',
   stack: {
     FrontEnd: ['html', 'css', 'javascript', 'react'],
-    Design: ['figma', 'ps', 'ai'],
-    Cooperation: ['github', 'notion', 'discord'],
+    Tools: ['figma', 'github', 'notion', 'discord'],
   },
 };
