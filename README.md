@@ -1,4 +1,5 @@
 ![Desktop - 7](https://github.com/jieun419/jieun_portfolio/assets/109754988/0d619991-4690-4994-9c8e-95c120205720)
+# 멘트, 구조 등을 그대로 베끼지 마시고 본인만의 스타일로 수정해 주세요...
 
 - **`Project` :** 최지은 포트폴리오
 - **`Project duration` :** 2023.08.31 - 2023.09.31
